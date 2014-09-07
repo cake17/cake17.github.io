@@ -1,0 +1,13 @@
+# Site settings
+title: Cake-Websites
+email: cake17@cake-websites.com
+description: > # this means to ignore newlines until "baseurl:"
+  Cake-Websites créé votre site internet et vous donne les outils pour le rendre
+  visible.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.cake-websites.com" # the base hostname & protocol for your site
+twitter_username: cake17
+github_username:  cake17
+
+# Build settings
+markdown: kramdown
