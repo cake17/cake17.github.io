@@ -3,7 +3,7 @@ layout: post
 title: List Of Projects
 categories: [General]
 tags: [General]
-description: Projets.
+description: Projects.
 ---
 
 ## Translations
