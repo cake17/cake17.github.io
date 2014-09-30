@@ -6,25 +6,22 @@ exclude: ["README.md"] # files to exclude
 highlighter: true
 markdown: kramdown
 
-
 defaults:
   -
     scope:
       path: "" # empty string for all files
     values:
-      title: Cake17's Blog
+      layout: "default"
 
-description: > # this means to ignore newlines until "baseurl:"
-  Development environment, PHP, CakePHP, Git, and more...
 author:
   name: cake17
   email: cake17@cake-websites.com
   github: cake17
-  twitter: 
-  pinterest: 
-  linkedin: 
   bio: 
   email_md5: HBfd!8é!çà99098872
+
+title: Cake17's Blog
+description: Development environment, PHP, CakePHP, Git, and more...
 
 rss_path: feed.xml
 categories_path: categories.html

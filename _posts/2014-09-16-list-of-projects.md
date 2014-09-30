@@ -1,9 +1,8 @@
 ---
 layout: post
 title: List Of Projects
-categories: [General]
 tags: [General]
-description: Projects.
+description: List of interesting projects.
 ---
 
 ## Translations
