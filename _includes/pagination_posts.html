@@ -1,0 +1,25 @@
+<hr>
+<div class="pagination-centered">
+	<ul class="pagination" role="menubar" aria-label="Pagination">
+		{% if paginator.previous_page %}
+		<li class="arrow" aria-disabled="true"><a href="{{ site.BASE_PATH }}{{ paginator.previous_page.url }}">&laquo; Previous</a></li>
+		{% else %}
+		<li class="arrow unavailable" aria-disabled="true">&laquo; Previous</li>
+		{% endif %}
+		{% for page in (1..paginator.total_pages) %}
+		{% if page == paginator.page %}
+		<li class="current"><a href="">{{ page }}</a></li>
+		{% elsif page == 1 %}
+		<li><a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+		{% else %}
+		<li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+		{% endif %}
+		{% endfor %}
+		{% if paginator.next_page %}
+		<li class="arrow"><a href="{{ site.BASE_PATH }}{{ paginator.next_page.url }}" title="{{ paginator.next_page.title }}">Next &raquo;</a></li>
+		{% else %}
+		<li class="arrow unavailable">Next &raquo;</li>
+		{% endif %}
+	</ul>
+</div>
+<hr>

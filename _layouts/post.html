@@ -1,4 +1,42 @@
----
-layout: default
----
-{% include post.html %}
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+	<body>
+		{% include header.html %}
+
+		{% include pagination_posts.html %}
+
+		<div class="row">
+			<div class="large-3 columns">
+				<ul class="button-group radius round">
+					<li><a class="button success tiny" href="{{ site.BASE_PATH }}{{ post.url }}">
+							{% assign d = page.date | date: "%d" | plus:'0' %}
+							{{ page.date | date: "%B" }} 
+							{% case d %}
+							{% when 1 or 21 or 31 %}{{ d }}st,
+							{% when 2 or 22 %}{{ d }}nd,
+							{% when 3 or 23 %}{{ d }}rd,
+							{% else %}{{ d }}th,
+							{% endcase %}
+							{{ page.date | date: "%Y" }}
+					</a></li>
+				</ul>
+				<h1> {{ page.title }} </h1>
+			</div>
+			<div class="large-9 columns">
+				<article>
+					<div class="article_body">
+						{{ content }}
+					</div>
+				</article>
+			</div>
+		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="{{ site.BASE_PATH }}/assets/js/app.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.5/js/foundation.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.5/js/foundation/foundation.magellan.min.js"></script>
+		<script src="../scripts/search.js"></script>
+	</body>
+</html>

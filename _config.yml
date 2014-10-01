@@ -1,6 +1,6 @@
 # visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
-paginate: 10 # pagination based on number of posts
+paginate: 10
 paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
 highlighter: true
@@ -27,6 +27,6 @@ rss_path: feed.xml
 categories_path: categories.html
 tags_path: tags.html
 
-url: "http://cake17.github.io/"
+url: "http://cake17.github.io"
 
 BASE_PATH:
