@@ -1,0 +1,33 @@
+[
+
+    
+        {
+            "title": "List Of Projects",
+            "content": "Translations\n\nCakePHP Documentation\n\nThe main purpose of this project is to follow en version on github\n\n\n  French Doc\n\n\nTranslate CakePHP Plugins\n\nTranslate docs for plugins maintained by cakephp’s group.\n\nLinks to interesting projects\n\nGraphics\n\n\n  Bootstrap Twitter 3 : Framework CSS\n  Foundation : Framework CSS\n  VenoBox : Responsive Jquery Modal for Images\n  OwlCarousel : Responsive Carousel\n  Sprite Generator : Generates sprites for icons\n  HTML Validation : http://validator.w3.org\n  CSS Validation : http://jigsaw.w3.org/css-validator\n  Test HTML+CSS+JS code : http://jsbin.com/\n\n\nEnvironnment Tools &amp; Config for Mac\n\n\n  Git : Versioning projects\n  Composer : Dependancy Manager for PHP\n  Brew : Package Manager for Mac\n  Virtual Machine + Vagrant + Puppet + Puphpet : Create and config a Virtual Machine\n  Make + Python + PhpDomain-contrib : Generate Documentation\n  Adminer : Handle Databases\n  MariaDB or mySQL : Databases\n  Jenkins : Continuous Integration\n  PHPUnit : PHPUnit\n  PHPUnit Selenium : Tests different browser\n\n\nPHP Libs\n\n\n  Markdown\n  Excel\n\n\nOther Libs\n\n  Discourse : Forum\n  Jekyll : Static Sites\n\n\nCakePHP Plugins\n\n\n  cakephp/debug_kit\n  cakephp/acl\n\n\nUsefuls Blogs\n\n\n  Grafikart : about CakePHP and other stuffs\n  Mark Story : About CakePHP and more\n  DerEuroMark : about CakePHP\n  Object Calisthenics\n  Alsacreations : about Responsive Design, HTML, CSS, …\n\n",
+            "link": "/2014/09/16/list-of-projects.html",
+            "date": "2014-09-16 00:00:00 +0200",
+            "excerpt": null
+        }
+    
+
+    
+        ,{
+            "title": "Welcome",
+            "content": "This is a tech blog about my experiences with CakePHP and the world around PHP (Composer, Git, …). I have a Mac so the installs will refer to this OS.\n\nYou can go to Cake-Websites for more information about my pricing and projects.\n\n",
+            "link": "/2014/09/14/welcome.html",
+            "date": "2014-09-14 00:00:00 +0200",
+            "excerpt": null
+        }
+    
+
+
+
+    
+
+    
+
+    
+
+    
+
+]

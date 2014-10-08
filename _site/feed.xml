@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Cake17's Blog</title>
+		<description>Development environment, PHP, CakePHP, Git, and more...</description>
+		<link>/</link>
+		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>List Of Projects</title>
+				<description>&lt;h2 id=&quot;translations&quot;&gt;Translations&lt;/h2&gt;
+
+&lt;h3 id=&quot;cakephp-documentation&quot;&gt;CakePHP Documentation&lt;/h3&gt;
+
+&lt;p&gt;The main purpose of this project is to follow en version on &lt;a href=&quot;https://github.com/cakephp/docs&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://book.cakephp.org/2.0/fr/index.html&quot;&gt;French Doc&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;translate-cakephp-plugins&quot;&gt;Translate CakePHP Plugins&lt;/h3&gt;
+
+&lt;p&gt;Translate docs for plugins maintained by cakephp’s group.&lt;/p&gt;
+
+&lt;h2 id=&quot;links-to-interesting-projects&quot;&gt;Links to interesting projects&lt;/h2&gt;
+
+&lt;h3 id=&quot;graphics&quot;&gt;Graphics&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bootstrap Twitter 3 : Framework CSS&lt;/li&gt;
+  &lt;li&gt;Foundation : Framework CSS&lt;/li&gt;
+  &lt;li&gt;VenoBox : Responsive Jquery Modal for Images&lt;/li&gt;
+  &lt;li&gt;OwlCarousel : Responsive Carousel&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://spritegen.website-performance.org&quot;&gt;Sprite Generator&lt;/a&gt; : Generates sprites for icons&lt;/li&gt;
+  &lt;li&gt;HTML Validation : http://validator.w3.org&lt;/li&gt;
+  &lt;li&gt;CSS Validation : http://jigsaw.w3.org/css-validator&lt;/li&gt;
+  &lt;li&gt;Test HTML+CSS+JS code : http://jsbin.com/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;environnment-tools--config-for-mac&quot;&gt;Environnment Tools &amp;amp; Config for Mac&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt; : Versioning projects&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Composer&lt;/strong&gt; : Dependancy Manager for PHP&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Brew&lt;/strong&gt; : Package Manager for Mac&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Virtual Machine + Vagrant + Puppet + Puphpet&lt;/strong&gt; : Create and config a Virtual Machine&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Make + Python + PhpDomain-contrib&lt;/strong&gt; : Generate Documentation&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Adminer&lt;/strong&gt; : Handle Databases&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;MariaDB&lt;/strong&gt; or &lt;strong&gt;mySQL&lt;/strong&gt; : Databases&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Jenkins&lt;/strong&gt; : Continuous Integration&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;PHPUnit&lt;/strong&gt; : PHPUnit&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;PHPUnit Selenium&lt;/strong&gt; : Tests different browser&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;php-libs&quot;&gt;PHP Libs&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://michelf.ca/projects/php-markdown&quot;&gt;Markdown&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/PHPOffice/PHPExcel&quot;&gt;Excel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;other-libs&quot;&gt;Other Libs&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/discourse/discourse&quot;&gt;Discourse&lt;/a&gt; : Forum&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; : Static Sites&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cakephp-plugins&quot;&gt;CakePHP Plugins&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cakephp/debug_kit&lt;/li&gt;
+  &lt;li&gt;cakephp/acl&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;usefuls-blogs&quot;&gt;Usefuls Blogs&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.grafikart.fr/tutoriels&quot;&gt;Grafikart&lt;/a&gt; : about CakePHP and other stuffs&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mark-story.com/posts/archive&quot;&gt;Mark Story&lt;/a&gt; : About CakePHP and more&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.dereuromark.de&quot;&gt;DerEuroMark&lt;/a&gt; : about CakePHP&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://williamdurand.fr/2013/06/03/object-calisthenics&quot;&gt;Object Calisthenics&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.alsacreations.com/tutoriels/&quot;&gt;Alsacreations&lt;/a&gt; : about Responsive Design, HTML, CSS, …&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>Tue, 16 Sep 2014 00:00:00 +0200</pubDate>
+				<link>/2014/09/16/list-of-projects.html</link>
+				<guid isPermaLink="true">/2014/09/16/list-of-projects.html</guid>
+			</item>
+		
+			<item>
+				<title>Welcome</title>
+				<description>&lt;p&gt;This is a tech blog about my experiences with CakePHP and the world around PHP (Composer, Git, …). I have a Mac so the installs will refer to this OS.&lt;/p&gt;
+
+&lt;p&gt;You can go to &lt;a href=&quot;http://www.cake-websites.com&quot;&gt;Cake-Websites&lt;/a&gt; for more information about my pricing and projects.&lt;/p&gt;
+
+</description>
+				<pubDate>Sun, 14 Sep 2014 00:00:00 +0200</pubDate>
+				<link>/2014/09/14/welcome.html</link>
+				<guid isPermaLink="true">/2014/09/14/welcome.html</guid>
+			</item>
+		
+	</channel>
+</rss>

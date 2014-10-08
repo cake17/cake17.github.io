@@ -1,5 +1,16 @@
 # visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
+## Personal values
+title: Cake17's Blog
+description: Development environment, PHP, CakePHP, Git, and more...
+
+author:
+  name: cake17
+  email: cake17@cake-websites.com
+  github: cake17
+  bio: 
+  email_md5: HBfd!8é!çà99098872
+
 ## Where things are
 # source folder
 source:		.
@@ -72,28 +83,9 @@ defaults:
       type: "drafts" # apply the defaults only for drafts
     values:
       layout: "post"
-  -
-    scope:
-      path: "_projects" # values will be defined for all files in _projects (empty string for all files)
-      type: "pages" # apply the defaults only for pages
-    values:
-      layout: "default"
-
-author:
-  name: cake17
-  email: cake17@cake-websites.com
-  github: cake17
-  bio: 
-  email_md5: HBfd!8é!çà99098872
-
-title: Cake17's Blog
-description: Development environment, PHP, CakePHP, Git, and more...
 
 rss_path: feed.xml
-categories_path: categories.html
 tags_path: tags.html
-
-BASE_PATH:
 
 paginate: 10
 paginate_path: "page:num"
