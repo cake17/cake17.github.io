@@ -9,7 +9,7 @@
 		<div class="row">
 			<div class="large-3 columns">
 				<ul class="button-group radius round">
-					<li><a class="button success tiny" href="{{ site.BASE_PATH }}{{ post.url }}">
+					<li><a class="button success tiny" href="{{ site.url }}{{ post.url }}">
 							{% assign d = page.date | date: "%d" | plus:'0' %}
 							{{ page.date | date: "%B" }} 
 							{% case d %}
@@ -32,11 +32,6 @@
 			</div>
 		</div>
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script type="text/javascript" src="{{ site.BASE_PATH }}/assets/js/app.js"></script>
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.5/js/foundation.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.5/js/foundation/foundation.magellan.min.js"></script>
-		<script src="../scripts/search.js"></script>
+		{% include bottom_js.html %}
 	</body>
 </html>

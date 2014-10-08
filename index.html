@@ -9,7 +9,7 @@ tagline:
 
 <article class="home">
 	<ul class="button-group radius round">
-		<li><a class="button success tiny" href="{{ site.BASE_PATH }}{{ post.url }}">
+		<li><a class="button success tiny" href="{{ site.url }}{{ post.url }}">
 				{% assign d = post.date | date: "%d" | plus:'0' %}
 				{{ post.date | date: "%B" }}
 				{% case d %}
@@ -20,7 +20,7 @@ tagline:
 				{% endcase %}
 				{{ post.date | date: "%Y" }}
 			</a></li>
-		<li><a href="{{ site.BASE_PATH }}{{ post.url }}" class="button tiny">
+		<li><a href="{{ site.url }}{{ post.url }}" class="button tiny">
 				{{ post.title }}
 			</a></li>
 	</ul>

@@ -1,15 +1,81 @@
 # visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
-paginate: 10
-paginate_path: "page:num"
-exclude: ["README.md"] # files to exclude
-highlighter: true
-markdown: kramdown
+## Where things are
+# source folder
+source:		.
+# destination folder
+destination:	./_site
+# plugins folder
+plugins:	./_plugins
+# layouts folder
+layouts:	./_layouts
+# data source folder
+data_source:	./_data
+# collections
+collections:	null
 
+## Handling Reading
+# Safe mode to false: plugins et symbolics links are authorized
+safe:		false
+include:	[".htaccess"]
+# files to exclude
+exclude:	["README.md"]
+keep_files:	[".git", ".svn"]
+encoding:	"utf-8"
+markdown_ext:	"markdown,mkdown,mkdn,mkd,md"
+textile_ext:	"textile"
+
+## Filtering Content
+show_drafts:	null
+limit_posts:	0
+future:		true
+unpublished:	false
+
+## Plugins
+whitelist:	[]
+gems:		[]
+
+## Conversion
+markdown:		kramdown
+kramdown:
+  input: GFM # use Github Flavored Markdown
+highlighter:		true # default : pygments
+lsi:			false
+excerpt_separator:	"\n\n"
+
+## Serving
+detach:		false
+port:		4000
+host:		0.0.0.0
+baseurl:	"" # does not include hostname
+
+## Backwards-compatibility
+relative_permalinks: false
+
+## Outputting
+permalink:	date
+paginate_path:	/page:num
+timezone:	"Europe/Paris"
+quiet:		false
+
+## defaults var for all pages, posts & drafts
 defaults:
   -
     scope:
-      path: "" # empty string for all files
+      path: "_posts" # values will be defined for all files in _posts (empty string for all files)
+      type: "posts" # apply the defaults only for posts
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "_drafts" # values will be defined for all files in _drafts (empty string for all files)
+      type: "drafts" # apply the defaults only for drafts
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "_projects" # values will be defined for all files in _projects (empty string for all files)
+      type: "pages" # apply the defaults only for pages
     values:
       layout: "default"
 
@@ -27,6 +93,7 @@ rss_path: feed.xml
 categories_path: categories.html
 tags_path: tags.html
 
-url: "http://cake17.github.io"
-
 BASE_PATH:
+
+paginate: 10
+paginate_path: "page:num"

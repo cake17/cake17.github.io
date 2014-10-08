@@ -1,4 +1,4 @@
-require 'json'
+require "json"
 
 module JsonFilter
   def json(input)

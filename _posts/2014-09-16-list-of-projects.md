@@ -1,6 +1,5 @@
 ---
 layout: post
-title: List Of Projects
 tags: [General]
 description: List of interesting projects.
 ---
