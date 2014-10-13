@@ -6,40 +6,29 @@
  * @version  0.1
  */
 
-
- /* ==========================================================================
-    Initialisation
-    ========================================================================== */
-
 var q, jsonFeedUrl = "/assets/json/feed.json",
-    $searchForm = $("[data-search-form]"),
-    $searchInput = $("[data-search-input]"),
-    $resultTemplate = $("#search-result"),
-    $resultsPlaceholder = $("[data-search-results]"),
-    $foundContainer = $("[data-search-found]"),
-    $foundTerm = $("[data-search-found-term]"),
-    $foundCount = $("[data-search-found-count]"),
-    allowEmpty = true,
-    showLoader = true,
-    loadingClass = "is--loading";
+	$searchForm = $("[data-search-form]"),
+	$searchInput = $("[data-search-input]"),
+	$resultTemplate = $("#search-result"),
+	$resultsPlaceholder = $("[data-search-results]"),
+	$foundContainer = $("[data-search-found]"),
+	$foundTerm = $("[data-search-found-term]"),
+	$foundCount = $("[data-search-found-count]"),
+	allowEmpty = true,
+	showLoader = true,
+	loadingClass = "is--loading";
 
+$(function () {
+	// hide items found string
+	$foundContainer.hide();
 
-$(document).ready( function() {
-    
-    // hide items found string
-    $foundContainer.hide();
-
-    // initiate search functionality
-    initSearch();
+	// initiate search functionality
+	initSearch();
 });
 
-
-
-
- /* ==========================================================================
-    Search functions
-    ========================================================================== */
- 
+/* ==========================================================================
+ Search functions
+ ========================================================================== */
 
 /**
  * Initiate search functionality.
@@ -47,154 +36,150 @@ $(document).ready( function() {
  * Binds search function to form submission.
  */
 function initSearch() {
+	// Get search results if q parameter is set in querystring
+	if (getParameterByName('q')) {
+		q = decodeURIComponent(getParameterByName('q'));
+		$searchInput.val(q);
+		execSearch(q);
+	}
 
-    // Get search results if q parameter is set in querystring
-    if (getParameterByName('q')) {
-        q = decodeURIComponent(getParameterByName('q'));
-        $searchInput.val(q);
-        execSearch(q);
-    }
-
-    // Get search results on submission of form
-    $(document).on("submit", $searchForm, function(e) {
-        e.preventDefault();
-        q = $searchInput.val();
-        execSearch(q);
-    });
+	// Get search results on submission of form
+	$(document).on("submit", $searchForm, function (e) {
+		e.preventDefault();
+		q = $searchInput.val();
+		execSearch(q);
+	});
 }
-
 
 /**
  * Executes search
+ *
  * @param {String} q 
  * @return null
  */
 function execSearch(q) {
-    if (q != '' || allowEmpty) {
-        if (showLoader) {
-            toggleLoadingClass();
-        }
+	if (q != '' || allowEmpty) {
+		if (showLoader) {
+			toggleLoadingClass();
+		}
 
-        getSearchResults(processData());
-    }
+		getSearchResults(processData());
+	}
 }
-
 
 /**
  * Toggles loading class on results and found string
+ *
  * @return null
  */
 function toggleLoadingClass() {
-    $resultsPlaceholder.toggleClass(loadingClass);
-    $foundContainer.toggleClass(loadingClass);
+	$resultsPlaceholder.toggleClass(loadingClass);
+	$foundContainer.toggleClass(loadingClass);
 }
-
 
 /**
  * Get Search results from JSON
+ *
  * @param {Function} callbackFunction 
  * @return null
  */
 function getSearchResults(callbackFunction) {
-    $.get(jsonFeedUrl, callbackFunction, 'json');
+	$.get(jsonFeedUrl, callbackFunction, 'json');
 }
-
 
 /**
  * Process search result data
+ *
  * @return null
  */
 function processData() {
-    $results = [];
-    
-    return function(data) {
-        
-        var resultsCount = 0,
-            results = "";
+	$results = [];
 
-        $.each(data, function(index, item) {
-            // check if search term is in content or title 
-            if (item.content.toLowerCase().indexOf(q.toLowerCase()) > -1 || item.title.toLowerCase().indexOf(q.toLowerCase()) > -1) {
-                var result = populateResultContent($resultTemplate.html(), item);
-                resultsCount++;
-                results += result;
-            }
-        });
+	return function (data) {
 
-        if (showLoader) {
-            toggleLoadingClass();
-        }
+		var resultsCount = 0,
+			results = "";
 
-        populateResultsString(resultsCount);
-        showSearchResults(results);
-    }
+		$.each(data, function (index, item) {
+			// check if search term is in content or title 
+			if (item.content.toLowerCase().indexOf(q.toLowerCase()) > -1 || item.title.toLowerCase().indexOf(q.toLowerCase()) > -1) {
+				var result = populateResultContent($resultTemplate.html(), item);
+				resultsCount++;
+				results += result;
+			}
+		});
+
+		if (showLoader) {
+			toggleLoadingClass();
+		}
+
+		populateResultsString(resultsCount);
+		showSearchResults(results);
+	}
 }
-
 
 /**
  * Add search results to placeholder
+ *
  * @param {String} results
  * @return null
  */
 function showSearchResults(results) {
-    // Add results HTML to placeholder
-    $resultsPlaceholder.html(results);
+	// Add results HTML to placeholder
+	$resultsPlaceholder.html(results);
 }
-
 
 /**
  * Add results content to item template
+ *
  * @param {String} html 
  * @param {object} item
  * @return {String} Populated HTML
  */
 function populateResultContent(html, item) {
-    html = injectContent(html, item.title, '##Title##');
-    html = injectContent(html, item.link, '##Url##');
-    html = injectContent(html, item.excerpt, '##Excerpt##');
-    html = injectContent(html, item.date, '##Date##');
-    return html;
+	html = injectContent(html, item.title, '##Title##');
+	html = injectContent(html, item.link, '##Url##');
+	html = injectContent(html, item.excerpt, '##Excerpt##');
+	html = injectContent(html, item.date, '##Date##');
+	return html;
 }
-
 
 /**
  * Populates results string
+ *
  * @param {String} count 
  * @return null
  */
 function populateResultsString(count) {
-    $foundTerm.text(q);
-    $foundCount.text(count);
-    $foundContainer.show();
+	$foundTerm.text(q);
+	$foundCount.text(count);
+	$foundContainer.show();
 }
 
-
-
-
- /* ==========================================================================
-    Helper functions
-    ========================================================================== */
-
+/* ==========================================================================
+ Helper functions
+ ========================================================================== */
 
 /**
  * Gets query string parameter - taken from http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+ *
  * @param {String} name 
  * @return {String} parameter value
  */
 function getParameterByName(name) {
-    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
-    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+	var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+	return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
 }
-
 
 /**
  * Injects content into template using placeholder
+ *
  * @param {String} originalContent
  * @param {String} injection
  * @param {String} placeholder 
  * @return {String} injected content
  */
 function injectContent(originalContent, injection, placeholder) {
-    var regex = new RegExp(placeholder, 'g');
-    return originalContent.replace(regex, injection);
+	var regex = new RegExp(placeholder, 'g');
+	return originalContent.replace(regex, injection);
 }
