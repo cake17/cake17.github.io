@@ -6,6 +6,7 @@ layout: json
     {% if post.title != null and post.title != empty and post.search_omit != true %}
         {% if forloop.index > 1 %},{%endif%}{
             "title": {{post.title | json}},
+	    "description": {{post.description | json}},
             "content": {{post.content | markdownify | strip_html | json}},
             "link": "{{ site.url }}{{ post.url }}",
             "date": {{ post.date | json }},

@@ -73,6 +73,8 @@ function execSearch(q) {
  * @return null
  */
 function toggleLoadingClass() {
+//	alert('ddd');
+	$resultsPlaceholder.show();
 	$resultsPlaceholder.toggleClass(loadingClass);
 	$foundContainer.toggleClass(loadingClass);
 }
