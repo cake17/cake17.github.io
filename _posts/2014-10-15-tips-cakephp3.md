@@ -13,7 +13,7 @@ follow code conventions. In our case, we follow the PSR-4 recommandations and [C
 You can now add the plugin [cakephp-codesniffer](https://github.com/cakephp/cakephp-codesniffer) to the composer.json of your project like this:
 
     php composer.phar require cakephp/cakephp-codesniffer
-    vendor/bin/phpcs --config-set installed_paths vendor/cakephp/cakephp-codesniffer
+    bin/phpcs --config-set installed_paths vendor/cakephp/cakephp-codesniffer
 
 This will also add a symlink to phpcs in bin/ directory.
 
@@ -25,8 +25,8 @@ Example to check a plugin : `./bin/phpcs --standard=CakePHP plugins/PluginName`
 
 PHPUnit, a member of the xUnit family of testing frameworks, provides an easy-to-use framework for testing and analyzing your PHP applications.
 
-Is now installed in each project in dev mode
-Just add the package in your composer.json in require-dev
+It is now installed in each project in dev mode
+Just add the package in your composer.json's require-dev
 
 Usage : `./bin/phpunit`
 Will launch every test defined in phpunit.xml.dist
