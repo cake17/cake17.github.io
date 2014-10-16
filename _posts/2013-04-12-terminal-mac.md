@@ -59,7 +59,7 @@ En mode commande
 
 ### Terminal Commands
 
-#### Infos : man, which, ls, cd, pwd, df, find
+#### Infos : man, which, ls, cd, pwd, df, find, history
 
 D'une manière général, les options sont mises après un '-'.
 
@@ -91,6 +91,10 @@ Connaître l'endroit où vous êtes : `pwd`
 Affiche la liste des volumes montés sur votre Mac et les caractéristiques de ceux-ci (très pratique) : `df -h`
 
 find où quoi (ex : find /home/cake17 readme.txt, cherche readme.txt dans /home/cake 17)
+
+Pour voir un historique des commandes entrées : `history`
+
+Pour rechercher une commande tapée : `CONTROL + R + commande_recherche` (ex : `CONTROL + R + all`)
 
 #### Actions : rm, cp, mkdir, mv, chown, chmod
 
