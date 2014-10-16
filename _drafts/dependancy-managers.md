@@ -143,3 +143,19 @@ Voir les solutions à ce problème : [https://getcomposer.org/doc/faqs/should-i-
 ## Homebrew
 
 Used to install and update tools on my MAC
+http://brew.sh/
+
+### Install
+
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+### Usage
+
+To check your installation : `brew doctor`
+
+To install a package : `brew install package_name`
+
+Everything is install in the `usr/local/Cellar` directory, so it can be uninstall easily : `brew uninstall package_name`
+
+List all tap used : `brew tap`
+
