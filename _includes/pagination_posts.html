@@ -2,14 +2,14 @@
 <div class="pagination-centered">
 	<ul class="pagination" role="menubar" aria-label="Pagination">
 		{% if page.previous %}
-		<li class="arrow" aria-disabled="true"><a href="{{ site.url }}{{ page.previous.url }}">&laquo; Previous</a></li>
+		<li class="arrow"><a id="jquery-prev" href="{{ site.url }}{{ page.previous.url }}">&laquo; Previous</a></li>
 		{% else %}
 		<li class="arrow unavailable" aria-disabled="true">&laquo; Previous</li>
 		{% endif %}
 		{% if page.next %}
-		<li class="arrow"><a href="{{ site.url }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
+		<li class="arrow"><a id="jquery-next" href="{{ site.url }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
 		{% else %}
-		<li class="arrow">Next &raquo;</li>
+		<li class="arrow unavailable" aria-disabled="true">Next &raquo;</li>
 		{% endif %}
 	</ul>
 </div>
