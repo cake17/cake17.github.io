@@ -53,8 +53,11 @@ Translate docs for plugins maintained by cakephp's group.
 
 ### CakePHP Plugins
 
-- cakephp/debug_kit
-- cakephp/acl
+- **cakephp/debug_kit** : Gives debug infos about your app
+- **cakephp/acl** : Acl permissions for users login
+- **cakephp/migrations** : Database Migrations based on phinx
+- **cakephp/cakephp-codesniffer** : test the compliance of your code with CakePHP conventions
+- **cake17/cakephp-bootstrap** : Integrate Bootstrap css framework in your app
 
 ### Usefuls Blogs
 
