@@ -5,12 +5,11 @@ layout: json
 {% for post in site.posts %}
     {% if post.title != null and post.title != empty and post.search_omit != true %}
         {% if forloop.index > 1 %},{%endif%}{
-            "title": {{post.title | json}},
-	    "description": {{post.description | json}},
-            "content": {{post.content | markdownify | strip_html | json}},
+            "title": {{post.title | jsonify}},
+            "description": {{post.description | jsonify}},
+            "content": {{post.content | jsonify}},
             "link": "{{ site.url }}{{ post.url }}",
-            "date": {{ post.date | json }},
-            "excerpt": {{ post.snippet | json }}
+            "date": {{ post.date | jsonify }}
         }
     {%endif%}
 {% endfor %}
@@ -18,11 +17,11 @@ layout: json
 {% for page in site.pages %}
     {% if page.layout != 'none' and page.layout != 'none' and page.title != null and page.title != empty and page.search_omit != true %}
         {% if forloop.index > 1 %},{%endif%}{
-            "title": {{page.title | json }},
-            "content": {{page.content | strip_html | strip_newlines | json}},
+            "title": "{{page.title | jsonify }}",
+            "content": {{page.content | jsonify }},
             "link": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}",
             "date": {{ page.date | json }},
-            "excerpt": {{ page.description | json }}
+            "excerpt": {{ page.description | jsonify }}
         }
     {%endif%}
 {% endfor %}
