@@ -3,6 +3,7 @@ layout: post
 title: Sphinx
 tags: [General]
 description: How to use Sphinx
+langs: [en]
 ---
 
 Sphinx is a great tool to generate documentation, but it can be hard to install

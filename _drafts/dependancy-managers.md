@@ -1,3 +1,11 @@
+---
+layout: post
+title: Dependancy Managers
+tags: [General]
+description: List of Dependancy Managers
+langs: [en, fr]
+---
+
 Dependancy Managers
 ===================
 
@@ -153,9 +161,12 @@ http://brew.sh/
 
 To check your installation : `brew doctor`
 
+To update Packages : `brew update`
+
+To upgrade brew : `brew upgrade`
+
 To install a package : `brew install package_name`
 
 Everything is install in the `usr/local/Cellar` directory, so it can be uninstall easily : `brew uninstall package_name`
 
 List all tap used : `brew tap`
-

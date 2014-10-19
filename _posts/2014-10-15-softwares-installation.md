@@ -3,6 +3,7 @@ layout: post
 title: Softwares Installation
 tags: [General]
 description: Install softwares on a MAC
+langs: [fr]
 ---
 
 # Apache

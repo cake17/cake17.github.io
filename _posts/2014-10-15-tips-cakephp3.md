@@ -3,6 +3,7 @@ layout: post
 title: CakePHP 3
 tags: [General]
 description: General Information about CakePHP 3 & Plugins
+langs: [en]
 ---
 
 ### Plugin cakephp-codesniffer

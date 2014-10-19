@@ -3,6 +3,7 @@ layout: post
 title: Contributing to CakePHP docs
 tags: [General]
 description: All you need to know to help the CakePHP community
+langs: [fr]
 ---
 
 Bonjour,
@@ -35,35 +36,45 @@ Le groupe github cakephp-fr regroupant les traducteurs se trouve [ici](https://g
 
 Ci-dessous les étapes pour participer à la traduction :
 
-1. Installez Git sur votre ordinateur [http://git-scm.com/book/fr](http://git-scm.com/book/fr) et inscrivez-vous gratuitement sur github [https://github.com/signup/free](https://github.com/signup/free). Vous pouvez aussi installer le logiciel avec interface graphique sur github dans la section téléchargements.
+1. Installez Git sur votre ordinateur comme expliqué [ici](http://git-scm.com/book/fr/D%C3%A9marrage-rapide-Installation-de-Git) et inscrivez-vous gratuitement sur [Github](https://github.com/signup/free). Vous pouvez aussi installer le logiciel avec interface graphique sur github dans la section téléchargements.
 
-2. Forkez le dépôt officiel de la doc de cakephp [ici](https://github.com/cakephp/docs). Forker veut dire faire une copie du dépôt de la doc officiel `cakephp / docs` sur le serveur de github mais à votre nom `votreNom / docs` (cliquez sur `Fork` en haut à droite de la page des [docs](https://github.com/cakephp/docs)). Vous pourrez ainsi cloner votre dépôt (= récupérer les fichiers sur votre ordinateur) que vous venez de forker et le modifier sur votre ordinateur (Cliquez sur `clone in Desktop` à droite de la page de votre fork https://github.com/votreNom/docs et choisissez l'endroit où vous voulez mettre le dossier des docs sur votre ordinateur).
+2. Forkez le dépôt officiel de la doc de cakephp [ici](https://github.com/cakephp/docs). Forker veut dire faire une copie du dépôt de la doc officiel `cakephp / docs` sur le serveur de github mais à votre nom `votreNom / docs` (cliquez sur `Fork` en haut à droite de la page des [docs](https://github.com/cakephp/docs)).
 
-3. Creez une nouvelle branche
-En effet, cela afin d'éviter les conflits quand vous mettrez vos branches à jour:
+3. Vous pourrez ainsi cloner votre dépôt (= récupérer les fichiers sur votre ordinateur) que vous venez de forker et le modifier sur votre ordinateur (Cliquez sur `clone in Desktop` à droite de la page de votre fork https://github.com/votreNom/docs et choisissez l'endroit où vous voulez mettre le dossier des docs sur votre ordinateur).
+   Un petit schéma pour récapituler les points 2 et 3:
 
-		// dans votre terminal
+   ![Schéma CakePHP docs]({{ site.url }}/assets/media/schema_cakephp_docs.png)
+
+4. Creez une nouvelle branche
+Avec Git en général, il est toujours mieux de ne pas directement travailler sur les branches, mais de créer une nouvelle branche pour faire ses modifications. Cela permet de mettre à jour ses branches locales avec les branches du remote sans avoir de conflits.
+Je vais prendre l'exemple du modification que l'on souhaite faire à la branche 3.0:
+
+		// dans votre terminal, on va dans le dossier des docs
 		cd chemin/vers/docs
-		// Creer une nouvelle branche et aller dessus
+		// on va sur la branche 3.0
+		git checkout 3.0
+		// On créé une nouvelle branche à partir de la 3.0 et on va dessus
 		git checkout -b 3.0-fr-name-of-change
 
-4. Modifier les fichiers de la doc sur votre ordinateur (attention de bien mettre votre éditeur en utf8) et pusher vos modifications vers votre dépôt github:
+5. Modifier les fichiers de la doc sur votre ordinateur (attention de bien mettre votre éditeur en utf8) et pusher vos modifications vers votre dépôt github:
 
-		// dans votre terminal
+		// dans votre terminal, on va dans le dossier des docs (si ce n'est pas déjà le cas)
 		cd chemin/vers/docs
 		// pour voir les fichiers que vous avez modifié
-		git st
+		git status
 		// pour les ajouter et créer un commit
 		git add --all
 		git commit -a -m "[fr] Follow #1111 from english version"
 		// envoi vers votre fork
 		git push origin 3.0-fr-name-of-change
 
-5. Retour sur le site de github sur la page de votre fork https://github.com/votreNom/docs et envoyez une pull request (icone verte à gauche à côté des branches) en comparant les branches 3.0 et 3.0-fr-name-of-change.
+6. Retour sur le site de github sur la page de votre fork https://github.com/votreNom/docs et envoyez une pull request (icone verte à gauche à côté des branches) en comparant les branches 3.0 et 3.0-fr-name-of-change.
 
-6. Cas particulier : quand vous clonez votre dépôt sur votre ordinateur, toutes les branches sont normalement présentes. Dans le cas où la branche 3.0 (ou tout autre branche) n'est pas présente, vous pouvez faire ceci:
+7. Cas particulier : quand vous clonez votre dépôt sur votre ordinateur, toutes les branches sont normalement présentes. Dans le cas où la branche 3.0 (ou tout autre branche) n'est pas présente, vous pouvez faire ceci:
 
+		// on récupère les branches, tags, etc... du remote
 		git fetch origin
+		// on créé la branche à partir du remote et on va dessus
 		git checkout --track origin/3.0
 
 Ça parait un peu compliqué au début, mais à long terme, ça vaut vraiment le coup d'utiliser git pour versionner ses projets. Accrochez-vous et ça coulera bientôt de source ! En plus la majorité des projets open source utilisent git et github, donc l'installation servira !

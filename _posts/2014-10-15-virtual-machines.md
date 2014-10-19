@@ -3,6 +3,7 @@ layout: post
 title: Virtual Machines
 tags: [General]
 description: Install a virtual machine on a MAC
+langs: [en]
 ---
 
 # Vagrant

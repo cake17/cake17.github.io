@@ -3,6 +3,7 @@ layout: post
 title: Cheat sheet for MAC Terminal, Bash and Vim
 tags: [General]
 description: Useful Commands for Mac Terminal
+langs: [fr]
 ---
 
 ### Keyboards Shortcuts and MAC tips
