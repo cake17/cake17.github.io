@@ -75,7 +75,9 @@ Lister le contenu d'un répertoire : `ls`
 
 Lister le contenu d'un répertoire avec les permissions : `ls -l`
 
-Lister le contenu d'un répertoire avec les fichiers cachés : `ls -all`
+Lister le contenu d'un répertoire avec les fichiers cachés : `ls -a`
+
+On peut cumuler les options pour par exemple lister le contenu avec les permissions et les fichiers cachés comme ceci : `ls -la`.
 
 Lister le contenu d'un répertoire avec la taille en octet, ko, mo et go : `ls -lh`
 
@@ -121,7 +123,7 @@ Liste des processus en cours : `top`
 
 Pour savoir qui est connecté : `who`
 
-Pour avoir plus de détails concernant les utilisateurs : `w`
+Pour avoir un résumé de l'ordi, ses utilisateurs connectés, ... : `w`
 
 Pour savoir qui est connecté en local : `users`
 

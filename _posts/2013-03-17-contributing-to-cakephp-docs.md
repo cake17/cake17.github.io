@@ -24,8 +24,8 @@ CakePHP 3 sort bientôt et la documentation est en train d'être remaniée sur g
 
 L'affichage de la doc se trouve :
 
-* CakePHP 2 : [http://book.cakephp.org/2.0/fr/index.html](http://book.cakephp.org/2.0/fr/index.html)
-* CakePHP 3 : (en beta) [http://book.cakephp.org/3.0/fr/index.html](http://book.cakephp.org/3.0/fr/index.html)
+* CakePHP 2 : [CookBook](http://book.cakephp.org/2.0/fr/index.html)
+* CakePHP 3 : (en beta) [CookBook](http://book.cakephp.org/3.0/fr/index.html)
 
 ### QUI TRADUIT ?
 
