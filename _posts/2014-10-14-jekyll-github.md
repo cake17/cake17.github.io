@@ -19,3 +19,7 @@ Run `gem install jekyll`
 ## Local
 
 Run `jekyll serve --watch` in the website repo to launch a local server and to be able to modify files and see the changes directly.
+
+## Search with json
+
+I got the idea from this website `http://mathayward.com/jekyll-search/`.
