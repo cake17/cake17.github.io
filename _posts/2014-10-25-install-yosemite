@@ -1,0 +1,52 @@
+Clean Install Yosemite
+======================
+
+- Download Yosemite on Apple Website
+
+- Faire une clé usb bootable : dans le terminal avec XXXX = nom de la Clé
+
+sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia --volume /Volumes/XXXX --applicationpath /Applications/Install\ OS\ X\ Yosemite.app --nointeraction
+
+- Redémarrer l'ordi avec la clé branchée. Appuyer sur la touche Option.
+
+- Allez dans l'Utilitaire de disques et effacez la partition de votre volume.
+Fermer l'utilitaire et lancez l'installation.
+
+
+Options changées
+================
+
+Finder
+------
+
+- Barre left : cake17, sites, Documents, Applications, Bureau,
+  Téléchargement, AirDrop, Vidéos, Musique, Images
+- options de présentation : Par liste
+- General : Nouvelles fenêtres s’ouvrent dans "Documents"
+- afficher les fichiers cachés
+
+Dock
+----
+
+- la mettre à gauche
+- Finder, AppStore, Pref, Terminal, Safari, Rappels, Itunes, Github, Atom,
+  Imovie, Iphoto, Garage Band, Plans, Transfert d'images
+  || Applications, Téléchargement, Corbeille
+
+Others
+------
+
+- Settings/Trackpad : Toucher pour cliquer, Faire glisser avec 3 doigts, sens du défilement naturel à décocher
+- code wifi
+- Bureau
+    => trier par : aligner sur la grille
+    => options de présentation : diminue la taille des icônes & espacement, taille du texte à 11
+- Ajout des clés et réglages ssh dans `.ssh/`
+- install de brew : `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+brew va installer command-line
+- brew install git et git-completion `brew install git bash-completion`
+- Logiciels à réinstaller : Imovie, Iphoto, GarageBand
+- Logiciels installés : Atom, Github
+
+- git clone cake-websites
+- Puis lancez le shell maj pour installer tous mes projets
