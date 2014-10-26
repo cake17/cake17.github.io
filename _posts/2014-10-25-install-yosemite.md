@@ -55,6 +55,10 @@ brew va installer command-line
 - brew install git et git-completion `brew install git bash-completion`
 - Logiciels à réinstaller : Imovie, Iphoto, GarageBand
 - Logiciels installés : Atom, Github
+- Jekyll : `sudo gem install jekyll`
+- install php55 : brew install php55
+- install Composer : `brew install composer`
+- install mcrypt : brew install mcrypt, puis brew install php55-mcrypt
 
 - git clone cake-websites
 - Puis lancez le shell maj pour installer tous mes projets
