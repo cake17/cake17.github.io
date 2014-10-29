@@ -1,3 +1,11 @@
+---
+layout: post
+title: Atom
+tags: [General]
+description: Use Atom & Create Packages
+langs: [en]
+---
+
 Atom
 ====
 

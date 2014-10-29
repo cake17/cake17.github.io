@@ -19,3 +19,5 @@ To remove duplicate images :
 - Open Iphoto
 - Open Duplicate Cleaner For Iphoto
 - Select your librairy
+
+You can also use `fdupes` to get duplicates files in a path. To install it, do `brew install fdupes` and use `man fdupes` to see commands.
