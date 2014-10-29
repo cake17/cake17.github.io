@@ -10,3 +10,12 @@ Iphoto 11
 =========
 
 To save all images in a folder with sub-folder, go to `File/Export` and Tick `SubFolder : event`
+
+To stop face detection, open a terminal : `defaults write com.apple.iPhoto PKFaceDetectionEnabled 0`
+
+To remove duplicate images :
+
+- download `Duplicate Cleaner For Iphoto`
+- Open Iphoto
+- Open Duplicate Cleaner For Iphoto
+- Select your librairy
