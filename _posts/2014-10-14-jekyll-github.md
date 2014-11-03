@@ -6,20 +6,21 @@ description: How to install and use Jekyll to create static sites
 langs: [en]
 ---
 
-# Jekyll
+## Jekyll
 
 Small website with Static Pages
 You can create a full blog with pre-formated designs.
 Jekyll is used in Github to create personal pages for projects or for develpers.
 
-## Install
+### Install
 
-Run `gem install jekyll`
+Run `sudo gem install jekyll`
 
-## Local
+### Local
 
-Run `jekyll serve --watch` in the website repo to launch a local server and to be able to modify files and see the changes directly.
+Open a terminal, go to the website repo with `cd` and type `jekyll serve -w`.
+This launch a local server and now you can modify files and see the changes directly in your browser at the default address `http://0.0.0.0:4000`.
 
-## Search with json
+### Search with json
 
-I got the idea from this website `http://mathayward.com/jekyll-search/`.
+I got the idea from [this website](http://mathayward.com/jekyll-search)

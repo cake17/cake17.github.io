@@ -6,8 +6,7 @@ description: A reminder for my Yosemite clean install
 langs: [en, fr]
 ---
 
-Clean Install Yosemite
-======================
+## Clean Install Yosemite
 
 - Download Yosemite on Apple Website
 
@@ -21,11 +20,9 @@ sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstall
 Fermer l'utilitaire et lancez l'installation.
 
 
-Options changées
-================
+## Options changées
 
-Finder
-------
+### Finder
 
 - Barre left : cake17, sites, Documents, Applications, Bureau,
   Téléchargement, AirDrop, Vidéos, Musique, Images
@@ -33,21 +30,18 @@ Finder
 - General : Nouvelles fenêtres s’ouvrent dans "Documents"
 - afficher les fichiers cachés
 
-Dock
-----
+### Dock
 
 - la mettre à gauche
 - Finder, AppStore, Pref, Terminal, Safari, Rappels, Itunes, Github, Atom,
   Imovie, Iphoto, Garage Band, Plans, Transfert d'images
   || Applications, Téléchargement, Corbeille
 
-Clavier
--------
+### Clavier
 
 Mettre en `français numérique` pour pouvoir utiliser les majuscules avec la touche Verrouillage Majuscule.
 
-Others
-------
+### Others
 
 - Settings/Trackpad : Toucher pour cliquer, Faire glisser avec 3 doigts, sens du défilement naturel à décocher
 - code wifi
