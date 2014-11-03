@@ -21,14 +21,17 @@ Translate docs for plugins maintained by cakephp's group.
 
 ### Graphics
 
-- Bootstrap Twitter 3 : Framework CSS
-- Foundation : Framework CSS
-- VenoBox : Responsive Jquery Modal for Images
-- OwlCarousel : Responsive Carousel
+- [Bootstrap Twitter 3](http://getbootstrap.com) : Framework CSS
+- [Foundation](http://foundation.zurb.com) : Framework CSS
+- [VenoBox](http://lab.veno.it/venobox) : Responsive Jquery Modal for Images
+- [OwlCarousel](http://www.owlcarousel.owlgraphic.com) : Responsive Carousel
 - [Sprite Generator](http://spritegen.website-performance.org) : Generates sprites for icons
-- HTML Validation : http://validator.w3.org
-- CSS Validation : http://jigsaw.w3.org/css-validator
-- Test HTML+CSS+JS code : http://jsbin.com/
+- [HTML Validation](http://validator.w3.org)
+- [CSS Validation](http://jigsaw.w3.org/css-validator)
+- Test [HTML+CSS+JS code](http://jsbin.com)
+- [Sass language](http://sass-lang.com)
+- [Compass framework](http://compass-style.org)
+- [Less](http://lesscss.org)
 
 ### Environnment Tools & Config for Mac
 
@@ -51,6 +54,7 @@ Translate docs for plugins maintained by cakephp's group.
 ### Other Libs
 - [Discourse](https://github.com/discourse/discourse) : Forum
 - [Jekyll](http://jekyllrb.com) : Static Sites
+- [Middle Man](http://middlemanapp.com/basics/dynamic-pages) : Dynamics Pages
 
 ### CakePHP Plugins
 
