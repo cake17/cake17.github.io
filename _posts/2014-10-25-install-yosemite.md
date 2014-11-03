@@ -63,10 +63,17 @@ brew va installer command-line
 - Logiciels à réinstaller depuis l'App Store : Imovie, Iphoto, GarageBand
 - Logiciels à installer : Atom, Github, Gimp, Docker, PoEdit, Vlc, Skype
 - Jekyll : `sudo gem install jekyll`
-- install php55 : brew install php55
-- install Composer : `brew install composer`
-- install mcrypt : brew install mcrypt, puis brew install php55-mcrypt
-  To finish installing mcrypt for PHP 5.5:
+
+- Install php55, composer and mcrypt:
+
+        brew tap homebrew/dupes
+        brew tap homebrew/php
+        brew install php55
+        brew install composer
+        brew install mcrypt
+        brew install php55-mcrypt
+
+To finish installing mcrypt for PHP 5.5:
     - /usr/local/etc/php/5.5/conf.d/ext-mcrypt.ini was created, do not forget to remove it upon extension removal.
     - Validate installation via one of the following methods:
         - Using PHP from a webserver:
