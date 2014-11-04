@@ -47,16 +47,6 @@ Toutes ces limitations vont être outrepassées grâce au langage SASS. On va é
 
 Pour cela on va utiliser un framework comme Compass.
 
-## Grunt
-
-Tool to acts on js files : minify, compile, test, ...
-
-### Installation
-
-You need node.js : `brew install node`
-
-Then : `npm install -g grunt-cli`
-
 
 ## Références
 
