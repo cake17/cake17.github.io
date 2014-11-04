@@ -6,9 +6,9 @@ description: Install softwares on a MAC
 langs: [fr]
 ---
 
-# Apache
+## Apache
 
-## Description
+### Description
 
 Permet d’héberger des sites
 
@@ -20,12 +20,12 @@ In /etc/apache2/httpd.conf, décommentez la ligne:
 
 	LoadModule php5_module        libexec/apache2/libphp5.so
 
-## Virtual hosts
+### Virtual hosts
 
 Pour pouvoir travailler sur plusieurs sites, on utilise les Virtual Hosts et
 les entrées DNS.
 
-## Local DNS entries
+### Local DNS entries
 
 D'abord vous devez entrer vos entrées DNS local – yoursite.dev, test.local ou
 ce que vous préférez.
@@ -50,7 +50,7 @@ En effet, Apache charge le site par défaut.
 Il n'y a pas de virtual hosts configurés pour le moment, donc tout pointe vers
 le site racine.
 
-## Créer un répertoire pour les sites
+### Créer un répertoire pour les sites
 
 Commencez un nouveau site dans le dossier /Sites et créez un nouveau site avec
 une seule page:
@@ -63,7 +63,7 @@ une seule page:
 Le dossier aura un fichier appelé index.html qui contient
 "Ceci est un test.local".
 
-## Créer un virtual host
+### Créer un virtual host
 
 Pour que Apache charge le fichier index.html, vous devez créer un hôte virtuel
 qui pointe vers le dossier que vous avez créé. Entrez ceci:
@@ -112,7 +112,7 @@ voir "This is test.local". Succès!
 Repetez ces étapes pour chaque site que vous souhaitez configurer.
 
 
-# MySql
+## MySql
 
 Permet de faire fonctionner un serveur MySql
 
@@ -136,7 +136,7 @@ Dans /etc/php.ini, remplacez les 3 occurences de /var/mysql/mysql.sock par /tmp/
     mysql.default_socket = /tmp/mysql.sock
     mysqli.default_socket = /tmp/mysql.sock
 
-## Launch and stop
+### Launch and stop
 
 Lancez : `mysql.server start`
 
@@ -149,14 +149,14 @@ de configuration du système `/etc/hostconfig`. Si vous voulez désactiver le d�
 `MYSQLCOM=-NO-`.
 
 
-# PhpMyAdmin
+## PhpMyAdmin
 
-Permet de gérer les bases de données MySql et de voir les infos de php.
-Adminer is also another tool that could be installed instead.
+To handle MySql databases.
+I know prefer `Adminer` as it's lighter.
 
-## Installation
+### Installation
 
-	brew install phpmyadmin
+- PhpMyAdmin : `brew install phpmyadmin`
 
 Faites une copie de
 “/Library/WebServer/Documents/phpMyAdmin/config.sample.inc.php” dans le même
@@ -167,14 +167,16 @@ Modifiez “config.inc.php” et mettez la variable “AllowNoPassword” à tru
 Cela va nous permettre de nous connecter à MySQL avec l'user `root` avec un mot
 de passe vide.
 
-    $cfg['Servers'][$i]['AllowNoPassword'] = true;
+	$cfg['Servers'][$i]['AllowNoPassword'] = true;
 
 Allez avec votre navigateur à l'adresse : http://localhost/phpMyAdmin/.
 
 Connectez vous avec l'utilisateur `root` et laissez le mot de passe vide.
 
+- Adminer
 
-# Jenkins
+
+## Jenkins
 
 Permet de faire de l’intégration continue.
 
@@ -187,14 +189,13 @@ Stop Jenkins
 	sudo launchctl unload /Library/LaunchDaemons/org.jenkins-ci.plist
 
 
-# XDebug
+## XDebug
 
 Site officiel : http://xdebug.org/
 
 
-# NetBeans
+## Text Editors
 
-Sublime Text 3 is also a great editor
-
-Préférences : PHP / Unit Testing
-Search (moi il se trouve dans /usr/bin/phpunit)
+- Atom : I know use this one as it's the one developed by Github. Light but functionnal.
+- NetBeans : I used it a while, it's really complete but it's a little slow on my machine.
+- Sublime Text 3 is also a great editor.
