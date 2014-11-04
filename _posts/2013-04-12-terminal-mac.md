@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Cheat sheet for MAC Terminal, Bash and Vim
+title: Cheat sheet pour MAC Terminal, Bash et Vim
 tags: [General]
-description: Useful Commands for Mac Terminal
+description: Commandes utiles pour le terminal de Mac
 langs: [fr]
 ---
 

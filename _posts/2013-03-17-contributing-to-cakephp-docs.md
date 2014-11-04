@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Contributing to CakePHP docs
+title: Contribuer aux docs de CakePHP
 tags: [General]
-description: All you need to know to help the CakePHP community
+description: Tout ce dont vous avez besoin pour aider à traduire la documentation de CakePHP
 langs: [fr]
 ---
 
@@ -102,3 +102,7 @@ D'autres projets autour de CakePHP n'ont toujours pas de traduction française. 
 * Localized : Dépôt officiel sur le compte github de cakephp : [https://github.com/cakephp/localized](https://github.com/cakephp/localized)
 
 En espérant vous avoir donné envie de participer à ce travail de traduction!
+
+### Outils pour générer la documentation
+
+Plus d'infos dans [cet article](http://cake17.github.io/2014/11/04/sphinx.html)

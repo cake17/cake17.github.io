@@ -61,6 +61,16 @@ brew will install command-line
 ### With Gem
 
 - Jekyll : `sudo gem install jekyll`
+- Middleman : `sudo gem install middleman`
+- Sass : `sudo gem install sass`
+- Compass : `sudo gem install compass`
+
+### With npm
+
+Needs to install node.js for grunt & gulp : `brew install node`
+
+- Grunt : `npm install -g grunt-cli`
+- Gulp : `npm install --global gulp`
 
 ### For sphinx docs (cakephp docs)
 

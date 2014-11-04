@@ -24,3 +24,5 @@ This launch a local server and now you can modify files and see the changes dire
 ### Search with json
 
 I got the idea from [this website](http://mathayward.com/jekyll-search)
+
+This blog uses it so you can have a look at my repo on Github.

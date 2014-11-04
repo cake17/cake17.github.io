@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Show Presentation
+title: Bespoke.js - Show Presentation
 tags: [General]
 description: To make a nice slideshow presentation
 langs: [en]
