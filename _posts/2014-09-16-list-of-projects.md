@@ -56,6 +56,9 @@ Translate docs for plugins maintained by cakephp's group.
 - [Jekyll](http://jekyllrb.com) : Static Sites
 - [Middle Man](http://middlemanapp.com/basics/dynamic-pages) : Dynamics Pages
 
+- [Hammer.js](http://hammerjs.github.io) : Add touch gestures to jquery
+- Elastic Search
+
 ### CakePHP Plugins
 
 - **cakephp/debug_kit** : Gives debug infos about your app
