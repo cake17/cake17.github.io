@@ -8,7 +8,7 @@ author:
   name: cake17
   email: cake17@cake-websites.com
   github: cake17
-  bio: 
+  bio:
   email_md5: HBfd!8é!çà99098872
 
 ## Where things are
@@ -46,7 +46,8 @@ unpublished:	false
 
 ## Plugins
 whitelist:	[]
-gems:		[]
+gems:
+  - jekyll-sitemap
 
 ## Conversion
 markdown:		kramdown
