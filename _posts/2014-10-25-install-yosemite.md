@@ -48,9 +48,10 @@ First install brew : `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Ho
 
     - brew install git
     - brew install git bash-completion
-      if [ -f `brew --prefix`/etc/bash_completion ]; then
-        . `brew --prefix`/etc/bash_completion
-      fi
+          if [ -f `brew --prefix`/etc/bash_completion ]; then
+            . `brew --prefix`/etc/bash_completion
+          fi
+
 
 - Install php55, composer and mcrypt:
 
@@ -60,10 +61,11 @@ First install brew : `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Ho
     - brew install mcrypt
     - brew install php55-mcrypt
 
+
 - Install Composer globally (not with Composer as composer version is old)
 
-    curl -sS https://getcomposer.org/installer | php
-    mv composer.phar /usr/local/bin/composer
+      curl -sS https://getcomposer.org/installer | php
+      mv composer.phar /usr/local/bin/composer
 
 - Configure Apache2
 
@@ -99,6 +101,7 @@ Change in `/etc/apache2/extra/httpd-vhosts.conf`, comment everything and add:
         ErrorLog "/Users/cake17/sites/logs/apache2/sites.com-error_log"
         CustomLog "/private/var/log/apache2/sites-access_log" common
     </VirtualHost>
+
 
 - Install Mysql
 
