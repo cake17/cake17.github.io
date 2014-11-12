@@ -30,6 +30,7 @@ Fermer l'utilitaire et lancez l'installation.
 
 ### With Browser
 
+- Firefox
 - Atom
 - Github
 - Gimp
@@ -38,25 +39,71 @@ Fermer l'utilitaire et lancez l'installation.
 - Vlc
 - Skype
 
-### With Homebrew : `brew install NAME`
+### With Homebrew
 
 First install brew : `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-brew will install command-line
+(brew will install Apple Xcode command-line, follow instructions to install it)
 
-- git
-- git bash-completion
+- Install softwares
+
+    - brew install git
+    - brew install git bash-completion
       if [ -f `brew --prefix`/etc/bash_completion ]; then
         . `brew --prefix`/etc/bash_completion
       fi
 
 - Install php55, composer and mcrypt:
 
-        brew tap homebrew/dupes
-        brew tap homebrew/php
-        brew install php55
-        brew install composer
-        brew install mcrypt
-        brew install php55-mcrypt
+    - brew tap homebrew/dupes
+    - brew tap homebrew/php
+    - brew install php55
+    - brew install mcrypt
+    - brew install php55-mcrypt
+
+- Install Composer globally (not with Composer as composer version is old)
+
+    curl -sS https://getcomposer.org/installer | php
+    mv composer.phar /usr/local/bin/composer
+
+- Configure Apache2
+
+Add this in `/etc/hosts`:
+
+     127.0.0.1       local.dev
+     127.0.0.1       www.local.dev
+
+Change `/etc/apache2/httpd.conf`:
+
+    Uncomment : `LoadModule rewrite_module  libexec/apache2/mod_rewrite.so`
+    Add this : `LoadModule php5_module /usr/local/Cellar/php55/5.5.18/libexec/apache2/libphp5.so`
+    ServerAdmin myemailadress@example.com
+    ServerName www.local.dev:80
+    DocumentRoot "/Users/cake17/sites"
+    <Directory "/Users/cake17/sites">
+        Options FollowSymLinks Multiviews Indexes
+        MultiviewsMatch Any
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ErrorLog "/sites/logs/apache2/error_log"
+    CustomLog "/sites/logs/apache2/access_log" common
+    Uncomment `Include /private/etc/apache2/extra/httpd-vhosts.conf`
+
+Change in `/etc/apache2/extra/httpd-vhosts.conf`, comment everything and add:
+
+    <VirtualHost *:80>
+        ServerAdmin cake17@cake-websites.com
+        DocumentRoot "/Users/cake17/sites"
+        ServerName local.dev
+        ServerAlias www.local.dev
+        ErrorLog "/Users/cake17/sites/logs/apache2/sites.com-error_log"
+        CustomLog "/private/var/log/apache2/sites-access_log" common
+    </VirtualHost>
+
+- Install Mysql
+
+`brew install mysql`, then `mysql.server start` and `mysql.server stop` to start/stop mysql server.
+
 
 ### With Gem
 
@@ -95,8 +142,8 @@ Needs to install node.js for grunt & gulp : `brew install node`
 ### Dock
 
 - la mettre à gauche
-- Finder, AppStore, Pref, Terminal, Safari, Rappels, Itunes, Github, Atom,
-  Imovie, Iphoto, Garage Band, Plans, Transfert d'images
+- Finder, AppStore, Pref, Terminal, Firefox, Safari, Rappels, Itunes, Github, Docker, Atom, PoEdit,
+  Imovie, Iphoto, Garage Band, Gimp, Vlc, Skype, Plans, Transfert d'images
   || Applications, Téléchargement, Corbeille
 
 ### Clavier

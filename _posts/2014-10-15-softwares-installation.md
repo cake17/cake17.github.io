@@ -40,7 +40,7 @@ domaine:
 
 	127.0.0.1    test.local
 
-Utilisez l'addresse IP 127.0.0.1 puisqu'elle pointe vers votre machine locale.
+Utilisez l'adresse IP 127.0.0.1 puisqu'elle pointe vers votre machine locale.
 
 Une fois que c'est fait, sauvegardez le fichier et ouvrez `http://test.local/`
 dans un navigateur. Vous devriez voir la page “It works!”.
@@ -175,6 +175,7 @@ Connectez vous avec l'utilisateur `root` et laissez le mot de passe vide.
 
 - Adminer
 
+Download it and create a virtual host to launch it
 
 ## Jenkins
 
