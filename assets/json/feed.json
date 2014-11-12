@@ -1,5 +1,6 @@
 ---
 layout: json
+sitemap: false
 ---
 [
 {% for post in site.posts %}
