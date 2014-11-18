@@ -46,7 +46,6 @@ First install brew : `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Ho
 
 - Install softwares
 
-    - brew install git
     - brew install git bash-completion
           if [ -f `brew --prefix`/etc/bash_completion ]; then
             . `brew --prefix`/etc/bash_completion
@@ -107,6 +106,16 @@ Change in `/etc/apache2/extra/httpd-vhosts.conf`, comment everything and add:
 
 `brew install mysql`, then `mysql.server start` and `mysql.server stop` to start/stop mysql server.
 
+To connect:
+    mysql -uroot
+
+To have launchd start mysql at login:
+    mkdir -p ~/Library/LaunchAgents
+    ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+Then to load mysql now:
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+Or, if you don't want/need launchctl, you can just run:
+    mysql.server start
 
 ### With Gem
 
