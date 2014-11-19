@@ -52,7 +52,7 @@ Config
 
 The config file `apigen.neon` is written in [neon format](http://ne-on.org) and is at the root of your project (or create it). Remove the brackets if they exist. Example:
 
-{% highlight neon linenos %}
+{% highlight json linenos %}
 source:
   - src
 

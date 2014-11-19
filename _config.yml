@@ -53,8 +53,8 @@ gems:
 markdown:		kramdown
 kramdown:
   input: GFM # use Github Flavored Markdown
-highlighter:		true # default : pygments
-lsi:			false
+highlighter: true # default : pygments
+lsi: false
 excerpt_separator:	"\n\n"
 
 ## Serving
