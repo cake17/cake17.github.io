@@ -39,3 +39,64 @@ PHPUnit will generate a set of static HTML files containing the coverage results
 	./bin/phpunit --coverage-html webroot/coverage tests/TestCase/Model/Table/ArticlesTableTest
 
 Go in to http://localhost/your_app/coverage to see the results
+
+### ApiGen
+
+You can use directly [ApiGen](https://github.com/apigen/apigen) in your projects to generate a complete html website with your Api.
+
+Install
+
+  composer require apigen/apigen --dev
+
+Config
+
+The config file `apigen.neon` is written in [neon format](http://ne-on.org) and is at the root of your project (or create it). Remove the brackets if they exist. Example:
+
+  source:
+  	- src
+
+  destination: api
+  extensions:
+  	- php
+
+  exclude:
+  	- tests/
+  	- vendor/
+  	- *Factory.php
+
+  skipDocPath:
+  	- * <mask>```
+
+  skipDocPrefix:
+  	- Nette
+
+  charset:
+  	- UTF-8
+
+  main: Project
+  title: Project API
+  templateTheme: bootstrap
+  groups: auto
+  autocomplete:
+  	- classes
+  	- constants
+  	- functions
+  	- methods
+  	- properties
+  	- classconstants
+
+  accessLevels:
+  	- public
+  	- protected
+
+  internal: false
+  php: true
+  tree: true
+  deprecated: false
+  todo: false
+  download: false
+
+
+Generate Api
+
+  php vendor/bin/apigen generate
