@@ -49,15 +49,18 @@ Ci-dessous les étapes pour participer à la traduction :
 Avec Git en général, il est toujours mieux de ne pas directement travailler sur les branches, mais de créer une nouvelle branche pour faire ses modifications. Cela permet de mettre à jour ses branches locales avec les branches du remote sans avoir de conflits.
 Je vais prendre l'exemple du modification que l'on souhaite faire à la branche 3.0:
 
+{% highlight bash %}
 		// dans votre terminal, on va dans le dossier des docs
 		cd chemin/vers/docs
 		// on va sur la branche 3.0
 		git checkout 3.0
 		// On créé une nouvelle branche à partir de la 3.0 et on va dessus
 		git checkout -b 3.0-fr-name-of-change
+{% endhighlight %}
 
 5. Modifier les fichiers de la doc sur votre ordinateur (attention de bien mettre votre éditeur en utf8) et pusher vos modifications vers votre dépôt github:
 
+{% highlight bash %}
 		// dans votre terminal, on va dans le dossier des docs (si ce n'est pas déjà le cas)
 		cd chemin/vers/docs
 		// pour voir les fichiers que vous avez modifié
@@ -67,15 +70,18 @@ Je vais prendre l'exemple du modification que l'on souhaite faire à la branche 
 		git commit -a -m "[fr] Follow #1111 from english version"
 		// envoi vers votre fork
 		git push origin 3.0-fr-name-of-change
+{% endhighlight %}
 
 6. Retour sur le site de github sur la page de votre fork https://github.com/votreNom/docs et envoyez une pull request (icone verte à gauche à côté des branches) en comparant les branches 3.0 et 3.0-fr-name-of-change.
 
 7. Cas particulier : quand vous clonez votre dépôt sur votre ordinateur, toutes les branches sont normalement présentes. Dans le cas où la branche 3.0 (ou tout autre branche) n'est pas présente, vous pouvez faire ceci:
 
+{% highlight bash %}
 		// on récupère les branches, tags, etc... du remote
 		git fetch origin
 		// on créé la branche à partir du remote et on va dessus
 		git checkout --track origin/3.0
+{% endhighlight %}
 
 Ça parait un peu compliqué au début, mais à long terme, ça vaut vraiment le coup d'utiliser git pour versionner ses projets. Accrochez-vous et ça coulera bientôt de source ! En plus la majorité des projets open source utilisent git et github, donc l'installation servira !
 

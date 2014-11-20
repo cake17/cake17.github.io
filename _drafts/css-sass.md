@@ -24,10 +24,13 @@ Prenons l'exemple de 2 elements html:
     <div class="round">Autre boite ronde dans la page</div>
 
 Le css:
+
+{% highlight css %}
     .round {
         -moz-border-radius: 15px;
         border-radius: 15px;
     }
+{% endhighlight %}
 
 Ainsi les deux boites seront arrondis.
 

@@ -12,23 +12,18 @@ langs: [fr]
 
 Permet d’héberger des sites
 
-	Démarrer Apache : sudo apachectl start
-	Re-démarrer Apache : sudo apachectl restart
-	Stopper Apache : sudo apachectl stop
+Démarrer Apache : sudo apachectl start
+Re-démarrer Apache : sudo apachectl restart
+Stopper Apache : sudo apachectl stop
 
-In /etc/apache2/httpd.conf, décommentez la ligne:
-
-	LoadModule php5_module        libexec/apache2/libphp5.so
 
 ### Virtual hosts
 
-Pour pouvoir travailler sur plusieurs sites, on utilise les Virtual Hosts et
-les entrées DNS.
+Pour pouvoir travailler sur plusieurs sites, on utilise les Virtual Hosts et les entrées DNS.
 
 ### Local DNS entries
 
-D'abord vous devez entrer vos entrées DNS local – yoursite.dev, test.local ou
-ce que vous préférez.
+D'abord vous devez entrer vos entrées DNS local – yoursite.dev, test.local ou ce que vous préférez.
 
 Vous pouvez ajouter autant d'entrées que vous le souhaitez dans le fichier
 `/etc/hosts`:
@@ -42,13 +37,11 @@ domaine:
 
 Utilisez l'adresse IP 127.0.0.1 puisqu'elle pointe vers votre machine locale.
 
-Une fois que c'est fait, sauvegardez le fichier et ouvrez `http://test.local/`
-dans un navigateur. Vous devriez voir la page “It works!”.
+Une fois que c'est fait, sauvegardez le fichier et ouvrez `http://test.local/` dans un navigateur. Vous devriez voir la page “It works!”.
 
 En effet, Apache charge le site par défaut.
 
-Il n'y a pas de virtual hosts configurés pour le moment, donc tout pointe vers
-le site racine.
+Il n'y a pas de virtual hosts configurés pour le moment, donc tout pointe vers le site racine.
 
 ### Créer un répertoire pour les sites
 
@@ -116,25 +109,14 @@ Repetez ces étapes pour chaque site que vous souhaitez configurer.
 
 Permet de faire fonctionner un serveur MySql
 
+Install : `brew install mysql`
+
 Voir la version de mySql:
 
 	mysql -v
 	(la mienne : Server version: 5.6.11 MySQL Community Server (GPL))
 
 Commande pour sortir de mysql : `quit ou exit`
-
-Install : `brew install mysql`
-
-Vérifiez que cela fonctionne:
-
-    /usr/local/mysql/bin/mysql
-
-Fix mysql.sock location in php.ini
-Dans /etc/php.ini, remplacez les 3 occurences de /var/mysql/mysql.sock par /tmp/mysql.sock
-
-    pdo_mysql.default_socket=/tmp/mysql.sock
-    mysql.default_socket = /tmp/mysql.sock
-    mysqli.default_socket = /tmp/mysql.sock
 
 ### Launch and stop
 
@@ -144,8 +126,7 @@ Stop : `mysql.server stop`
 
 Re-démarrez Apache : `sudo apachectl restart`
 
-L'installation de Startup Item ajoute une variable `MYSQLCOM=-YES-` au fichier
-de configuration du système `/etc/hostconfig`. Si vous voulez désactiver le démarrage automatique de MySQL, changez simplement cette variable en
+L'installation de Startup Item ajoute une variable `MYSQLCOM=-YES-` au fichier de configuration du système `/etc/hostconfig`. Si vous voulez désactiver le démarrage automatique de MySQL, changez simplement cette variable en
 `MYSQLCOM=-NO-`.
 
 

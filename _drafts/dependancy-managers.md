@@ -55,6 +55,7 @@ C'est dans le fichier composer.json que vous allez définir les plugins et dépe
 
 Un exemple simple de ce fichier :
 
+{% highlight json %}
 {
 	"name": "votreNom/nomApp",
 	"description": "mon application perso",
@@ -84,6 +85,7 @@ Un exemple simple de ce fichier :
 	"scripts": {
 		"post-install-cmd": "App\\Console\\Installer::postInstall"        }
 	}
+{% endhighlight %}
 
 #### Quelques explications :
 
