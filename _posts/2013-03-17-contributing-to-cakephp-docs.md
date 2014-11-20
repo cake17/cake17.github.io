@@ -49,7 +49,7 @@ Ci-dessous les étapes pour participer à la traduction :
 Avec Git en général, il est toujours mieux de ne pas directement travailler sur les branches, mais de créer une nouvelle branche pour faire ses modifications. Cela permet de mettre à jour ses branches locales avec les branches du remote sans avoir de conflits.
 Je vais prendre l'exemple du modification que l'on souhaite faire à la branche 3.0:
 
-{% highlight bash %}
+{% highlight bash linenos %}
 // dans votre terminal, on va dans le dossier des docs
 cd chemin/vers/docs
 // on va sur la branche 3.0
@@ -60,7 +60,7 @@ git checkout -b 3.0-fr-name-of-change
 
 5. Modifier les fichiers de la doc sur votre ordinateur (attention de bien mettre votre éditeur en utf8) et pusher vos modifications vers votre dépôt github:
 
-{% highlight bash %}
+{% highlight bash linenos %}
 // dans votre terminal, on va dans le dossier des docs (si ce n'est pas déjà le cas)
 cd chemin/vers/docs
 // pour voir les fichiers que vous avez modifié
@@ -76,7 +76,7 @@ git push origin 3.0-fr-name-of-change
 
 7. Cas particulier : quand vous clonez votre dépôt sur votre ordinateur, toutes les branches sont normalement présentes. Dans le cas où la branche 3.0 (ou tout autre branche) n'est pas présente, vous pouvez faire ceci:
 
-{% highlight bash %}
+{% highlight bash linenos %}
 // on récupère les branches, tags, etc... du remote
 git fetch origin
 // on créé la branche à partir du remote et on va dessus
