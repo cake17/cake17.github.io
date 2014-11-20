@@ -90,5 +90,5 @@ defaults:
 rss_path: feed.xml
 tags_path: tags.html
 
-paginate: 10
+paginate: 20
 paginate_path: "page:num"
