@@ -160,6 +160,23 @@ Download it and create a virtual host to launch it
 
 ## Jenkins
 
+Install : `brew install jenkins`
+
+Note: When using launchctl the port will be 8080.
+
+To have launchd start jenkins at login:
+
+		mkdir -p ~/Library/LaunchAgents
+		ln -sfv /usr/local/opt/jenkins/*.plist ~/Library/LaunchAgents
+
+Then to load jenkins now:
+
+		launchctl load ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
+
+Or, if you don't want/need launchctl, you can just run:
+
+		java -jar /usr/local/opt/jenkins/libexec/jenkins.war
+
 Permet de faire de l’intégration continue.
 
 Start Jenkins
