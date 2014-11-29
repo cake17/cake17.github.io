@@ -17,6 +17,7 @@ There will be 3 main areas:
 - a folder with the project served by Apache
 - my project created locally
 
+![Deploy Schema]({{ site.url }}/assets/media/deploy-cakephp.png)
 
 Remote
 ======
