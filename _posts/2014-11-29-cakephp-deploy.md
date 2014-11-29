@@ -16,8 +16,8 @@ A small schema to see how it works:
 ![Deploy Schema]({{ site.url }}/assets/media/deploy-cakephp.png)
 
 
-1. Remote
-=========
+1 Remote
+========
 
 1.1 Access to Remote
 --------------------
@@ -78,7 +78,7 @@ echo "Finished Deploy" >> $LOGFILE
 And create the folder in `/volume1/web/cakephp3-test`
 
 
-2. Local
+2 Local
 ========
 
 2.1 Create a CakePHP repo
@@ -102,7 +102,7 @@ git push origin master
 {% endhighlight %}
 
 
-3. Remote
+3 Remote
 =========
 
 3.1 Apache Config On Synology
@@ -136,7 +136,7 @@ Change the following sections:
 - Salt (normally already defined but check it)
 
 
-4. Locally
+4 Locally
 ==========
 
 4.1 Gitignore
