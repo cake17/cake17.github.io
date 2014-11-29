@@ -155,7 +155,17 @@ git commit -a -m "add gitignore rules again"
 git push origin master
 {% endhighlight %}
 
-4.2 Create your project, add Plugins
+4.2 Add a git hook locally
+--------------------------
+
+First add the cakephp-codesniffer and phpunit in composer.json.
+Go [here](http://cake17.github.io/2014/10/15/tips-cakephp3.html) if you need more information on how to install.
+
+To add the git hook, do the following things in the `pre-commit` hook:
+- phpunit
+- phpcs
+
+4.3 Create your project, add Plugins
 ------------------------------------
 
 Now you can add everything you need in your project and then each time you push on your remote, it will deploy it in the `/volume1/web/cakephp3-test` and launch a `composer install`.
