@@ -29,14 +29,18 @@ So basically, you should be able to access to your remote with something like th
 
 {% highlight bash linenos %}
 ssh git@serveName
-// or if you changed your ssh port on your server (strongly advised :-)). For example if your ssh port is on 7373.
+// or if you changed your ssh port on your server (strongly advised :-)).
+// For example if your ssh port is on 7373.
 ssh git@serveName -p 7373
 {% endhighlight %}
 
 1.2 Create a Git Bare Repository
 --------------------------------
 
+{% highlight bash linenos %}
+cd /volume1/repositories/prod
 git init --bare cakephp3-test.git
+{% endhighlight %}
 
 1.3 Setup Git Hooks
 -------------------
@@ -84,14 +88,17 @@ And create the folder in `/volume1/web/cakephp3-test`
 2.1 Create a CakePHP repo
 -------------------------
 
+{% highlight bash linenos %}
 composer create-project --prefer-dist -s dev cakephp/app cakephp3-test
 cd cakephp3-test
-add composer.phar : `curl -sS https://getcomposer.org/installer | php`
+// add composer.phar
+curl -sS https://getcomposer.org/installer | php
 git init
-remove tmp/ and logs/ from .gitignore (temporarly)
-add plugins/DebugKit in .gitignore
+// remove tmp/ and logs/ from .gitignore (temporarly)
+// add plugins/DebugKit in .gitignore
 git add --all
 git commit -a -m "initialize cakephp3 project"
+{% endhighlight %}
 
 2.2 Push to Remote
 ------------------
@@ -113,7 +120,7 @@ Click on Hôte Virtuel
 
 {% highlight vim linenos %}
 Nom du Sous-dossier		Nom d'hôte
-cakephp3-test 				www.nomdomaine.com
+cakephp3-test 	www.nomdomaine.com
 {% endhighlight %}
 
 3.2 Check the Website
@@ -142,9 +149,11 @@ Change the following sections:
 4.1 Gitignore
 -------------
 
-Re-add tmp/ and logs/ in .gitignore
+{% highlight bash linenos %}
+// Re-add tmp/ and logs/ in .gitignore
 git commit -a -m "add gitignore rules again"
 git push origin master
+{% endhighlight %}
 
 4.2 Create your project, add Plugins
 ------------------------------------
