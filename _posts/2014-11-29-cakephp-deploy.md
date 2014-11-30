@@ -161,11 +161,58 @@ git push origin master
 First add the cakephp-codesniffer and phpunit in composer.json.
 Go [here](http://cake17.github.io/2014/10/15/tips-cakephp3.html) if you need more information on how to install.
 
-To add the git hook, do the following things in the `pre-commit` hook:
-- phpunit
-- phpcs
+Basically add this in composer.json:
+
+{% highlight bash linenos %}
+"require": {
+  ...
+  "phpunit/phpunit": "*",
+  "cakephp/cakephp-codesniffer": "dev-master"
+  ...
+},
+{% endhighlight %}
+
+I got (help from here)[http://tech.zumba.com/2014/04/14/control-code-quality/]
+
+Add a bin/pre-commit file (see link)
+
+And a setup.sh file that composer will launch, put this in scripts section:
+
+{% highlight json linenos %}
+"scripts": {
+  "post-install-cmd": [
+    "App\\Console\\Installer::postInstall"
+  ],
+  "post-update-cmd": [
+    "bash bin/setup.sh"
+  ]
+},
+{% endhighlight %}
+
+Don't forget to `chmod +x bin/setup.sh`
+
+{% highlight bash linenos %}
+#!/bin/sh
+
+cp bin/pre-commit .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+{% endhighlight %}
 
 4.3 Create your project, add Plugins
 ------------------------------------
 
 Now you can add everything you need in your project and then each time you push on your remote, it will deploy it in the `/volume1/web/cakephp3-test` and launch a `composer install`.
+
+4.4 Another computer or contributor
+-----------------------------------
+
+If you need to install a copy of the project on another computer, you can just make `git clone ssh://syno_git/volume1/repositories/prod/cakephp3-test.git`.
+And launch composer install.
+
+5 Issues
+========
+
+5.1 Mysql/MariaDb
+-----------------
+
+I had to change my /etc/mysql/my.conf to increase the `max_allowed_packet = 10M`
