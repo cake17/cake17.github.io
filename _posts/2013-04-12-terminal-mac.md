@@ -24,6 +24,8 @@ Desactiver le DashBoard sur mac OSX 10.9:
     defaults write com.apple.dashboard mcx-disabled -boolean NO
     `killall Dock`
 
+Si le ventilateur marche fort ou que la carte sd n'est pas reconnue pour un MacBook, on peut faire un [reset smc](http://support.apple.com/fr-fr/HT3964) et un [reset pram](http://support.apple.com/kb/PH14222?viewlocale=fr_FR)
+
 ### Vim
 
 Pour lire un fichier : `vim /path/to/file`
