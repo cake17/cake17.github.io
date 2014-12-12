@@ -65,19 +65,23 @@ LOGFILE=./post-receive.log
 echo -e "Received Push Request at $( date +%F )" >> $LOGFILE
 echo " - Old SHA: $oldrev New SHA: $newrev Branch Name: $refname" >> $LOGFILE
 
-## Update the deployed copy
-echo "Starting Deploy" >> $LOGFILE
+# deploy only for master branch
+if [[ $ref =~ .*/master$ ]];
+then
+  ## Update the deployed copy
+  echo "Starting Deploy" >> $LOGFILE
 
-echo " - Starting code update"
-GIT_WORK_TREE="$DEPLOYDIR" git checkout -f
-echo " - Finished code update"
+  echo " - Starting code update"
+  GIT_WORK_TREE="$DEPLOYDIR" git checkout -f
+  echo " - Finished code update"
 
-echo " - Starting composer install"
-cd "$DEPLOYDIR"; php composer.phar install --prefer-dist; cd -
-echo " - Finished composer install"
+  echo " - Starting composer install"
+  cd "$DEPLOYDIR"; php composer.phar install --prefer-dist; cd -
+  echo " - Finished composer install"
 
-echo "Finished Deploy" >> $LOGFILE
-{% endhighlight %}
+  echo "Finished Deploy" >> $LOGFILE
+  {% endhighlight %}
+fi
 
 And create the folder in `/volume1/web/cakephp3-test`
 
