@@ -133,6 +133,7 @@ Needs to install node.js for grunt & gulp : `brew install node`
 - Bower : `npm install -g bower`
 - Yeoman to generate skeletons (I use it with bespoke.js) : `npm install -g yo`
 - Bespoke : `npm install -g generator-bespoke`
+- For CakePHP Asset Compress : `npm install -g uglify-js`
 
 ### For sphinx docs (cakephp docs)
 
