@@ -123,6 +123,7 @@ Or, if you don't want/need launchctl, you can just run:
 - Middleman : `sudo gem install middleman`
 - Sass : `sudo gem install sass`
 - Compass : `sudo gem install compass`
+- Jekyll-sitemap : `sudo gem install jekyll-sitemap`
 
 ### With npm
 
