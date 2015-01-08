@@ -88,7 +88,7 @@ defaults:
       layout: "post"
 
 # For RSS
-#rss_path: feed.xml
+rss_path: feed.xml
 url: http://cake17.github.io
 tags_path: tags.html
 
