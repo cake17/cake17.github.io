@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jekyll & Github
+title: Jekyll and Github
 tags: [General]
 description: How to install and use Jekyll to create static sites
 langs: [en]
