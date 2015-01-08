@@ -87,7 +87,9 @@ defaults:
     values:
       layout: "post"
 
-rss_path: feed.xml
+# For RSS
+#rss_path: feed.xml
+url: http://cake17.github.io
 tags_path: tags.html
 
 paginate: 20
