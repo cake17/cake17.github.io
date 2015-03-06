@@ -13,7 +13,7 @@ author:
 
 ## Where things are
 # source folder
-source:	.
+source:  .
 # destination folder
 destination: ./_site
 # plugins folder
@@ -29,19 +29,19 @@ sass:
 
 ## Handling Reading
 # Safe mode to false: plugins et symbolics links are authorized
-safe:	false
+safe:  false
 include: [".htaccess"]
 # files to exclude
 exclude: ["README.md"]
-keep_files:	[".git", ".svn"]
-encoding:	"utf-8"
-markdown_ext:	"markdown,mkdown,mkdn,mkd,md"
+keep_files:  [".git", ".svn"]
+encoding:  "utf-8"
+markdown_ext:  "markdown,mkdown,mkdn,mkd,md"
 textile_ext: "textile"
 
 ## Filtering Content
 show_drafts: null
 limit_posts: 0
-future:	true
+future:  true
 unpublished: false
 
 ## Plugins
@@ -50,17 +50,17 @@ gems:
   - jekyll-sitemap
 
 ## Conversion
-markdown:	kramdown
+markdown:  kramdown
 kramdown:
   input: GFM # use Github Flavored Markdown
 highlighter: pygments
 lsi: false
-excerpt_separator:	"\n\n"
+excerpt_separator:  "\n\n"
 
 ## Serving
-detach:	false
-port:	4000
-host:	0.0.0.0
+detach:  false
+port:  4000
+host:  0.0.0.0
 baseurl: "" # does not include hostname
 
 ## Backwards-compatibility
@@ -69,7 +69,7 @@ relative_permalinks: false
 ## Outputting
 permalink: date
 paginate_path: /page:num
-timezone:	"Europe/Paris"
+timezone:  "Europe/Paris"
 quiet: false
 
 ## defaults var for all pages, posts & drafts
