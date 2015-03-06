@@ -4,6 +4,7 @@ title: Contribuer aux docs de CakePHP
 tags: [General]
 description: Tout ce dont vous avez besoin pour aider à traduire la documentation de CakePHP
 langs: [fr]
+comments: true
 ---
 
 Bonjour,
