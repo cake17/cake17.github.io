@@ -80,6 +80,7 @@ defaults:
       type: "posts" # apply the defaults only for posts
     values:
       layout: "post"
+      comments: true
   -
     scope:
       path: "_drafts" # values will be defined for all files in _drafts (empty string for all files)
