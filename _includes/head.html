@@ -1,30 +1,35 @@
 <head>
-	<meta charset="utf-8">
-	<title>{{ page.title }}</title>
-	{% if page.description %}
-	<meta name="description" content="{{ page.description }}">
-	{% endif %}
-	<meta name="author" content="{{ site.author.name }}">
+    <meta charset="utf-8">
+    <title>
+    {% if page.title %}
+        {{ page.title }} -
+    {% endif %}
+    Blog Cake17
+    </title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    <meta name="author" content="{{ site.author.name }}">
 
-	<!-- Enable responsive viewport -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- Styles -->
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.5/css/foundation.min.css">
+    <!-- Styles -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.5/css/foundation.min.css">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.5/css/normalize.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.5/css/normalize.min.css">
 
-	<!-- My css -->
-	<link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
-	<!-- For Flags -->
-	<link href="{{ site.url }}/assets/css/iso16.css" rel="stylesheet">
-	<!-- Foundation icons css -->
-	<link href="{{ site.url }}/assets/css/foundation-icons.css" rel="stylesheet">
+    <!-- My css -->
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+    <!-- For Flags -->
+    <link href="{{ site.url }}/assets/css/iso16.css" rel="stylesheet">
+    <!-- Foundation icons css -->
+    <link href="{{ site.url }}/assets/css/foundation-icons.css" rel="stylesheet">
 
-	<!-- Le fav and touch icons -->
-	<link rel="shortcut icon" href="assets/media/favicon.png">
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/media/favicon.png">
 
-	<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
 </head>
