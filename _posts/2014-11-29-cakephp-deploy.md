@@ -80,11 +80,10 @@ then
   echo " - Finished composer install"
 
   echo "Finished Deploy" >> $LOGFILE
-  {% endhighlight %}
 fi
+{% endhighlight %}
 
 And create the folder in `/volume1/web/cakephp3-test`
-
 
 2 Local
 ========
