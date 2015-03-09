@@ -65,7 +65,6 @@ First install brew : `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Ho
     export PATH="/usr/local/bin:$PATH"
     export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
-
 - Install Composer globally (not with Brew as composer version is old)
 
       curl -sS https://getcomposer.org/installer | php
