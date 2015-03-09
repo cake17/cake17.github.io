@@ -52,16 +52,21 @@ First install brew : `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Ho
           fi
 
 
-- Install php55, composer and mcrypt:
+- Install php56 and mcrypt:
 
     - brew tap homebrew/dupes
     - brew tap homebrew/php
-    - brew install php55
-    - brew install mcrypt
-    - brew install php55-mcrypt
+    - brew install php56
+    - brew install mcrypt --without-homebrew-php
+    - brew install php56-mcrypt
+
+- Add this in .bash_profile
+
+    export PATH="/usr/local/bin:$PATH"
+    export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
 
-- Install Composer globally (not with Composer as composer version is old)
+- Install Composer globally (not with Brew as composer version is old)
 
       curl -sS https://getcomposer.org/installer | php
       mv composer.phar /usr/local/bin/composer
@@ -72,6 +77,8 @@ Add this in `/etc/hosts`:
 
      127.0.0.1       local.dev
      127.0.0.1       www.local.dev
+
+For info, the php.ini is in `/usr/local/etc/php/5.6/php.ini`.
 
 Change `/etc/apache2/httpd.conf`:
 
