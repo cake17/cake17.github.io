@@ -4,11 +4,11 @@ rvm:
 script: bundle exec jekyll build && bundle exec htmlproof ./_site
 
 # branch whitelist
-branches:
-  only:
-  - master
-  - gh-pages     # test the gh-pages branch
-  - /pages-(.*)/ # test every branch which starts with "pages-"
+#branches:
+#  only:
+#  - master
+#  - gh-pages     # test the gh-pages branch
+#  - /pages-(.*)/ # test every branch which starts with "pages-"
 
 env:
   global:
