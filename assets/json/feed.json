@@ -9,7 +9,7 @@ sitemap: false
             "title": {{post.title | jsonify}},
             "description": {{post.description | jsonify}},
             "content": {{post.content | jsonify}},
-            "link": "{{ site.url }}{{ post.url }}",
+            "link": "{{ site.baseurl }}{{ post.url }}",
             "date": {{ post.date | jsonify }}
         }
     {%endif%}
@@ -20,7 +20,7 @@ sitemap: false
         {% if forloop.index > 1 %},{%endif%}{
             "title": "{{page.title | jsonify }}",
             "content": {{page.content | jsonify }},
-            "link": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}",
+            "link": "{{ site.baseurl }}{{ page.url | replace: 'index.html', '' }}",
             "date": {{ page.date | json }},
             "excerpt": {{ page.description | jsonify }}
         }

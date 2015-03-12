@@ -25,7 +25,9 @@ data_source: ./_data
 # collections
 collections: null
 sass:
-    sass_dir: assets/_sass
+    load_paths:
+    - bower_components/foundation/scss
+    - _scss
 
 ## Handling Reading
 # Safe mode to false: plugins et symbolics links are authorized
@@ -90,7 +92,7 @@ defaults:
 
 # For RSS
 rss_path: feed.xml
-url: http://blog.cake-websites.com
+baseurl: http://blog.cake-websites.com
 tags_path: tags.html
 
 paginate: 20
