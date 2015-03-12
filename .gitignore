@@ -1,6 +1,7 @@
 ## Jekyll ##
 _site
 .sass-cache
+bower_components/
 
 ## Composer ##
 
@@ -10,7 +11,7 @@ composer.phar
 ## Travis ##
 
 .travis.yml
- 
+
 
 ## Netbeans ##
 
@@ -72,7 +73,7 @@ Temporary Items
 
 
 ## Windows ##
-	
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
