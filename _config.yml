@@ -3,6 +3,7 @@
 ## Personal values
 title: Cake17's Blog
 description: Development environment, PHP, CakePHP, Git, and more...
+baseurl: http://blog.cake-websites.com
 
 author:
   name: cake17
@@ -34,7 +35,7 @@ sass:
 safe:  false
 include: [".htaccess"]
 # files to exclude
-exclude: ["README.md"]
+exclude: ["README.md", "vendor"]
 keep_files:  [".git", ".svn"]
 encoding:  "utf-8"
 markdown_ext:  "markdown,mkdown,mkdn,mkd,md"
@@ -92,7 +93,6 @@ defaults:
 
 # For RSS
 rss_path: feed.xml
-baseurl: http://blog.cake-websites.com
 tags_path: tags.html
 
 paginate: 20
