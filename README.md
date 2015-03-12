@@ -8,6 +8,7 @@ Run the following commands:
 
     //To update foundation with all its dependancy in bower_components
     bower update
+    // and copy files from bower_components/foundation/_scss to assets/_scss to update them (see to do it wuth grunt or gulp)
 
     // To install gem dependancies for jekyll
     bundle install

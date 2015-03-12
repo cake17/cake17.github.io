@@ -26,13 +26,12 @@ data_source: ./_data
 # collections
 collections: null
 sass:
-    load_paths:
-    - bower_components/foundation/scss
-    - assets/_scss
+  sass_dir: assets/_scss
 
 ## Handling Reading
 # Safe mode to false: plugins et symbolics links are authorized
-safe:  false
+# Safe mode is to true in github pages
+safe:  true
 include: [".htaccess"]
 # files to exclude
 exclude: ["README.md", "vendor"]
