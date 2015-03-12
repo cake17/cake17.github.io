@@ -33,7 +33,7 @@ sass:
 ## Handling Reading
 # Safe mode to false: plugins et symbolics links are authorized
 safe:  false
-include: [".htaccess"]
+include: [".htaccess", "vendor"]
 # files to exclude
 exclude: ["README.md"]
 keep_files:  [".git", ".svn"]
