@@ -5,43 +5,43 @@ layout: default
 {% include pagination_posts.html %}
 
 <div id="page">
-	<div class="row">
-		<div class="large-3 columns">
-			<ul class="button-group radius round">
-				<li><a class="button success tiny" href="{{ site.url }}{{ post.url }}">
-						{% assign d = page.date | date: "%d" | plus:'0' %}
-						{{ page.date | date: "%B" }}
-						{% case d %}
-						{% when 1 or 21 or 31 %}{{ d }}st,
-						{% when 2 or 22 %}{{ d }}nd,
-						{% when 3 or 23 %}{{ d }}rd,
-						{% else %}{{ d }}th,
-						{% endcase %}
-						{{ page.date | date: "%Y" }}
-				</a></li>
-			</ul>
-			<h1>
-				{{ page.title }}
-				{% if page.langs %}
-				{% for lang in page.langs %}
-				<span class="flag-{{lang}}"></span>
-				{% endfor %}
-				{% endif %}
-			</h1>
-		</div>
-		<div class="large-9 columns">
-			<article>
-				<div class="article_body">
-					{{ content }}
-				</div>
-			</article>
-		</div>
-	</div>
+    <div class="row">
+        <div class="large-3 columns">
+            <ul class="button-group radius round">
+                <li><a class="button success tiny" href="{{ site.baseurl }}{{ post.url }}">
+                        {% assign d = page.date | date: "%d" | plus:'0' %}
+                        {{ page.date | date: "%B" }}
+                        {% case d %}
+                        {% when 1 or 21 or 31 %}{{ d }}st,
+                        {% when 2 or 22 %}{{ d }}nd,
+                        {% when 3 or 23 %}{{ d }}rd,
+                        {% else %}{{ d }}th,
+                        {% endcase %}
+                        {{ page.date | date: "%Y" }}
+                </a></li>
+            </ul>
+            <h1>
+                {{ page.title }}
+                {% if page.langs %}
+                {% for lang in page.langs %}
+                <span class="flag-{{lang}}"></span>
+                {% endfor %}
+                {% endif %}
+            </h1>
+        </div>
+        <div class="large-9 columns">
+            <article>
+                <div class="article_body">
+                    {{ content }}
+                </div>
+            </article>
+        </div>
+    </div>
 </div>
 
 {% include bottom_js.html %}
 
 {% include disqus.html %}
 
-<script type="text/javascript" src="{{ site.url }}/assets/js/jquery-hammer/jquery.hammer.js"></script>
-<script type="text/javascript" src="{{ site.url }}/assets/js/swipe.js"></script>
+<!-- <script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery-hammer/jquery.hammer.js"></script> -->
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/swipe.js"></script>

@@ -13,7 +13,7 @@ This is a tuto to create a CakePHP 3 project on a synology server and to deploy 
 
 A small schema to see how it works:
 
-![Deploy Schema]({{ site.url }}/assets/media/deploy-cakephp.png)
+![Deploy Schema]({{ site.baseurl }}/assets/media/deploy-cakephp.png)
 
 
 1 Remote
