@@ -6,6 +6,7 @@ _site
 ## Composer ##
 
 composer.phar
+vendor/
 
 
 ## Travis ##

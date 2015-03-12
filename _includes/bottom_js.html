@@ -1,7 +1,7 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{ "/bower_components/jquery/dist/jquery.min.js" | prepend: site.baseurl }}"></script>
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.5/js/foundation.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.5/js/foundation/foundation.magellan.min.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/assets/js/search.js"></script>
+<script type="text/javascript" src="{{ "/bower_components/foundation/js/foundation.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/bower_components/foundation/js/foundation/foundation.magellan.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/search.js" | prepend: site.baseurl }}"></script>
 
 {% include piwik.html %}

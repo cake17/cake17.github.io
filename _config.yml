@@ -28,7 +28,7 @@ collections: null
 sass:
     load_paths:
     - bower_components/foundation/scss
-    - _scss
+    - assets/_scss
 
 ## Handling Reading
 # Safe mode to false: plugins et symbolics links are authorized
@@ -64,7 +64,7 @@ excerpt_separator:  "\n\n"
 detach:  false
 port:  4000
 host:  0.0.0.0
-baseurl: "" # does not include hostname
+baseurl: ''
 
 ## Backwards-compatibility
 relative_permalinks: false
