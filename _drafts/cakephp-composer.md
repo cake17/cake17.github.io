@@ -56,14 +56,12 @@ $maClasse->hello();
 Si vous ouvrez votre page index.php dans votre navigateur, vous devriez voir
 `Hello` affiché.
 
-
 Les normes PSR0, PSR1, PSR2, PSR3 et PSR4
 =========================================
 
-Ces normes ont été créées et votées par l'ensemble des frameworks PHP.
+Ces normes ont été créées et votées par les contibuteurs principaux de PHP, que ce soit les créateurs de frameworks ou de libraires.
 Elles facilitent l'utilisation des librairies d'un framework à l'autre en dotant
-le monde PHP de normes d'écritures et de création .
-
+le monde PHP de normes communes d'écritures et de création .
 
 La norme PSR4
 =============
@@ -74,16 +72,54 @@ maintenant dépréciée au profit de PSR4.
 Vous pouvez aller consulter le texte "officiel" de la norme PSR4-autoloader
 [sur github](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md).
 
-
 Problème soulevé
 ================
 
-on se rend rapidement compte que certaines tâches sont répétitives comme
+On se rend rapidement compte que certaines tâches sont répétitives comme
 l'inclusion des classes avec les require.
+Il faut pour commencer que chaque fichier contienne
+une et et une seule classe. Le fichier doit porter le
+nom de la classe qu'il contient. Exemple:
 
+{% highlight php linenos %}
+<?php
+// dans le fichier NomDeLaClasse.php
+class NomDeLaClasse
+{
+}
+{% endhighlight %}
+
+Le nom de la classe doit être avec des majuscules pour chaque mot. Il NE DOIT PAS être de type ma_classe.php ou ma-classe.php ou encore maClasse.php.
+
+On va aussi rajouter la notion de namespaces.
 
 Namespaces
 ==========
 
+Les namespaces (en français espace de noms) permettent de séparer les classes pour éviter d'avoir des collisions de méthodes. Par convention on utilise le chemin
+vers le dossier.
+
+Prenons le fichier de MaClasse.php qui va devenir:
+
+{% highlight php linenos %}
+<?php
+//
+namespace MonApp;
+
+use MonAutreClasse;
+
+class MaClasse
+{
+    // methods ...
+}
+{% endhighlight %}
+
+
 Comment Composer nous aide pour l'auto-chargement des classes
 =============================================================
+
+Lorsque l'on lance la commande `composer dumpautoload`, Composer créé les fichiers
+qui font le lien entre les namespaces et les chemins des classes automatiquement.
+
+Il nous suffira d'inclure le fichier de base qui se trouve dans `/vendor/autoload.php`. Vous pouvez l'ouvrir pour voir qu'il inclut tous les
+fichiers qui se trouvent dans `/vendor/composer/`.
