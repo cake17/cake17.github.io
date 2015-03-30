@@ -1,4 +1,8 @@
 /**
+ * Css specific to this website
+ */
+
+/**
  * Code formatting
  */
 pre,
@@ -22,4 +26,11 @@ pre {
     padding-right: 0;
     padding-left: 0;
   }
+}
+
+/**
+ * Search Bar
+ */
+#search-bar {
+  margin-top: rem-calc(20);
 }

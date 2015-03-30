@@ -10,7 +10,7 @@ layout: page
 
   {% for post in paginator.posts %}
 
-  <article class="home">
+  <article class="home text-center">
     <ul class="button-group radius round">
       <li><a href="{{ site.baseurl }}{{ post.url }}" class="button success tiny">
         {% assign d = post.date | date: "%d" | plus:'0' %}
