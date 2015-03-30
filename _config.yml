@@ -26,7 +26,7 @@ data_source: ./_data
 # collections
 collections: null
 sass:
-  sass_dir: assets/_scss
+  sass_dir: dev/scss
 
 ## Handling Reading
 # Safe mode to false: plugins et symbolics links are authorized
@@ -34,7 +34,7 @@ sass:
 safe:  true
 include: [".htaccess"]
 # files to exclude
-exclude: ["README.md", "vendor"]
+exclude: ["README.md", "vendor", "bower_components", "dev"]
 keep_files:  [".git", ".svn"]
 encoding:  "utf-8"
 markdown_ext:  "markdown,mkdown,mkdn,mkd,md"

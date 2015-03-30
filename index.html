@@ -3,55 +3,56 @@ layout: page
 ---
 
 <div class="row">
-    <div class="small-12 small-centered columns">
 
-    {% include pagination_pages.html %}
+  <div class="small-12 small-centered columns">
 
-    {% for post in paginator.posts %}
+  {% include pagination_pages.html %}
 
-    <article class="home">
-      <ul class="button-group radius round">
-        <li><a class="button success tiny" href="{{ site.baseurl }}{{ post.url }}">
-            {% assign d = post.date | date: "%d" | plus:'0' %}
-            {{ post.date | date: "%B" }}
-            {% case d %}
-            {% when 1 or 21 or 31 %}{{ d }}st,
-            {% when 2 or 22 %}{{ d }}nd,
-            {% when 3 or 23 %}{{ d }}rd,
-            {% else %}{{ d }}th,
-            {% endcase %}
-            {{ post.date | date: "%Y" }}
-          </a></li>
-        <li><a href="{{ site.baseurl }}{{ post.url }}" class="button tiny">
-            {{ post.title }}
+  {% for post in paginator.posts %}
+
+  <article class="home">
+    <ul class="button-group radius round">
+      <li><a href="{{ site.baseurl }}{{ post.url }}" class="button success tiny">
+        {% assign d = post.date | date: "%d" | plus:'0' %}
+        {{ post.date | date: "%B" }}
+        {% case d %}
+        {% when 1 or 21 or 31 %}{{ d }}st,
+        {% when 2 or 22 %}{{ d }}nd,
+        {% when 3 or 23 %}{{ d }}rd,
+        {% else %}{{ d }}th,
+        {% endcase %}
+        {{ post.date | date: "%Y" }}
         </a></li>
-      </ul>
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        <div class="panel radius">
-          {% if post.fullview %}
-          {{ post.content }}
-          {% else %}
-          {% if post.shortinfo %}
-          {{ post.shortinfo }}
-          {% elsif post.description %}
-          {{ post.description }}
-          {% else %}
-          {{ post.excerpt }}
-          {% endif %}
-          {% endif %}
-          {% if post.langs %}
-          {% for lang in post.langs %}
-          <span class="flag-{{lang}}"></span>
-          {% endfor %}
-          {% endif %}
-        </div>
-      </a>
-    </article>
+      <li><a href="{{ site.baseurl }}{{ post.url }}" class="button tiny">
+          {{ post.title }}
+      </a></li>
+    </ul>
+    <a href="{{ site.baseurl }}{{ post.url }}">
+      <div class="panel radius">
+        {% if post.fullview %}
+        {{ post.content }}
+        {% else %}
+        {% if post.shortinfo %}
+        {{ post.shortinfo }}
+        {% elsif post.description %}
+        {{ post.description }}
+        {% else %}
+        {{ post.excerpt }}
+        {% endif %}
+        {% endif %}
+        {% if post.langs %}
+        {% for lang in post.langs %}
+        <span class="flag-{{lang}}"></span>
+        {% endfor %}
+        {% endif %}
+      </div>
+    </a>
+  </article>
 
-    {% endfor %}
+  {% endfor %}
 
-    {% include pagination_pages.html %}
+  {% include pagination_pages.html %}
 
-    </div>
+  </div>
 
 </div>

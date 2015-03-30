@@ -44,7 +44,7 @@ Ci-dessous les étapes pour participer à la traduction :
 3. Vous pourrez ainsi cloner votre dépôt (= récupérer les fichiers sur votre ordinateur) que vous venez de forker et le modifier sur votre ordinateur (Cliquez sur `clone in Desktop` à droite de la page de votre fork https://github.com/votreNom/docs et choisissez l'endroit où vous voulez mettre le dossier des docs sur votre ordinateur).
    Un petit schéma pour récapituler les points 2 et 3:
 
-   ![Schéma CakePHP docs]({{ site.baseurl }}/assets/media/schema_cakephp_docs.png)
+   ![Schéma CakePHP docs]({{ site.baseurl }}/public/img/schema_cakephp_docs.png)
 
 4. Creez une nouvelle branche
 Avec Git en général, il est toujours mieux de ne pas directement travailler sur les branches, mais de créer une nouvelle branche pour faire ses modifications. Cela permet de mettre à jour ses branches locales avec les branches du remote sans avoir de conflits.

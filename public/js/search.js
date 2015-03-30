@@ -6,7 +6,7 @@
  * @version  0.1
  */
 
-var q, jsonFeedUrl = "/assets/json/feed.json",
+var q, jsonFeedUrl = "/public/json/feed.json",
     $searchForm = $("[data-search-form]"),
     $searchInput = $("[data-search-input]"),
     $resultTemplate = $("#search-result"),

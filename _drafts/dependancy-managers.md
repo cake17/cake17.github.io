@@ -19,8 +19,8 @@ CakePHP 3 sort courant 2014 et utilise Composer pour l'installation de dépendan
 
 ### Installation de Composer sur MAC OS 10.9
 
-	$ curl -sS https://getcomposer.org/installer | php
-	$ mv composer.phar /usr/local/bin/composer
+    $ curl -sS https://getcomposer.org/installer | php
+    $ mv composer.phar /usr/local/bin/composer
 
 et ensuite on peut utiliser la commande **composer** partout (si `usr/local/bin` est dans le PATH)
 
@@ -28,15 +28,15 @@ et ensuite on peut utiliser la commande **composer** partout (si `usr/local/bin`
 
 Elle se fait en une commande avec Composer en se plaçant avec `cd` dans le répertoire où l'on veut installer le nouveau projet
 
-	cd /path/to/project
-	composer create-project -s dev cakephp/app
+    cd /path/to/project
+    composer create-project -s dev cakephp/app
 
 ### Fonctionnement de Composer
 
 Le fonctionnement est simple : on ajoute un fichier composer.json à la racine de son projet et on rentre dedans les dépendances dont on a besoin. Ensuite on lance dans le terminal une commande :
 
-	composer install (pour la première execution)
-	composer update (celle qu'on utilisera le plus souvent pour mettre à jour les dépendances, plugins)
+    composer install (pour la première execution)
+    composer update (celle qu'on utilisera le plus souvent pour mettre à jour les dépendances, plugins)
 
 #### Rappel de l'arborescence de CakePHP 3
 
@@ -57,34 +57,34 @@ Un exemple simple de ce fichier :
 
 {% highlight json %}
 {
-	"name": "votreNom/nomApp",
-	"description": "mon application perso",
-	"homepage": "<a href="http://www.monapp.com" rel="" target="">http://www.monapp.com</a>",
-	"type": "project",
-	"license": "MIT",
-	"require": {
-		"cakephp/cakephp": "3.0.*-dev",
-		"FriendsOfCake/crud": "dev-cake3",
-		"cakephp/debug_kit": "dev-master",
-		"votreNom/pluginName": "dev-master",
-		"php": "&gt;=5.4"
-	},
-	"repositories": [
-		{
-			"type": "vcs",
-				"url": "git@bitbucket.org:votreNom/pluginName.git"
-		},
-	],
-	"autoload": {
-		"psr-4": {
-			"App\\": "App",
-			"App\\Test\\": "Test",
-			"": "./Plugin"
-		}
-	},
-	"scripts": {
-		"post-install-cmd": "App\\Console\\Installer::postInstall"        }
-	}
+    "name": "votreNom/nomApp",
+    "description": "mon application perso",
+    "homepage": "<a href="http://www.monapp.com" rel="" target="">http://www.monapp.com</a>",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "cakephp/cakephp": "3.0.*-dev",
+        "FriendsOfCake/crud": "dev-cake3",
+        "cakephp/debug_kit": "dev-master",
+        "votreNom/pluginName": "dev-master",
+        "php": "&gt;=5.4"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+                "url": "git@bitbucket.org:votreNom/pluginName.git"
+        },
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "App",
+            "App\\Test\\": "Test",
+            "": "./Plugin"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": "App\\Console\\Installer::postInstall"        }
+    }
 {% endhighlight %}
 
 #### Quelques explications :
@@ -104,50 +104,50 @@ Voir les solutions à ce problème : [https://getcomposer.org/doc/faqs/should-i-
 #### Exemple de composer.json pour un plugin CakePHP
 
 {
-	"name":"votreNom/nomPlugin",
-	"version": "1.0.0",
-	"description":"CakePHP Application Plugin super top qui fait ça et ça",
-	"type":"cakephp-plugin",
-	"keywords":[
-		"cakephp",
-		"mot clé1",
-		"mot clé2"
-	],
-	"homepage":"https://github.com/votreNom/nomPlugin",        "license":"MIT",
-	"authors":[
-		{
-			"name":"Votre Nom",
-			"role":"Author",
-			"homepage":"http://www.votrePageWeb.com/"
-		},
-		{
-			"name":"Nom autre pers si nécessaire",
-			"role":"Contributor",
-			"homepage":"https://github.com/votreNom"
-		}
-	],
-	"require":{
+    "name":"votreNom/nomPlugin",
+    "version": "1.0.0",
+    "description":"CakePHP Application Plugin super top qui fait ça et ça",
+    "type":"cakephp-plugin",
+    "keywords":[
+        "cakephp",
+        "mot clé1",
+        "mot clé2"
+    ],
+    "homepage":"https://github.com/votreNom/nomPlugin",        "license":"MIT",
+    "authors":[
+        {
+            "name":"Votre Nom",
+            "role":"Author",
+            "homepage":"http://www.votrePageWeb.com/"
+        },
+        {
+            "name":"Nom autre pers si nécessaire",
+            "role":"Contributor",
+            "homepage":"https://github.com/votreNom"
+        }
+    ],
+    "require":{
         "composer/installers":"*"
     },
     "require-dev": {
-    	"cakephp/cakephp": "3.0.x-dev"
-	},
-	"suggest":{
-	},
-	"autoload": {
-		"psr-4": {
-			"Crud\\": "."
-		}
-	},
-	"support": {
-		"source":"https://github.com/votreNom/nomPlugin",
-		"issues":"https://github.com/votreNom/nomPlugin/issues",
-		"wiki":"http://www.wiki.com/",
-		"irc":"irc://irc.freenode.org/votreIrc"
-	},
-	"extra": {
-		"installer-name": "NomDuPlugin"
-	}
+        "cakephp/cakephp": "3.0.x-dev"
+    },
+    "suggest":{
+    },
+    "autoload": {
+        "psr-4": {
+            "Crud\\": "."
+        }
+    },
+    "support": {
+        "source":"https://github.com/votreNom/nomPlugin",
+        "issues":"https://github.com/votreNom/nomPlugin/issues",
+        "wiki":"http://www.wiki.com/",
+        "irc":"irc://irc.freenode.org/votreIrc"
+    },
+    "extra": {
+        "installer-name": "NomDuPlugin"
+    }
 }
 
 ## Homebrew
@@ -157,7 +157,7 @@ http://brew.sh/
 
 ### Install
 
-	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 ### Usage
 

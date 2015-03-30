@@ -1,7 +1,8 @@
 ## Jekyll ##
 _site
-.sass-cache
-#bower_components/foundation
+/.sass-cache/*
+/bower_components/*
+/stylesheets/*
 
 ## Composer ##
 

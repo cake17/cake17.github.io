@@ -1,32 +1,31 @@
 <!-- Search form -->
-<form method="get" action="{{ site.baseurl }}/assets/js/search" data-search-form>
-    <div class="row">
-        <div class="large-12 columns">
-            <div class="row collapse">
-                <div class="small-2 large-1 columns">
-                    <a href="#" class="button prefix prefix-round secondary"><i class="fi-magnifying-glass"></i></a>
-                </div>
-                <div class="small-7 large-9 columns">
-                    <input type="text" name="q" id="q" placeholder="Enter search term" data-search-input />
-
-                </div>
-                <div class="small-3 large-2 columns">
-                    <input type="submit" value="Ok" class="button postfix secondary" />
-                </div>
-            </div>
+<form method="get" action="{{ site.baseurl }}/public/js/search" data-search-form>
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="row collapse">
+        <div class="small-2 large-1 columns">
+          <a href="#" class="button prefix prefix-round secondary"><i class="fi-magnifying-glass"></i></a>
         </div>
+        <div class="small-7 large-9 columns">
+          <input type="text" name="q" id="q" placeholder="Enter search term" data-search-input />
+        </div>
+        <div class="small-3 large-2 columns">
+          <input type="submit" value="Ok" class="button postfix secondary" />
+        </div>
+      </div>
     </div>
+  </div>
 </form>
 
 <!-- Search results placeholder -->
 <p data-search-found>
-    <span data-search-found-count></span> result(s) found for &ldquo;<span data-search-found-term></span>&rdquo;.
+  <span data-search-found-count></span> result(s) found for &ldquo;<span data-search-found-term></span>&rdquo;.
 </p>
 <div data-search-results></div>
 
 <!-- Search result template -->
 <script type="text/x-template" id="search-result">
-    <a href="##Url##"><div class="panel">
-        <h5>##Date## | ##Title##</h5>
-    </div></a>
+  <a href="##Url##"><div class="panel">
+    <h5>##Date## | ##Title##</h5>
+  </div></a>
 </script>

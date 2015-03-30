@@ -1,17 +1,17 @@
 <hr />
 <div class="pagination-centered">
-    <ul class="pagination" role="menubar" aria-label="Pagination">
-        {% if page.previous %}
-        <li class="arrow"><a id="jquery-prev" href="{{ site.baseurl }}{{ page.previous.url }}">&laquo; Previous </a></li>
-        {% else %}
-        <li class="arrow unavailable" aria-disabled="true">&laquo; Previous </li>
-        {% endif %}
-        <span data-tooltip aria-haspopup="true" class="has-tip" title="Use Keyboards arrows to swip from article to article!">?</span>
-        {% if page.next %}
-        <li class="arrow"><a id="jquery-next" href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
-        {% else %}
-        <li class="arrow unavailable" aria-disabled="true">Next &raquo;</li>
-        {% endif %}
-    </ul>
+  <ul class="pagination" role="menubar" aria-label="Pagination">
+    {% if page.previous %}
+    <li class="arrow"><a id="jquery-prev" href="{{ site.baseurl }}{{ page.previous.url }}">&laquo; Previous </a></li>
+    {% else %}
+    <li class="arrow unavailable" aria-disabled="true">&laquo; Previous </li>
+    {% endif %}
+    <span data-tooltip aria-haspopup="true" class="has-tip" title="Use Keyboards arrows to swip from article to article!">?</span>
+    {% if page.next %}
+    <li class="arrow"><a id="jquery-next" href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
+    {% else %}
+    <li class="arrow unavailable" aria-disabled="true">Next &raquo;</li>
+    {% endif %}
+  </ul>
 </div>
 <hr />
