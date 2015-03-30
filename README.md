@@ -6,15 +6,15 @@ Clone this repo
 
 Run the following commands:
 
-    //To update foundation with all its dependancy in bower_components
+    // To update foundation with all its dependancy in bower_components
     bower update
-    // and copy files from bower_components/foundation/_scss to dev/_scss to update them (see to do it wuth grunt or gulp)
 
-    // To install gem dependancies for jekyll
+    // To install gem dependancies for jekyll (it creates the Gemfile.lock)
     bundle install
 
-    // To run a webserver (add --watch while developping)
-    bundle exec jekyll serve --baseurl ''
+    // To run a webserver locally
+    bundle exec jekyll serve --baseurl '' --watch
 
-    // Deploy
-    Don't forget to run `gulp app.js` and `gulp app.css` to refresh these assets
+    // Before pushing to deploy : run these 2 gulp commands
+    gulp app.js // recreates the app.js file which groups all js files minified (js files from foundation, jquery, modernizr, fastclick, ...)
+    gulp app.css // recreates the app.css file which groups all js files (css files from foundation)

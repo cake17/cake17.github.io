@@ -45,6 +45,12 @@ layout: page
         <span class="flag-{{lang}}"></span>
         {% endfor %}
         {% endif %}
+
+        {% capture nowunix %}{{'now' | date: '%s' | minus: 2629743}}{% endcapture %}
+        {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
+        {% if posttime > nowunix %}
+          <span class="alert round label">NEW</span>
+        {% endif %}
       </div>
     </a>
   </article>
