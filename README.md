@@ -15,3 +15,6 @@ Run the following commands:
 
     // To run a webserver (add --watch while developping)
     bundle exec jekyll serve --baseurl ''
+
+    // Deploy
+    Don't forget to run `gulp app.js` and `gulp app.css` to refresh these assets
