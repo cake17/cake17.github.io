@@ -129,32 +129,32 @@ nous indiquer les chemins vers les différents dossiers:
 
 ##### Les Tâches gulp
 
-// --- TASKS
-// Generate CSS App file
-gulp.task('app.css', function() {
-  // place code for your default task here
-  return gulp.src('./dev/scss/*.scss')
-      .pipe(sass({
-          includePaths: [paths.vendor.bower+'foundation/scss']
-      }))
-      .pipe(minify())
-      .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest(paths.public.css));
-});
+    // --- TASKS
+    // Generate CSS App file
+    gulp.task('app.css', function() {
+      // place code for your default task here
+      return gulp.src('./dev/scss/*.scss')
+          .pipe(sass({
+              includePaths: [paths.vendor.bower+'foundation/scss']
+          }))
+          .pipe(minify())
+          .pipe(rename({suffix: '.min'}))
+          .pipe(gulp.dest(paths.public.css));
+    });
 
-// Generate Js App File
-gulp.task('app.js', function(){
-  return gulp.src([
-        paths.vendor.bower+'jquery/dist/jquery.min.js',
-        paths.vendor.bower+'foundation/js/foundation.min.js',
-        paths.vendor.bower+'fastclick/lib/fastclick.js',
-        paths.vendor.bower+'modernizr/modernizr.js',
-    ])
-    .pipe(concat('app.js'))
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest(paths.public.js));
-});
+    // Generate Js App File
+    gulp.task('app.js', function(){
+      return gulp.src([
+            paths.vendor.bower+'jquery/dist/jquery.min.js',
+            paths.vendor.bower+'foundation/js/foundation.min.js',
+            paths.vendor.bower+'fastclick/lib/fastclick.js',
+            paths.vendor.bower+'modernizr/modernizr.js',
+        ])
+        .pipe(concat('app.js'))
+        .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(paths.public.js));
+    });
 
 Ces 2 tâches app.css et app.js se lancent respectivement avec les commandes
 `gulp app.css` et `gulp app.js`.
@@ -191,7 +191,7 @@ puisqu'il utilise ces techniques.
 Créez un fichier Gruntfile.js dans votre projet. Vous mettrez les dépendances
 nécessaires à l'utilisation de Grunt.
 
-Dépendances utiles [here](http://gruntjs.com/plugins)
+Dépendances utiles [ici](http://gruntjs.com/plugins)
 
 - grunt-contrib-concat : concatène
 - grunt-contrib-uglify : minifie
