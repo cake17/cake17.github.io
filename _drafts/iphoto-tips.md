@@ -9,9 +9,11 @@ langs: [en]
 Iphoto 11
 =========
 
-To save all images in a folder with sub-folder, go to `File/Export` and Tick `SubFolder : event`
+To save all images in a folder with sub-folder, go to `File/Export` and Tick
+`SubFolder : event`
 
-To stop face detection, open a terminal : `defaults write com.apple.iPhoto PKFaceDetectionEnabled 0`
+To stop face detection, open a terminal : `defaults write com.apple.iPhoto
+PKFaceDetectionEnabled 0`
 
 To remove duplicate images :
 
@@ -20,4 +22,5 @@ To remove duplicate images :
 - Open Duplicate Cleaner For Iphoto
 - Select your librairy
 
-You can also use `fdupes` to get duplicates files in a path. To install it, do `brew install fdupes` and use `man fdupes` to see commands.
+You can also use `fdupes` to get duplicates files in a path. To install it, do
+`brew install fdupes` and use `man fdupes` to see commands.

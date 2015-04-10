@@ -1,39 +1,46 @@
 ---
 layout: post
-title: Dependancy Managers
+title: Gestionnaires de Dépendances
 tags: [General]
-description: List of Dependancy Managers
-langs: [en, fr]
+description: Liste des Gestionnaires de Dépendances
+langs: [fr]
 ---
 
-Dependancy Managers
-===================
+Gestionnaires de Dépendances (Dependancy Managers)
+==================================================
 
-## Pear : Not used anymore
+## Pear : A ne plus utiliser
 
 ## Composer
 
-Used for CakePHP 3.x
+Utilisé pour CakePHP 3.x
 
-CakePHP 3 sort courant 2014 et utilise Composer pour l'installation de dépendances. Que ce soit pour créer un projet CakePHP, le mettre à jour, installer des plugins CakePHP ou des librairies externes, il va être obligatoire de regarder un peu le fonctionnement de Composer.
+CakePHP 3 sort courant 2014 et utilise Composer pour l'installation de
+dépendances. Que ce soit pour créer un projet CakePHP, le mettre à jour,
+installer des plugins CakePHP ou des librairies externes, il va être obligatoire
+de regarder un peu le fonctionnement de Composer.
 
 ### Installation de Composer sur MAC OS 10.9
 
     $ curl -sS https://getcomposer.org/installer | php
     $ mv composer.phar /usr/local/bin/composer
 
-et ensuite on peut utiliser la commande **composer** partout (si `usr/local/bin` est dans le PATH)
+et ensuite on peut utiliser la commande **composer** partout (si `usr/local/bin`
+est dans le PATH)
 
 ### Création d'un projet CakePHP
 
-Elle se fait en une commande avec Composer en se plaçant avec `cd` dans le répertoire où l'on veut installer le nouveau projet
+Elle se fait en une commande avec Composer en se plaçant avec `cd` dans le
+répertoire où l'on veut installer le nouveau projet
 
     cd /path/to/project
     composer create-project -s dev cakephp/app
 
 ### Fonctionnement de Composer
 
-Le fonctionnement est simple : on ajoute un fichier composer.json à la racine de son projet et on rentre dedans les dépendances dont on a besoin. Ensuite on lance dans le terminal une commande :
+Le fonctionnement est simple : on ajoute un fichier composer.json à la racine
+de son projet et on rentre dedans les dépendances dont on a besoin. Ensuite on
+lance dans le terminal une commande :
 
     composer install (pour la première execution)
     composer update (celle qu'on utilisera le plus souvent pour mettre à jour les dépendances, plugins)
@@ -51,7 +58,8 @@ composer.json
 index.php
 README.md
 
-C'est dans le fichier composer.json que vous allez définir les plugins et dépendances dont votre projet CakePHP va avoir besoin.
+C'est dans le fichier composer.json que vous allez définir les plugins et
+dépendances dont votre projet CakePHP va avoir besoin.
 
 Un exemple simple de ce fichier :
 
@@ -113,7 +121,8 @@ Voir les solutions à ce problème : [https://getcomposer.org/doc/faqs/should-i-
         "mot clé1",
         "mot clé2"
     ],
-    "homepage":"https://github.com/votreNom/nomPlugin",        "license":"MIT",
+    "homepage":"https://github.com/votreNom/nomPlugin",
+    "license":"MIT",
     "authors":[
         {
             "name":"Votre Nom",
@@ -127,10 +136,9 @@ Voir les solutions à ce problème : [https://getcomposer.org/doc/faqs/should-i-
         }
     ],
     "require":{
-        "composer/installers":"*"
     },
     "require-dev": {
-        "cakephp/cakephp": "3.0.x-dev"
+        "cakephp/cakephp": "~3.0"
     },
     "suggest":{
     },
@@ -169,6 +177,7 @@ To upgrade brew : `brew upgrade`
 
 To install a package : `brew install package_name`
 
-Everything is install in the `usr/local/Cellar` directory, so it can be uninstall easily : `brew uninstall package_name`
+Everything is install in the `usr/local/Cellar` directory, so it can b
+uninstall easily : `brew uninstall package_name`
 
 List all tap used : `brew tap`

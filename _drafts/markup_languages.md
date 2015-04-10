@@ -6,7 +6,8 @@ description: List of markup languages
 langs: [en, fr]
 ---
 
-Liste non exhaustive de languages permettant d'écrire la documentation, des manuels, ou tout autre projet.
+Liste non exhaustive de languages permettant d'écrire la documentation, des
+manuels, ou tout autre projet.
 
 - Markdown [http://daringfireball.net/projects/markdown/](http://daringfireball.net/projects/markdown/)
 

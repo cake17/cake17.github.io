@@ -9,7 +9,8 @@ langs: [en]
 Dash software
 =============
 
-There comes times where you develop an application and you don't have an internet connection.
+There comes times where you develop an application and you don't have an
+internet connection.
 
 http://kapeli.com/dash
 
