@@ -175,7 +175,7 @@ Basically add this in composer.json:
 },
 {% endhighlight %}
 
-I got (help from here)[http://tech.zumba.com/2014/04/14/control-code-quality/]
+I got [help from here](http://tech.zumba.com/2014/04/14/control-code-quality/)
 
 Add a bin/pre-commit file (see link)
 
