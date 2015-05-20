@@ -129,6 +129,10 @@ Re-démarrez Apache : `sudo apachectl restart`
 L'installation de Startup Item ajoute une variable `MYSQLCOM=-YES-` au fichier de configuration du système `/etc/hostconfig`. Si vous voulez désactiver le démarrage automatique de MySQL, changez simplement cette variable en
 `MYSQLCOM=-NO-`.
 
+### Secure Mysql
+
+Run `mysql_secure_installation` in terminal and follow instructions.
+
 
 ## PhpMyAdmin
 
