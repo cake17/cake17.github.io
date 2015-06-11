@@ -36,7 +36,7 @@ mais vous pourrez trouver à la fin de l'article la façon d'installer Grunt.
 
 ##### Installation
 
-    `npm install --global gulp`
+    npm install --global gulp
 
 Créez un fichier gulpfile.js à la racine de votre projet. Dans ce fichier vous
 allez mettre toutes les dépendances pour votre projet, que vous pouvez trouver
@@ -75,7 +75,7 @@ notamment le dossier où vous allez télécharger vos dépendances.
       "directory": "bower_components"
     }
 
-Les dépendances que vous souhaitez seront dans bower.json:
+Les dépendances que vous souhaitez seront dans `bower.json`:
 
     {
         "name": "my-app",
@@ -186,7 +186,7 @@ puisqu'il utilise ces techniques.
 
 ##### Installation
 
-    `npm install -g grunt-cli`
+    npm install -g grunt-cli
 
 Créez un fichier Gruntfile.js dans votre projet. Vous mettrez les dépendances
 nécessaires à l'utilisation de Grunt.
