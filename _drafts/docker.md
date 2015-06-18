@@ -8,8 +8,8 @@ langs: [fr]
 
 Docker entre en jeu pour tenter de résoudre un problème qui existe dès lors
 que l'on développe une application, un site web ou tout autre programme
-informatique à savoir : `mon programme fonctionne en local mais il ne fonctionne pas
-sur le serveur.`
+informatique à savoir : "mon programme fonctionne en local mais il ne fonctionne pas
+sur le serveur."
 
 En clair, le serveur qui héberge mon site n'a pas forcément la même
 configuration, les mêmes versions d'apache, de nginx, mysql, .... que mon

@@ -34,7 +34,7 @@ Elle se fait en une commande avec Composer en se plaçant avec `cd` dans le
 répertoire où l'on veut installer le nouveau projet
 
     cd /path/to/project
-    composer create-project -s dev cakephp/app
+    composer create-project --prefer-dist cakephp/app nom-application
 
 ### Fonctionnement de Composer
 
@@ -45,9 +45,39 @@ lance dans le terminal une commande :
     composer install (pour la première execution)
     composer update (celle qu'on utilisera le plus souvent pour mettre à jour les dépendances, plugins)
 
+La différence entre les 2 commandes `install` et `update` est qu'avec `install`, les
+dépendances écrites dans le composer.lock vont être installés.
+
+En gros, quand on est en local, en développement, on va mettre à jour les dépendances avec
+`composer update`. Avec cette commande, composer met à jour le fichier `composer.lock`
+qui contient une arborescence de toutes les dépendances à l'instant t.
+
+On va faire tous nos tests pour vérifier que les dépendances mises
+à jour ne cassent pas notre code, en lançant nos tests (phpunit, ...).
+
+Quand notre code nous semble satisfaisant, on ajoute le `composer.lock` dans git.
+Le dossier `vendor` qui contient toutes les dépendances ne doit pas être suivi
+par git, il faut bien penser à le mettre dans notre .gitignore. En effet, on ne
+va pas alourdir notre projet git avec nos dépendances. Le composer.lock contient
+tout ce qu'il faut pour recréer le fichier vendor quand on sera sur le serveur.
+
+En effet quand on déploie, on va envoyer notre projet avec `git push` sur le serveur
+et relancer `composer install` sur le serveur (avec un hook de git par exemple).
+Ainsi cette commande va réinstaller les dépendances dans le dossier /vendor en
+se servant des données qui se trouvent dans `composer.lock`.
+
+Il faut bien comprendre qu'il ne faut pas lancer `composer update` sur le serveur
+car à ce moment là, les dépendances vont être mises à jour, et des dépendances
+vont peut-être être incompatibles avec votre code. Aucun test n'aura effectué avec
+les dépendances mises à jour.
+
+En conclusion :
+- `composer update` : quand on développe, en local, pour mettre à jour les dépendances
+- `composer install` : seule commande à utiliser sur un serveur quand on déploie notre application
+
 #### Rappel de l'arborescence de CakePHP 3
 
-Src
+src
 plugins
 logs
 tmp
