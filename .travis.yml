@@ -1,14 +1,14 @@
 language: ruby
 rvm:
-  - 2.1
-script: bundle exec jekyll build
+- 2.1
+script: ./script/cibuild
 #&& bundle exec htmlproof ./_site
 
 # branch whitelist
-#branches:
-#  only:
-#  - master
-#  - gh-pages     # test the gh-pages branch
+branches:
+  only:
+  - master
+  - gh-pages     # test the gh-pages branch
 #  - /pages-(.*)/ # test every branch which starts with "pages-"
 
 env:

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Install Yosemite
+title: Installer Yosemite
 tags: [General]
-description: A reminder for my Yosemite clean install
-langs: [en, fr]
+description: Un reminder pour ma clean install de Yosemite
+langs: [fr]
 ---
 
 ## Clean Install Yosemite
 
-- Download Yosemite on Apple Website
+- Télécharger Yosemite sur le site d'Apple
 
 - Faire une clé usb bootable : dans le terminal avec XXXX = nom de la Clé
 
@@ -20,143 +20,25 @@ sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstall
 Fermer l'utilitaire et lancez l'installation.
 
 
-## Softwares Dowloaded
-
-### From App Store
-
-- Imovie
-- Iphoto
-- GarageBand
-
-### With Browser
-
-- Firefox
-- Atom
-- Github
-- Gimp
-- Docker
-- PoEdit
-- Vlc
-- Skype
-
-### With Homebrew
-
-First install brew : `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-(brew will install Apple Xcode command-line, follow instructions to install it)
-
-- Install softwares
-
-    - brew install git bash-completion
-          if [ -f `brew --prefix`/etc/bash_completion ]; then
-            . `brew --prefix`/etc/bash_completion
-          fi
-
-
-- Install php56 and mcrypt:
-
-    - brew tap homebrew/dupes
-    - brew tap homebrew/php
-    - brew install php56
-    - brew install mcrypt --without-homebrew-php
-    - brew install php56-mcrypt
-
-- Add this in .bash_profile
-
-    export PATH="/usr/local/bin:$PATH"
-    export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
-
-- Install Composer globally (not with Brew as composer version is old)
-
-      curl -sS https://getcomposer.org/installer | php
-      mv composer.phar /usr/local/bin/composer
-
-- Configure Apache2
-
-Add this in `/etc/hosts`:
-
-     127.0.0.1       local.dev
-     127.0.0.1       www.local.dev
-
-For info, the php.ini is in `/usr/local/etc/php/5.6/php.ini`.
-
-Change `/etc/apache2/httpd.conf`:
-
-    Uncomment : `LoadModule rewrite_module  libexec/apache2/mod_rewrite.so`
-    Add this : `LoadModule php5_module /usr/local/Cellar/php55/5.5.18/libexec/apache2/libphp5.so`
-    ServerAdmin myemailadress@example.com
-    ServerName www.local.dev:80
-    DocumentRoot "/Users/cake17/sites"
-    <Directory "/Users/cake17/sites">
-        Options FollowSymLinks Multiviews Indexes
-        MultiviewsMatch Any
-        AllowOverride All
-        Require all granted
-    </Directory>
-    ErrorLog "/sites/logs/apache2/error_log"
-    CustomLog "/sites/logs/apache2/access_log" common
-    Uncomment `Include /private/etc/apache2/extra/httpd-vhosts.conf`
-
-Change in `/etc/apache2/extra/httpd-vhosts.conf`, comment everything and add:
-
-    <VirtualHost *:80>
-        ServerAdmin cake17@cake-websites.com
-        DocumentRoot "/Users/cake17/sites"
-        ServerName local.dev
-        ServerAlias www.local.dev
-        ErrorLog "/Users/cake17/sites/logs/apache2/sites.com-error_log"
-        CustomLog "/private/var/log/apache2/sites-access_log" common
-    </VirtualHost>
-
-
-- Install Mysql
-
-`brew install mysql`, then `mysql.server start` and `mysql.server stop` to start/stop mysql server.
-
-To connect:
-    mysql -uroot
-
-To have launchd start mysql at login:
-    mkdir -p ~/Library/LaunchAgents
-    ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
-Then to load mysql now:
-    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
-Or, if you don't want/need launchctl, you can just run:
-    mysql.server start
-
-### With Gem
-
-- Jekyll : `sudo gem install jekyll`
-- Middleman : `sudo gem install middleman`
-- Sass : `sudo gem install sass`
-- Compass : `sudo gem install compass`
-- Jekyll-sitemap : `sudo gem install jekyll-sitemap`
-
-### With npm
-
-Needs to install node.js for grunt & gulp : `brew install node`
-
-- Grunt : `npm install -g grunt-cli`
-- Gulp : `npm install --global gulp`
-- Bower : `npm install -g bower`
-- Yeoman to generate skeletons (I use it with bespoke.js) : `npm install -g yo`
-- Bespoke : `npm install -g generator-bespoke`
-- For CakePHP Asset Compress : `npm install -g uglify-js`
-
-### For sphinx docs (cakephp docs)
-
-- brew install python
-- brew install sphinx
-- pip install sphinxcontrib-phpdomain
-
-
 ## Options changées
+
+### Général
+
+- Settings/Trackpad : Toucher pour cliquer, Faire glisser avec 3 doigts, sens du défilement naturel à décocher
+- Mise en veille et sécurité
+- Activer le coupe-feu
+- Bureau
+    => trier par : aligner sur la grille
+    => options de présentation : diminue la taille des icônes & espacement, taille du texte à 11
+- Ajout des clés et réglages ssh dans `.ssh/`
+- code wifi
 
 ### Finder
 
-- Barre left : cake17, sites, Documents, Applications, Bureau,
+- barre left : cake17, sites, Documents, Applications, Bureau,
   Téléchargement, AirDrop, Vidéos, Musique, Images
 - options de présentation : Par liste
-- General : Nouvelles fenêtres s’ouvrent dans "Documents"
+- general : Nouvelles fenêtres s’ouvrent dans "Documents"
 - afficher les fichiers cachés
 
 ### Dock
@@ -170,16 +52,129 @@ Needs to install node.js for grunt & gulp : `brew install node`
 
 Mettre en `français numérique` pour pouvoir utiliser les majuscules avec la touche Verrouillage Majuscule.
 
-### Others
 
-- Settings/Trackpad : Toucher pour cliquer, Faire glisser avec 3 doigts, sens du défilement naturel à décocher
-- Mise en veille et sécurité
-- Activer le coupe-feu
-- Bureau
-    => trier par : aligner sur la grille
-    => options de présentation : diminue la taille des icônes & espacement, taille du texte à 11
-- Ajout des clés et réglages ssh dans `.ssh/`
-- code wifi
+## Softwares Téléchargés
+
+### Via l'App Store
+
+- Imovie
+- Iphoto
+- GarageBand
+
+### Via le navigateur
+
+- Firefox
+- Atom
+- Gimp
+- Docker
+- PoEdit
+- Vlc
+- Skype
+
+### Via Homebrew
+
+Installez d'abord brew : `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+(brew va installer Apple Xcode command-line, suivez les instructions pour l'installer)
+
+- Installez git
+
+    - brew install git bash-completion
+        // Ajoutez ceci dans .bash_profile
+        if [ -f `brew --prefix`/etc/bash_completion ]; then
+          . `brew --prefix`/etc/bash_completion
+        fi
+
+
+- Installez php56
+
+    - brew tap homebrew/dupes
+    - brew tap homebrew/php
+    - brew install php56 --without-mysql --without-apache --with-postgresql
+    - brew install php56-intl
+
+The php.ini file can be found in:
+    /usr/local/etc/php/5.6/php.ini
+
+✩✩✩✩ PEAR ✩✩✩✩
+
+If PEAR complains about permissions, 'fix' the default PEAR permissions and config:
+    chmod -R ug+w /usr/local/Cellar/php56/5.6.10/lib/php
+    pear config-set php_ini /usr/local/etc/php/5.6/php.ini system
+
+✩✩✩✩ Extensions ✩✩✩✩
+
+If you are having issues with custom extension compiling, ensure that
+you are using the brew version, by placing /usr/local/bin before /usr/sbin in your PATH:
+
+      PATH="/usr/local/bin:$PATH"
+
+PHP56 Extensions will always be compiled against this PHP. Please install them
+using --without-homebrew-php to enable compiling against system PHP.
+
+✩✩✩✩ PHP CLI ✩✩✩✩
+
+If you wish to swap the PHP you use on the command line, you should add the following to ~/.bashrc,
+~/.zshrc, ~/.profile or your shell's equivalent configuration file:
+
+      export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+
+✩✩✩✩ FPM ✩✩✩✩
+
+To launch php-fpm on startup:
+    mkdir -p ~/Library/LaunchAgents
+    cp /usr/local/opt/php56/homebrew.mxcl.php56.plist ~/Library/LaunchAgents/
+    launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist
+
+The control script is located at /usr/local/opt/php56/sbin/php56-fpm
+
+OS X 10.8 and newer come with php-fpm pre-installed, to ensure you are using the brew version you need to make sure /usr/local/sbin is before /usr/sbin in your PATH:
+
+  PATH="/usr/local/sbin:$PATH"
+
+To have launchd start homebrew/php/php56 at login:
+    mkdir -p ~/Library/LaunchAgents
+    ln -sfv /usr/local/opt/php56/*.plist ~/Library/LaunchAgents
+Then to load homebrew/php/php56 now:
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.php56.plist
+
+- Installez nginx : `brew install nginx`
+
+- Installez Postgres : `brew install postgres`
+
+### Via le terminal
+
+- Installez Composer globalement (pas avec Brew puisque la version de composer de brew est ancienne)
+
+      curl -sS https://getcomposer.org/installer | php
+      mv composer.phar /usr/local/bin/composer
+
+
+### Via Gem
+
+- Jekyll : `sudo gem install jekyll`
+- Middleman : `sudo gem install middleman`
+- Sass : `sudo gem install sass`
+- Compass : `sudo gem install compass`
+- Jekyll-sitemap : `sudo gem install jekyll-sitemap`
+
+### Via npm
+
+On doit d'abord installer node.js for grunt & gulp : `brew install node`
+
+- Grunt : `npm install -g grunt-cli`
+- Gulp : `npm install --global gulp`
+- Bower : `npm install -g bower`
+- Yeoman pour générer des squelettes (utilisé avec bespoke.js) : `npm install -g yo`
+- Bespoke : `npm install -g generator-bespoke`
+- Pour CakePHP Asset Compress : `npm install -g uglify-js`
+
+### Pour les docs sphinx (cakephp docs)
+
+- brew install python
+- brew install sphinx
+- pip install sphinxcontrib-phpdomain
+
+### Mes projets
 
 - git clone cake-websites
 - Puis lancez le shell maj pour installer tous mes projets
