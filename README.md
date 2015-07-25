@@ -2,6 +2,12 @@
 
 [![Build Status](https://api.travis-ci.org/cake17/cake17.github.io.png?branch=master)](https://travis-ci.org/cake17/cake17.github.io)
 
+Tools needed
+
+    - bower
+    - bundle
+    - gulp
+
 Clone this repo
 
 Run the following commands:

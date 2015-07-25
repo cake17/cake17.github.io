@@ -102,7 +102,7 @@ Un octet est ensemble de 8 bits. Un moyen de s'en souvenir est de prendre la rac
 Représentation
 --------------
 
-img à insérer
+![Schéma octets-bits]({{ site.baseurl }}/public/img/octet-bits.png)
 
 Application pour les encodages
 ==============================
@@ -113,7 +113,7 @@ dans un ordinateur qui ne comprend que les 0 et les 1.
 
 Tout d'abord vous faîtes la liste des caractères que l'on utilise la plupart du temps.
 Au fait, vous êtes américain, donc ne pensez pas aux caractères avec des accents, ni
-à des caractères japonnais, ou d'autres langues.
+à des caractères japonais, ou d'autres langues.
 
 Voici une liste non exhaustive:
 - a

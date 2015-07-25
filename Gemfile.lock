@@ -144,6 +144,3 @@ DEPENDENCIES
   github-pages (= 37)
   html-proofer
   json
-
-BUNDLED WITH
-   1.10.5
