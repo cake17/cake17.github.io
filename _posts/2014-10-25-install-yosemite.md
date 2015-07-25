@@ -16,8 +16,7 @@ sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstall
 
 - Redémarrer l'ordi avec la clé branchée. Appuyer sur la touche Option.
 
-- Allez dans l'Utilitaire de disques et effacez la partition de votre volume.
-Fermer l'utilitaire et lancez l'installation.
+- Allez dans l'Utilitaire de disques et effacez la partition de votre volume. Fermer l'utilitaire et lancez l'installation.
 
 
 ## Options changées
@@ -28,25 +27,21 @@ Fermer l'utilitaire et lancez l'installation.
 - Mise en veille et sécurité
 - Activer le coupe-feu
 - Bureau
-    => trier par : aligner sur la grille
-    => options de présentation : diminue la taille des icônes & espacement, taille du texte à 11
+    - trier par : aligner sur la grille
+    - options de présentation : diminue la taille des icônes & espacement, taille du texte à 11
 - Ajout des clés et réglages ssh dans `.ssh/`
 - code wifi
 
 ### Finder
 
-- barre left : cake17, sites, Documents, Applications, Bureau,
-  Téléchargement, AirDrop, Vidéos, Musique, Images
+- barre left : cake17, sites, Documents, Applications, Bureau, Téléchargement, AirDrop, Vidéos, Musique, Images
 - options de présentation : Par liste
 - general : Nouvelles fenêtres s’ouvrent dans "Documents"
 - afficher les fichiers cachés
 
 ### Dock
 
-- la mettre à gauche
-- Finder, AppStore, Pref, Terminal, Firefox, Safari, Rappels, Itunes, Github, Docker, Atom, PoEdit,
-  Imovie, Iphoto, Garage Band, Gimp, Vlc, Skype, Plans, Transfert d'images
-  || Applications, Téléchargement, Corbeille
+Le mettre à gauche et ajouter Finder, AppStore, Pref, Terminal, Firefox, Safari, Rappels, Itunes, Github, Docker, Atom, PoEdit, Imovie, Iphoto, Garage Band, Gimp, Vlc, Skype, Plans, Transfert d'images - Applications, Téléchargement, Corbeille
 
 ### Clavier
 

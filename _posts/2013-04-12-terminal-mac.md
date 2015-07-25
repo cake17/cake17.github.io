@@ -6,23 +6,19 @@ description: Commandes utiles pour le terminal de Mac
 langs: [fr]
 ---
 
-### Keyboards Shortcuts and MAC tips
+### Raccourcis Clavier et astuces MAC
 
-Pour faire des tilde sur MAC : `ALT+n`
+| Raccourci | Action                                    |
+|-----------|-------------------------------------------|
+| ALT+n     | Pour faire des tilde sur MAC              |
+| ALT+MAJ+L | Pour faire des conditions OR `||`         |
 
-Pour faire des conditions OR `||` : `ALT+MAJ+L`
 
-Pour afficher les fichiers cachés sur MAC : dans le terminal, tapez : `defaults write com.apple.finder AppleShowAllFiles 1`
-
-Pour désactiver le DashBoard sur mac OSX 10.9:
-
-    defaults write com.apple.dashboard mcx-disabled -boolean YES
-    `killall Dock`
-
-Desactiver le DashBoard sur mac OSX 10.9:
-
-    defaults write com.apple.dashboard mcx-disabled -boolean NO
-    `killall Dock`
+| Dans le Terminal                                                           | Action                                         |
+|----------------------------------------------------------------------------|------------------------------------------------|
+| tapez : `defaults write com.apple.finder AppleShowAllFiles 1`              | Pour afficher les fichiers cachés sur MAC      |
+| defaults write com.apple.dashboard mcx-disabled -boolean YES; killall Dock | Pour désactiver le DashBoard sur mac OSX 10.10 |
+| defaults write com.apple.dashboard mcx-disabled -boolean NO; killall Dock  | Réactiver le DashBoard sur mac OSX 10.10       |
 
 Si le ventilateur marche fort ou que la carte sd n'est pas reconnue pour un MacBook, on peut faire un [reset smc](http://support.apple.com/fr-fr/HT3964) et un [reset pram](http://support.apple.com/kb/PH14222?viewlocale=fr_FR)
 
@@ -39,102 +35,88 @@ Pour lire un fichier : `vim /path/to/file`
 Tapez ESC pour revenir au mode interactif.
 
 En mode interactif:
-w : se déplacer de mot en mot
-o : aller au début de la ligne
-$ : aller à la fin de la ligne
-G : sauter à la ligne dernière ligne (ex 5G va à la ligne 5)
-gg : aller à la 1ère ligne du fichier
 
-x : efface des lettres
-dd : supprime une ligne
-dw : supprime un mot
-dO et d$ : supprime le début ou la fin de ligne
+| Raccourci | Action                                                   |
+|-----------|----------------------------------------------------------|
+| w         | se déplacer de mot en mot                                |
+| o         | aller au début de la ligne                               |
+| $         | aller à la fin de la ligne                               |
+| G         | sauter à la ligne dernière ligne (ex 5G va à la ligne 5) |
+| gg        | aller à la 1ère ligne du fichier                         |
+|           |                                                          |
+| x         | efface des lettres                                       |
+| dd        | supprime une ligne                                       |
+| dw        | supprime un mot                                          |
+| dO et d$  | supprime le début ou la fin de ligne                     |
+|           |                                                          |
+| yy        | copier une ligne                                         |
+| p         | coller                                                   |
+| r         | remplacer une lettre                                     |
+| u         | annuler modifications (CTRL + R pour rétablir)           |
 
-yy : copier une ligne
-p : coller
-r : remplacer une lettre
-u : annuler modifications (CTRL + R pour rétablir)
 
 En mode commande
-:wq : sauvegarder le fichier et quitter
-:%s/ancien/nouveau/g : rechercher et remplacer dans tout le fichier
-:r autrefichier : inserer un fichier au niveau du curseur
 
-### Terminal Commands
+| Raccourci            | Action                                       |
+|----------------------|----------------------------------------------|
+| :wq                  | sauvegarder le fichier et quitter            |
+| :%s/ancien/nouveau/g | rechercher et remplacer dans tout le fichier |
+| :r autrefichier      | inserer un fichier au niveau du curseur      |
+
+### Commandes du Terminal
 
 #### Infos : man, which, ls, cd, pwd, df, find, history
 
 D'une manière général, les options sont mises après un '-'.
 
-Pour connaître les options d'une commande
-
-    man NOM_COMMANDE
-    par exemple : man cp
-
-Pour savoir où se trouve la commande : `which NOM_COMMANDE`
-
-Lister le contenu d'un répertoire : `ls`
-
-Lister le contenu d'un répertoire avec les permissions : `ls -l`
-
-Lister le contenu d'un répertoire avec les fichiers cachés : `ls -a`
+| Commande           | Action                                                 |
+|--------------------|--------------------------------------------------------|
+| man NOM_COMMANDE   | Pour savoir où se trouve la commande                   |
+| which NOM_COMMANDE | Pour connaître les options d'une commande (ex: man cp) |
+|                    |                                                        |
+| ls                 | Lister le contenu d'un répertoire                      |
+| ls -l              | Lister le contenu d'un répertoire avec les permissions |
+| ls -a              | Lister le contenu d’un répertoire avec les fichiers cachés |
+| ls -lh            | Lister le contenu d'un répertoire avec la taille en octet, ko, mo et go |
 
 On peut cumuler les options pour par exemple lister le contenu avec les permissions et les fichiers cachés comme ceci : `ls -la`.
 
-Lister le contenu d'un répertoire avec la taille en octet, ko, mo et go : `ls -lh`
+| Commande          | Action                                                                  |
+|-------------------|-------------------------------------------------------------------------|
+| cd NOM_REPERTOIRE | Se déplacer dans les répertoires                                        |
+| cd ..             | Pour revenir au répertoire parent                                        |
+| cd + TAB                         | Après cd vous pouvez appuyer sur 'tab' après avoir entré la première lettre d'un répertoire existant |
+| cd D+TAB+ENTER                   | vous ouvre le dossier Documents dans votre home                                                      |
+| pwd                              | Connaître l'endroit où vous êtes                                                                     |
+| cd NOM_REPERTOIRE                | Se déplacer dans les répertoires                                                                     |
+| df -h                            | Affiche la liste des volumes montés sur votre Mac et les caractéristiques de ceux-ci (très pratique) |
+| history                          | Pour voir un historique des commandes entrées                                                        |
+| CONTROL + R + COMMANDE_RECHERCHEE| Pour rechercher une commande tapée                                                                   |
+| find où quoi                     | ex : find /home/cake17 readme.txt, cherche readme.txt dans /home/cake 17                             |
 
-Se déplacer dans les répertoires : `cd nom du rep`
-
-Après cd vous pouvez appuyer sur 'tab' après avoir entré la première lettre d'un répertoire existant.
-
-Par exemple : cd D+tab+enter vous ouvre le dossier Documents dans votre home.
-
-Pour revenir au répertoire parent : `cd ..`
-
-Connaître l'endroit où vous êtes : `pwd`
-
-Affiche la liste des volumes montés sur votre Mac et les caractéristiques de ceux-ci (très pratique) : `df -h`
-
-find où quoi (ex : find /home/cake17 readme.txt, cherche readme.txt dans /home/cake 17)
-
-Pour voir un historique des commandes entrées : `history`
-
-Pour rechercher une commande tapée : `CONTROL + R + commande_recherche` (ex : `CONTROL + R + all`)
 
 #### Actions : rm, cp, mkdir, mv, chown, chmod
 
-Supprimer un fichier : `rm nom_du_fichier`
-
-Créer un répertoire : `mkdir nom_du_rep`
-
-Supprimer un repertoire : `rm -rf nom_du_rep`
-
-Copier un document : `cp doc_source doc_destination`
-
-Copier un répertoire : `cp -R rep_source rep_destination`
-
-Déplacer un document : `mv doc_source doc_destination`
-
-Pour changer le propriétaire d'un fichier : `chown`
-
-Pour changer les permissions d'un fichier : `chmod`
+| Commande                         | Action                                    |
+|----------------------------------|-------------------------------------------|
+| rm NOM_FICHIER                   | Supprimer un fichier                      |
+| mkdir NOM_REPERTOIRE             | Créer un répertoire                       |
+| rm -rf NOM_REPERTOIRE            | Supprimer un repertoire                   |
+| cp DOC_SOURCE DOC_DESTINATION    | Copier un document                        |
+| cp -R REP_SOURCE REP_DESTINATION | Copier un répertoire                      |
+| mv DOC_SOURCE DOC_DESTINATION    | Déplacer un document                      |
+| chown                            | Pour changer le propriétaire d'un fichier |
+| chmod                            | Pour changer les permissions d'un fichier |
 
 #### Processus : top, who, w, users, write, uptime, scp
 
-Liste des processus en cours : `top`
-
-Pour savoir qui est connecté : `who`
-
-Pour avoir un résumé de l'ordi, ses utilisateurs connectés, ... : `w`
-
-Pour savoir qui est connecté en local : `users`
-
-Pour écrire à un utilisateur
-
-    write nom_d'utilisateur
-    Contrôle+c pour arrêter.
-
-Pour savoir depuis combien de temps l'ordinateur (ou le serveur) est booté : `uptime`
+| Commande              | Action                                                                     |
+|-----------------------|----------------------------------------------------------------------------|
+| top                   | Liste des processus en cours                                               |
+| who                   | Pour savoir qui est connecté                                               |
+| users                 | Pour avoir un résumé de l'ordi, ses utilisateurs connectés, ...            |
+| write NOM_UTILISATEUR | Pour écrire à un utilisateur (CTRL + C pour arrêter)                       |
+| uptime                | Pour savoir depuis combien de temps l'ordinateur (ou le serveur) est booté |
 
 Pour démarrer un serveur ssh sur son mac : aller dans `Preferences/Partage` et cocher `Session à distance`
 
@@ -142,21 +124,16 @@ Pour copier des fichiers `scp image.png cake@85.123.10.201:/home/cake/images/`
 
 #### Analyze & filter trafic : host, ping, lsof, netstat, traceroute, ifconfig
 
-Connaitre l’IP d’un serveur dans le terminal : `host NOMDUSERVEUR`
-
-Tester si un serveur répond : `ping NOMDUSERVEUR`
-
-Pour stopper le ping dans terminal : `CONTROL+C`
-
-Pour afficher les proccessus : `sudo lsof -i`
-
-Ou mieux pour avoir des détails sur le PID, l'utilisateur et le processus : `netstat -anpe`
-
-Ou pour seulement les ports TCP : `netstat -antp`. L'adresse ssh qu'il faudra taper sera noté dans la fenêtre.
-
-pour voir le chemin fait par un paquet pour atteindre une adresse ip : `traceroute IP`
-
-Pour voir les interfaces réseaux de son ordi : `ifconfig`
+| Commande          | Action                                                                                       |
+|-------------------|----------------------------------------------------------------------------------------------|
+| host NOMDUSERVEUR | Connaitre l’IP d’un serveur dans le terminal                                                 |
+| ping NOMDUSERVEUR | Tester si un serveur répond                                                                  |
+| CONTROL+C         | Pour stopper le ping dans terminal                                                           |
+| sudo lsof -i      | Pour afficher les proccessus                                                                 |
+| netstat -anpe     | Ou mieux pour avoir des détails sur le PID, l'utilisateur et le processus                    |
+| netstat -antp     | Ou pour seulement les ports TCP (L'adresse ssh qu'il faudra taper sera noté dans la fenêtre) |
+| traceroute IP     | Pour voir le chemin fait par un paquet pour atteindre une adresse ip                         |
+| ifconfig          | Pour voir les interfaces réseaux de son ordi                                                 |
 
 ### Références
 

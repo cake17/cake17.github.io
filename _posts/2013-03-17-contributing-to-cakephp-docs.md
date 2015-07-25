@@ -13,8 +13,7 @@ Après avoir utilisé le framework CakePHP pendant environ un an, je me suis lan
 
 La documentation de CakePHP était étoffée en ce qui concerne la version 1.3, mais la dernière version 2.0 n'était qu'en anglais.
 
-Après avoir consulté le forum français [http://forum.cakephp-fr.org/](http://forum.cakephp-fr.org/), je me suis aperçu qu'il fallait aller sur github, un site de partage de codes sources et notamment de codes libres.
-Avec azur, un membre de cakephp.org, nous avons donc récupéré la version anglaise et traduit pendant l'été l'intégralité de la documentation de la version 2.0.
+Après avoir consulté le forum français [http://forum.cakephp-fr.org/](http://forum.cakephp-fr.org/), je me suis aperçu qu'il fallait aller sur github, un site de partage de codes sources et notamment de codes libres. Avec azur, un membre de cakephp.org, nous avons donc récupéré la version anglaise et traduit pendant l'été l'intégralité de la documentation de la version 2.0.
 
 Un problème subsiste, il s'agit du maintien de la doc, puisqu'elle évolue tous les jours en anglais. Pour vérifier cela il faudrait regarder chaque commit fait sur la doc anglaise et changer un à un les fichiers concernés. Cela demande un travail assez important mais qui serait facilité si on pouvait se répartir le fardeau. Je vais donc mettre à la suite la procédure pour participer à la documentation sur Github en essayant de détailler au maximum car l'utilisation de git n'est pas aisée au départ.
 

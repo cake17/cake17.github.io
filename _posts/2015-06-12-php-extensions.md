@@ -39,8 +39,7 @@ Dans mon terminal, je vais pouvoir trouver les modules qui sont installés avec 
 Liste complète des modules
 ==========================
 
-Voici la [liste complète des extensions](https://php.net/manual/fr/extensions.alphabetical.php)
-et une [liste plus restrictive](https://pagodabox.io/docs/php_extensions?c=5-6&) qui me semble meilleure car certains modules anciens ont été purgés. Les modules qui ont été installés sur ma machine avec sont en gras:
+Voici la [liste complète des extensions](https://php.net/manual/fr/extensions.alphabetical.php) et une [liste plus restrictive](https://pagodabox.io/docs/php_extensions?c=5-6&) qui me semble meilleure car certains modules anciens ont été purgés. Les modules qui ont été installés sur ma machine avec sont en gras:
 
     php_extensions:
       - amqp
