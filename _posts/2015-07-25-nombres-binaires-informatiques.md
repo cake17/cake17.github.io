@@ -93,9 +93,9 @@ Un octet est ensemble de 8 bits. Un moyen de s'en souvenir est de prendre la rac
 
 ## Application pour les encodages
 
-Essayons de nous replonger dans le contexte de l'époque des premiers ordinateurs. Vous êtes chargé de confectionner un sytème qui permet d'enregistrer des mots, des chiffres dans un ordinateur qui ne comprend que les 0 et les 1.
+Essayons de nous replonger dans le contexte de l'époque des premiers ordinateurs. Vous êtes chargé de confectionner un sytème qui permet d'enregistrer des lettres et des chiffres dans un ordinateur qui ne comprend que les 0 et les 1.
 
-Tout d'abord vous faîtes la liste des caractères que l'on utilise la plupart du temps. Au fait, vous êtes américain, donc ne pensez pas aux caractères avec des accents, ni à des caractères japonais, ou d'autres langues.
+Tout d'abord vous faîtes la liste des caractères que l'on utilise la plupart du temps. Au fait, vous êtes américain, donc ne pensez pas aux caractères avec accents, ni aux caractères japonais, ou d'autres langues.
 
 Voici une liste non exhaustive:
 - a
@@ -112,7 +112,7 @@ Voici une liste non exhaustive:
 - <
 - %
 
-Ok on va pas tout faire mais les américains se sont dit. Ok on a 128 caractères possibles. On va donc essayer de trouver le nombre de chiffres composés uniquement de 0 et de 1 qui nous permettent d'avoir 128 combinaisons possibles.
+Ok on va pas tout faire mais les américains se sont dit. Ok on a 128 caractères possibles au maximum que l'on souhaite utiliser. On va donc essayer de trouver le nombre de chiffres composés uniquement de 0 et de 1 qui nous permettent d'avoir 128 combinaisons possibles.
 
 Je prend un exemple:
 
@@ -129,7 +129,7 @@ Admettons que nous prenions 3 nombre binaires, combien de combinaisons peut-on f
 
 On compte **8** combinaisons de façon empirique. Les probabilités nous permettent d'avoir cette formule : 2^3 = 8
 
-Donc si l'on souhaite 128 combinaisons, on va chercher n, tel que 2^n=256
+Donc si l'on souhaite 128 combinaisons, on va chercher n, tel que 2^n=128
 
 2^4=16, non, 2^5=32, non plus, directement 2^7=128 !!! Super. Il faut donc que nous fassions une suite de 7 chiffres pour avoir 128 possibilités de caractères.
 
