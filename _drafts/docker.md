@@ -43,31 +43,15 @@ Docker fonctionne directement en natif sur linux, mais pas sur un MAC. On va
 avoir besoin d'installer une machine virtuelle très legère, appelée boot2docker
 sur laquelle tournera une version de LINUX et sur laquelle on utilisera Docker.
 
-Installer Docker et boot2docker sur un MAC
-------------------------------------------
+Installer Docker sur un MAC
+---------------------------
 
-2 possibilités :
-
-- Installer Kitematic, un logiciel avec interface graphique.
-  http://docs.docker.com/kitematic/. Docker et boot2docker seront installés
-  en même temps.
-- Installer seulement docker et boot2docker.
-    - Sur la page [https://github.com/boot2docker/osx-installer/releases/tag/v1.6.2](boot2docker/osx-installer).
-    - Télécharger le Boot2Docker-x.x.x.pkg dans la section "Downloads".
-    - Installer Boot2Docker en double-cliquant sur le package.
-    - L'installeur place Boot2Docker dans le dossier "Applications".
-    L'installation place les binaires docker et boot2docker dans /usr/local/bin.
+Suivez les instructions de [la page](http://docs.docker.com/mac/step_one).
 
 Lancer Docker
 -------------
 
-Selon l'installation que vous avez choisi, vous avez 2 possibilités :
-
-- Soit ouvrir l'application Kitematic qui se chargera de lancer la machine
-  virtuelle Boot2Docker.
-- Soit ouvrir l'application boot2Docker qui lancera la machine virtuelle et
-  ouvrira un terminal dans lequel vous pourrez executer vos commandes pour
-  docker.
+Lancez LaunchPad et choisissez Kitematic ou Docker Terminal.
 
 Une histoire de containers
 --------------------------
