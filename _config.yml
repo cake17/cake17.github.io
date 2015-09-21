@@ -50,6 +50,7 @@ unpublished: false
 whitelist: []
 gems:
   - jekyll-sitemap
+  - jekyll-feed
 
 ## Conversion
 markdown:  kramdown
