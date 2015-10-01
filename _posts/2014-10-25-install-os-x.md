@@ -10,11 +10,15 @@ lang: fr
 
 ## Clean Install El Capitan
 
+Note: pour le Macbook Pro, il vaut mieux brancher une souris car le click du trackpad est désactivé pendant l'installation.
+
 - Télécharger El Capitan sur le site d'Apple
 
 - Faire une clé usb bootable : dans le terminal avec XXXX = nom de la Clé
 
     sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia `--`volume /Volumes/XXXX `--`applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app `--`nointeraction
+
+Voici ce que vous allez voir dans votre terminal si tout se déroule bien.
 
 ![Install Ok]({{ site.baseurl }}/public/img/install_os_x_ok.png)
 
