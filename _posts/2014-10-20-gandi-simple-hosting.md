@@ -3,7 +3,7 @@ layout: post
 title: Gandi Simple Hosting
 tags: [General]
 description: Tips for Gandi Simple Hosting (Jekyll, backup, ...)
-langs: [en]
+lang: en
 ---
 
 Gandi Simple Hosting is a website that is really nice for people who don't want to update themselves tools like MySQL, PHP versions, etc... on their remote. I'm one of them and I really like the easy way provided by Gandi to host web pages for a reasonnable price.

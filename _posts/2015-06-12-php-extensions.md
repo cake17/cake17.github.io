@@ -3,7 +3,7 @@ layout: post
 title: PHP Extensions
 tags: [General]
 description: Quelles extensions PHP faut-il installer ?
-langs: [fr]
+lang: fr
 ---
 
 Ayant eu l'habitude d'utiliser MAMP, je n'ai jamais trop prêté attention à l'installation de PHP et de ses extensions.

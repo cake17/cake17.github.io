@@ -3,7 +3,7 @@ layout: post
 title: Installer Yosemite
 tags: [General]
 description: Un reminder pour ma clean install de Yosemite
-langs: [fr]
+lang: fr
 ---
 
 **Last-Update : 2015-09-10**
@@ -17,6 +17,7 @@ langs: [fr]
 sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia `--`volume /Volumes/XXXX `--`applicationpath /Applications/Install\ OS\ X\ Yosemite.app `--`nointeraction
 
 - Redémarrer l'ordi avec la clé branchée. Appuyer sur la touche Option.
+  ![Schéma CakePHP docs]({{ site.baseurl }}/public/img/touche_option_mac.jpg)
 
 - Allez dans l'Utilitaire de disques et effacez la partition de votre volume. Fermer l'utilitaire et lancez l'installation.
 

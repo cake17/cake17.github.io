@@ -3,7 +3,7 @@ layout: post
 title: Nombre binaires en informatique
 tags: [General]
 description: Utilisation des nombres binaires en informatique
-langs: [fr]
+lang: fr
 ---
 
 ## Introduction
@@ -48,7 +48,9 @@ On retrouve les 8 chiffres de nos nombres binaires du tableau.
 | 2^6 | 2^5 | 2^4 | 2^3 | 2^2 | 2^1 | 2° |
 |-----|-----|-----|-----|-----|-----|----|
 | 64  | 32  | 16  | 8   | 4   | 2   | 1  |
-| 0   | 0   | 0   | 0   | 0   | 0   | 0  | Ici le 0 en base 10 correspond au 0000 0000 en base 2
+| 0   | 0   | 0   | 0   | 0   | 0   | 0  |
+
+Ici le 0 en base 10 correspond au 0000 0000 en base 2
 
 ### Technique
 

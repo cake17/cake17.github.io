@@ -3,7 +3,7 @@ layout: post
 title: Grunt & Gulp
 tags: [General]
 description: Grunt & Gulp - 2 outils pour les mêmes besoins
-langs: [fr]
+lang: fr
 ---
 
 ### Grunt && Gulp

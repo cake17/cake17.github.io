@@ -3,7 +3,7 @@ layout: post
 title: Jekyll and Github
 tags: [General]
 description: How to install and use Jekyll to create static sites
-langs: [en]
+lang: en
 ---
 
 ## Jekyll

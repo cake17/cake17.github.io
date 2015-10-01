@@ -1,19 +1,21 @@
 <head>
+
   <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>
   {% if page.title %}
-    {{ page.title }} -
+    {{ page.title }} |
   {% endif %}
-  Blog Cake17
+  Cake17's Blog
   </title>
   {% if page.description %}
   <meta name="description" content="{{ page.description }}">
   {% endif %}
   <meta name="author" content="{{ site.author.name }}">
-  <meta name="google-site-verification" content="Eakerb7NRoz_egRoyrFPO32Zzu9vS45GGh7NEsdjKcA" />
+  <meta name="google-site-verification" content="Eakerb7NRoz_egRoyrFPO32Zzu9vS45GGh7NEsdjKcA">
 
   <!-- Enable responsive viewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Styles -->
   <!-- My css -->
@@ -25,6 +27,7 @@
 
   <!-- Le fav and touch icons -->
   <link href="{{ "/public/img/favicon.png" | prepend: site.baseurl }}" rel="shortcut icon">
+ <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <link type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml" rel="alternate">
 </head>

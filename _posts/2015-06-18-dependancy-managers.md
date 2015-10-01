@@ -3,7 +3,7 @@ layout: post
 title: Gestionnaires de Dépendances (Dependancy Managers)
 tags: [General]
 description: Liste des Gestionnaires de Dépendances
-langs: [fr]
+lang: fr
 ---
 
 ## Pear

@@ -3,7 +3,7 @@ layout: post
 title: Deploy CakePHP 3 apps
 tags: [General]
 description: Deploy CakePHP 3 apps with git and composer
-langs: [en]
+lang: en
 ---
 
 Brief explanations

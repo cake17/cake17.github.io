@@ -3,7 +3,7 @@ layout: post
 title: Iphoto Tips
 tags: [General]
 description: Iphoto and Mac software Tips & Reminders
-langs: [en]
+lang: en
 ---
 
 Iphoto 11

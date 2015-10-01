@@ -2,7 +2,7 @@
 layout: post
 tags: [General]
 description: List of interesting projects.
-langs: [en]
+lang: en
 ---
 
 ## Translations
