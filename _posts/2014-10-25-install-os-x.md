@@ -1,20 +1,22 @@
 ---
 layout: post
-title: Installer Yosemite
+title: Installer Mac OS X El Capitan 10.11
 tags: [General]
-description: Un reminder pour ma clean install de Yosemite
+description: Un reminder pour ma clean install de El Capitan
 lang: fr
 ---
 
-**Last-Update : 2015-09-10**
+**Last-Update : 2015-10-01**
 
-## Clean Install Yosemite
+## Clean Install El Capitan
 
-- Télécharger Yosemite sur le site d'Apple
+- Télécharger El Capitan sur le site d'Apple
 
 - Faire une clé usb bootable : dans le terminal avec XXXX = nom de la Clé
 
-sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia `--`volume /Volumes/XXXX `--`applicationpath /Applications/Install\ OS\ X\ Yosemite.app `--`nointeraction
+    sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia `--`volume /Volumes/XXXX `--`applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app `--`nointeraction
+
+![Install Ok]({{ site.baseurl }}/public/img/install_os_x_ok.png)
 
 - Redémarrer l'ordi avec la clé branchée. Appuyer sur la touche Option.
   ![Schéma CakePHP docs]({{ site.baseurl }}/public/img/touche_option_mac.jpg)
