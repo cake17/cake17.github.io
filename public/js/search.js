@@ -139,6 +139,9 @@ function showSearchResults(results) {
  * @return {String} Populated HTML
  */
 function populateResultContent(html, item) {
+    var date = new Date(item.date);
+    //alert(date.substr(0, 8));
+    // var formattedDate = date.getFullYear() + '/' + date.getMonth() + '/' + date.getDate();
     html = injectContent(html, item.title, '##Title##');
     html = injectContent(html, item.link, '##Url##');
     html = injectContent(html, item.excerpt, '##Excerpt##');

@@ -38,6 +38,19 @@ pre {
 /**
  * Page Layout
  */
-.article_body {
+.article-body {
   text-align: justify;
+}
+
+.img-fond {
+  background-image: url("../../public/img/bandeau_fond_copie.png");
+  margin: 0;
+  padding: 0;
+  min-height: 200px;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+}
+
+i.medium-icon {
+  font-size: 1.6rem;
 }

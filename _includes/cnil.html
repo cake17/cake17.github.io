@@ -1,15 +1,15 @@
-<a href="javascript:tagAnalyticsCNIL.CookieConsent.gaOptout()">Cliquez ici pour vous opposer aux cookies de mesure d'audience de Google</a>
+<!-- <a href="javascript:tagAnalyticsCNIL.CookieConsent.gaOptout()">Cliquez ici pour vous opposer aux cookies de mesure d'audience de Google</a> -->
 <script>
 var tagAnalyticsCNIL = {}
 
 tagAnalyticsCNIL.CookieConsent = function() {
     // Remplacez la valeur UA-XXXXXX-Y par l'identifiant analytics de votre site.
-    var gaProperty = 'UA-XXXXXX-Y '
+    var gaProperty = 'UA-36348485-5'
     // Désactive le tracking si le cookie d'Opt-out existe déjÃ .
     var disableStr = 'ga-disable-' + gaProperty;
     var firstCall = false;
 
-    //Cette fonction retourne la date dâ€™expiration du cookie de consentement
+    //Cette fonction retourne la date d expiration du cookie de consentement
 
     function getCookieExpireDate() {
      // Le nombre de millisecondes que font 13 mois
@@ -20,8 +20,7 @@ tagAnalyticsCNIL.CookieConsent = function() {
      return expires;
     }
 
-
-    //Cette fonction vérifie si on  a déjÃ  obtenu le consentement de la personne qui visite le site.
+    //Cette fonction vérifie si on  a déjà  obtenu le consentement de la personne qui visite le site.
     function checkFirstVisit() {
        var consentCookie =  getCookie('hasConsent');
        if ( !consentCookie ) return true;
@@ -45,7 +44,6 @@ tagAnalyticsCNIL.CookieConsent = function() {
         document.getElementsByTagName('body')[0].className+=' cookiebanner';
         createInformAndAskDiv();
      }
-
 
     // Fonction utile pour récupérer un cookie à partir de son nom
     function getCookie(NameOfCookie)  {
@@ -85,7 +83,7 @@ tagAnalyticsCNIL.CookieConsent = function() {
         return r;
     }
 
-    //Vérifie la valeur de navigator.DoNotTrack pour savoir si le signal est activé et est à  1
+    //Vérifie la valeur de navigator.DoNotTrack pour savoir si le signal est activé et est à 1
     function notToTrack() {
         if ( (navigator.doNotTrack && (navigator.doNotTrack=='yes' || navigator.doNotTrack=='1'))
             || ( navigator.msDoNotTrack && navigator.msDoNotTrack == '1') ) {
@@ -148,8 +146,6 @@ tagAnalyticsCNIL.CookieConsent = function() {
         bodytag.insertBefore(div,bodytag.firstChild);
     }
 
-
-
     function isClickOnOptOut( evt) {
         // Si le noeud parent ou le noeud parent du parent est la bannière, on ignore le clic
         return(evt.target.parentNode.id == 'cookie-banner' || evt.target.parentNode.parentNode.id =='cookie-banner'
@@ -168,7 +164,6 @@ tagAnalyticsCNIL.CookieConsent = function() {
             }
         }
     }
-
 
     // Tag Google Analytics, cette version est avec le tag Universal Analytics
     function callGoogleAnalytics() {
@@ -195,12 +190,10 @@ tagAnalyticsCNIL.CookieConsent = function() {
             deleteAnalyticsCookies();
         },
 
-
          showInform: function() {
             var div = document.getElementById("inform-and-ask");
             div.style.display = "";
         },
-
 
          hideInform: function() {
             var div = document.getElementById("inform-and-ask");
@@ -208,7 +201,6 @@ tagAnalyticsCNIL.CookieConsent = function() {
             var div = document.getElementById("cookie-banner");
             div.style.display = "none";
         },
-
 
         start: function() {
             //Ce bout de code vÃ©rifie que le consentement n'a pas dÃ©jÃ  Ã©tÃ© obtenu avant d'afficher
@@ -243,7 +235,6 @@ tagAnalyticsCNIL.CookieConsent = function() {
             }
         }
     }
-
 }();
 
 tagAnalyticsCNIL.CookieConsent.start();

@@ -1,22 +1,21 @@
-<div class="row">
-  <div class="large-12 columns large-centered text-center"><br />
-    <!-- <a href="{{ site.baseurl }}/">
-      <img src="{{ site.baseurl }}/public/img/bandeau_medaillon.png" alt="Bandeau Medaillon">
-      <p>
-        {{ site.title }} &copy; {{ site.time | date: '%Y' }} with Jekyll.
-      </p>
-    </a> -->
-    <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/public/img/bandeau_medaillon_with_title.png" alt="Bandeau Medaillon"></a>
-    <!-- Nav Menu -->
-    <!-- <a href="{{ site.baseurl }}/" class="button medium secondary radius"><i class="fi-home"></i> Blog</a> -->
-    <a href="{{ site.baseurl }}/2014/09/16/list-of-projects.html" class="button medium secondary radius"><i class="fi-folder"></i> Projets</a>
-    <a href="{{ site.baseurl }}/feed.xml" class="button medium secondary radius"><i class="fi-rss"></i> RSS</a>
-    <a href="https://github.com/{{ site.author.github }}" class="button medium secondary radius">
-      <i class="fi-social-github"></i>
-      <span class="username">{{ site.author.github }}</span>
-    </a>
+<div class="img-fond">
+  <div class="row">
+    <div class="large-12 columns large-centered text-center"><br />
+      <!-- Nav Menu -->
+      <ul class="button-group">
+        <li><a href="{{ site.baseurl }}/" class="button small secondary radius" title="Home"><i class="fi-home medium-icon" title="Home"></i> <span class="username">{{ site.author.github }}'s Blog</span></a></li>
+        <li><a href="{{ site.baseurl }}/2014/09/16/list-of-projects.html" class="button small secondary radius" title="My Projects"><i class="fi-folder medium-icon" title="My Projects"></i></a></li>
+        <li><a href="{{ site.baseurl }}/feed.xml" class="button small secondary radius" title="RSS"><i class="fi-rss medium-icon" title="RSS"></i></a></li>
+        <li><a href="https://github.com/{{ site.author.github }}" class="button small secondary radius" title="Github"><i class="fi-social-github medium-icon" title="Github"></i></a></li>
+      </ul>
 
-    <!-- Search form -->
-    {% include search_bar.html %}
+      <!-- Search form -->
+      {% include search_bar.html %}
+    </div>
   </div>
+</div>
+
+<div class="text-center">
+  <!-- Search results -->
+  {% include search_results.html %}
 </div>

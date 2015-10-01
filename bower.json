@@ -1,8 +1,9 @@
 {
-  "name": "my-app",
+  "name": "blog.cake-websites.com",
+  "description": "My Blog packages",
   "version": "0.0.1",
   "private": "true",
-  "dependencies": {
+  "devDependencies": {
     "foundation": "zurb/bower-foundation"
   }
 }

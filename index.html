@@ -40,10 +40,9 @@ layout: page
         {{ post.excerpt }}
         {% endif %}
         {% endif %}
-        {% if post.langs %}
-        {% for lang in post.langs %}
-        <span class="flag-{{lang}}"></span>
-        {% endfor %}
+
+        {% if post.lang %}
+        <span class="flag-{{ post.lang }}"></span>
         {% endif %}
 
         {% capture nowunix %}{{'now' | date: '%s' | minus: 2629743}}{% endcapture %}

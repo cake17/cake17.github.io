@@ -22,17 +22,15 @@ layout: default
       </ul>
       <h1>
         {{ page.title }}
-        {% if page.langs %}
-        {% for lang in page.langs %}
-        <span class="flag-{{lang}}"></span>
-        {% endfor %}
+        {% if page.lang %}
+        <span class="flag-{{ page.lang }}"></span>
         {% endif %}
       </h1>
     </div>
     <hr class="hide-for-medium-up">
     <div class="small-12 large-8 columns">
       <article>
-        <div class="article_body">
+        <div class="article-body" lang="{{ page.lang }}">
           {{ content }}
         </div>
       </article>
