@@ -141,6 +141,3 @@ DEPENDENCIES
   html-proofer
   jekyll-feed
   json
-
-BUNDLED WITH
-   1.10.5

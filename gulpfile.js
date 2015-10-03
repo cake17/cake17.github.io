@@ -39,6 +39,7 @@ gulp.task('app.js', function(){
         paths.vendor.bower+'foundation/js/foundation.min.js',
         paths.vendor.bower+'fastclick/lib/fastclick.js',
         paths.vendor.bower+'modernizr/modernizr.js',
+        paths.vendor.bower+'cookies-eu-banner/dist/cookies-eu-banner.min.js'
     ])
     .pipe(concat('app.js'))
     .pipe(uglify())

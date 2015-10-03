@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "private": "true",
   "devDependencies": {
-    "foundation": "zurb/bower-foundation"
+    "foundation": "zurb/bower-foundation",
+    "cookies-eu-banner": "~1.2.7"
   }
 }
