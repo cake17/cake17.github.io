@@ -40,6 +40,7 @@ Voici ce que vous allez voir dans votre terminal si tout se déroule bien.
     - options de présentation : diminue la taille des icônes & espacement, taille du texte à 11
 - Ajout des clés et réglages ssh dans `.ssh/`
 - code wifi
+- configurer l'imprimante : Au branchement de l'imprimante, Apple Software Update devrait proposer d'installer le logiciel pour l'imprimante. Si ce n'est pas le cas, vous pouvez télécharger le [logiciel](https://support.apple.com/kb/DL907?locale=fr_FR)
 
 ### Finder
 
