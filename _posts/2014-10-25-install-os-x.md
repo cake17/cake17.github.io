@@ -8,6 +8,13 @@ lang: fr
 
 **Last-Update : 2015-10-01**
 
+## A faire avant l'installation
+
+Faire une sauvegarde:
+- des `/Documents` : via rsync
+- des clés ssh
+- des `/sites`
+
 ## Clean Install El Capitan
 
 Note: pour le Macbook Pro, il vaut mieux brancher une souris car le click du trackpad est désactivé pendant l'installation.
