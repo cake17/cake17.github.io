@@ -39,7 +39,8 @@ Voici ce que vous allez voir dans votre terminal si tout se déroule bien.
 
 ### Général
 
-- Settings/Trackpad : Toucher pour cliquer, Faire glisser avec 3 doigts, sens du défilement naturel à décocher
+- Settings/Trackpad : Toucher pour cliquer, sens du défilement naturel à décocher
+- Deplacer/glisser avec 3 doigts est dans «accessibilité» maintenant
 - Mise en veille et sécurité
 - Activer le coupe-feu
 - Bureau
@@ -51,10 +52,11 @@ Voici ce que vous allez voir dans votre terminal si tout se déroule bien.
 
 ### Finder
 
-- barre left : cake17, sites, Documents, Applications, Bureau, Téléchargement, AirDrop, Vidéos, Musique, Images
+- barre left : cake17, sites, Documents, Applications, Bureau, Téléchargement, AirDrop
 - options de présentation : Par liste
 - general : Nouvelles fenêtres s’ouvrent dans "Documents"
 - afficher les fichiers cachés
+- afficher barre d'état et barre du chemin d'accès
 
 ### Dock
 
@@ -62,16 +64,23 @@ Le mettre à gauche et ajouter Finder, Launchpad, AppStore, Pref, Terminal, Fire
 
 ### Clavier
 
-Mettre en `français numérique` pour pouvoir utiliser les majuscules avec la touche Verrouillage Majuscule.
+- Mettre en `français numérique` pour pouvoir utiliser les majuscules avec la touche Verrouillage Majuscule.
+- Guillemets double et simple à changer
 
 
 ## Softwares Téléchargés
 
 ### Via l'App Store
 
+- Xcode (le lancer et accepter les conditions)
 - Imovie
-- Iphoto
 - GarageBand
+
+### Via le Terminal
+
+Pour installer le command-line developer tools:
+
+    xcode-select --install
 
 ### Via [Homebrew](http://brew.sh) (for bin installation) & [Brew Cast](http://caskroom.io) (for app installation) & my shell
 
@@ -88,4 +97,4 @@ Use the following script to install apps and bins:
 
 ### Via le navigateur
 
-- Firefox
+- Firefox + sync
