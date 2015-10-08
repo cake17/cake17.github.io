@@ -88,6 +88,13 @@ Use the following script to install apps and bins:
 
 {% gist 99e72719c221d239b3f8 %}
 
+- Si l'install de php56 entre en mode interactif, bien penser à effacer le cache:
+
+    brew cleanup
+    brew purge
+
+Et relancer l'install, element par element : brew install php56 --with-postgres, puis brew install php56-intl ....
+
 - Ajoutez ceci dans .bash_profile:
 
     if [ -f `brew --prefix`/etc/bash_completion ]; then
