@@ -23,9 +23,40 @@ Je vais plutôt utiliser gulp qui permet d'utiliser des flux et donc permet d'é
 
 ##### Installation
 
-    npm install --global gulp
+Pour pouvoir utiliser gulp, vous devez d'abord avoir node installé. Pour un mac, vous pouvez utiliser brew:
 
-Créez un fichier gulpfile.js à la racine de votre projet. Dans ce fichier vous allez mettre toutes les dépendances pour votre projet, que vous pouvez trouver sur le [site des plugins](http://gulpjs.com/plugins).
+    brew install node
+
+[npm](https://www.npmjs.com) est un gestionnaire de dépendances pour javascript. Pour installer des paquets pour votre projet, la meilleure façon est de créer un fichier `package.json` à la racine de votre projet. Par exemple:
+
+    {
+        "name": "blog.cake-websites.com",
+        "description": "Blog website",
+        "version": "0.0.1",
+        "homepage": "http://blog.cake-websites.com",
+        "repository": "cake17/blog.cake-websites.com",
+        "author": "cake17 <cake17@cake-websites.com> (http://www.cake-websites.com/)",
+        "tags": [
+            "tabs"
+        ],
+        "license": "MIT"
+    }
+
+Ce fichier décrit votre projet et les informations seront utiles si vous décidez de rendre votre projet public. Et donc le principal intêret de ce fichier est de décrire toutes les dépendances de votre projet et leurs versions. Si nous voulons installer gulp, nous pouvons faire la commande suivante:
+
+    npm install gulp --save
+
+This will add the following in the `package.json`:
+
+    {
+        ...
+        "dependencies": {
+            "gulp": "^3.9.0"
+        }
+        ...
+    }
+
+Maintenant nous allons créer des tâches que gulp accomplira. Tout ceci se fait dans un fichier `gulpfile.js` que vous pouvez créer à la racine de votre projet. Dans ce fichier vous allez mettre toutes les dépendances de gulp pour votre projet, que vous pouvez trouver sur le [site des plugins](http://gulpjs.com/plugins).
 
 Les plugins que j'utilise régulièrement sont les suivants:
 
@@ -47,7 +78,23 @@ On les met au début du fichier `gulpfile.js` comme ceci:
 
 ##### Workflow
 
-On va utiliser bower pour gérer les dépendances des libraires css et js. J'utilise par exemple [foundation](http://foundation.zurb.com/docs) qui est un framework css très utile.
+On va utiliser bower ou composer pour gérer les dépendances des libraires css et js. J'utilise par exemple [foundation](http://foundation.zurb.com/docs) qui est un framework css très utile.
+
+##### Bower ou Composer ?
+
+Pour installer les dépendances ``css`` et ``js`` habituelles (jquery, foundation, bootstrap, ...), vous pouvez utiliser plusieurs gestionnaires de paquets. Dans le cas où j'utilise déjà des paquets PHP, je préfère utiliser aussi Composer pour les paquets des assets Js et css. Sinon vous pouvez toujours utiliser bower comme décrit ci-dessous.
+
+##### Composer
+
+Dans le fichier `composer.json`:
+
+    {
+        "require-dev": {
+            "twbs/bootstrap": "v4.0.0-alpha",
+            "components/jquery": "~2.1",
+            "components/modernizr": "~2.8"
+        }
+    }
 
 ##### Bower
 
