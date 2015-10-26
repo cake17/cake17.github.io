@@ -36,12 +36,13 @@ tests que l'on va faire subir à notre code.
 
 Envie d'installer et d'utiliser Docker ? Suivez le guide !
 
-Boot2docker et Docker
----------------------
+Docker Toolbox
+--------------
 
-Docker fonctionne directement en natif sur linux, mais pas sur un MAC. On va
-avoir besoin d'installer une machine virtuelle très legère, appelée boot2docker
-sur laquelle tournera une version de LINUX et sur laquelle on utilisera Docker.
+Docker fonctionne directement en natif sur linux, mais pas sur un MAC.
+Téléchargez `Docker Toolbox` qui va s'occuper de toute l'installation
+de tous les logiciels dont vous aurez besoin pour faire fonctionner
+Docker.
 
 Installer Docker sur un MAC
 ---------------------------
@@ -51,7 +52,10 @@ Suivez les instructions de [la page](http://docs.docker.com/mac/step_one).
 Lancer Docker
 -------------
 
-Lancez LaunchPad et choisissez Kitematic ou Docker Terminal.
+Lancez LaunchPad et choisissez `Docker Terminal`. Vous avez aussi la possibilité
+de lancer `Kitematic` qui est une version graphique de Docker mais je trouve
+qu'on comprend mieux le fonctionnement et qu'on a accès à toutes les
+fonctionnalités de docker grâce au terminal.
 
 Une histoire de containers
 --------------------------
@@ -67,12 +71,8 @@ Docker-compose, l'outil ultime pour lancer et lier ses containers
 -----------------------------------------------------------------
 
 Il vous faudra installer docker-compose qui est un petit outil pour gérer
-ses containers: https://docs.docker.com/compose/install/
-
-Pour installer docker-compose :
-
-- curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
-- chmod +x /usr/local/bin/docker-compose
+ses containers: https://docs.docker.com/compose/install/. A priori, il est
+déjà installé si vous avez installé Docker avec la docker-toolbox.
 
 Concrètement, dans chaque projet web on aura un fichier docker-composer.yml qui
 contiendra l'ensemble des containers à lancer et leurs configurations.

@@ -2,16 +2,15 @@
 
 [![Build Status](https://api.travis-ci.org/cake17/cake17.github.io.png?branch=master)](https://travis-ci.org/cake17/cake17.github.io)
 
-To run the website locally, do the following:
+## To run the website locally, do the following
 
-    - Clone this repo: ``git clone git@github.com:cake17/cake17.github.io.git``
+    git clone git clone git@github.com:cake17/cake17.github.io.git
+    cd cake17.github.io
+    # run a container with official jekyll image
+    docker run --rm -v $PWD:/srv/jekyll -t -p 4000:4000 jekyll/jekyll jekyll serve --forcolling
 
-    - To install gem dependancies for jekyll (with dependancies tested in the Gemfile.lock): ``bundle install``
 
-    - To run a webserver locally: ``bundle exec jekyll serve --baseurl '' --watch``
-
-
-Tasks and updates for developer:
+## Tasks and updates for developer
 
     - Some tools are needed in development. You can use the package.json file
       to install them for the project, using: ``npm install``
