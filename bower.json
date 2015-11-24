@@ -5,6 +5,7 @@
   "private": "true",
   "devDependencies": {
     "foundation": "zurb/bower-foundation",
+    "daneden": "daneden/animate.css",
     "cookies-eu-banner": "~1.2.7"
   }
 }

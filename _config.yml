@@ -18,11 +18,11 @@ source:  .
 # destination folder
 destination: ./_site
 # plugins folder
-plugins: ./_plugins
+plugins_dir: ./_plugins
 # layouts folder
-layouts: ./_layouts
+layouts_dir: ./_layouts
 # data source folder
-data_source: ./_data
+data_dir: ./_data
 # collections
 collections: null
 sass:
