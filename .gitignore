@@ -1,5 +1,6 @@
 ## Jekyll ##
 _site
+Gemfile.lock
 /.sass-cache/*
 /bower_components/*
 /node_modules/*
