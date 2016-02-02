@@ -51,6 +51,8 @@ whitelist: []
 gems:
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-gist
 
 ## Conversion
 markdown:  kramdown
