@@ -22,18 +22,18 @@ The following sections need to be fullfilled:
 - Firewall Rules
 - Webservers : Install Apache2, Server Name => local.dev, Document Root => /var/www/local.dev
 - Languages
-	- php 5.6, Europe/Paris, Modules => cli, intl, mcrypt, mbstring, curl, PHP Librairies => XDebug
-	- Ruby 2.1.2 Install Bundler
-	- Node.js
-	- Python
+  - php 5.6, Europe/Paris, Modules => cli, intl, mcrypt, mbstring, curl, PHP Librairies => XDebug
+  - Ruby 2.1.2 Install Bundler
+  - Node.js
+  - Python
 - Databases
-	- PostgreSQL 9.3
-	- MariaDB 10.0, Install Adminer
-	- MongoDB
-	- SQLite
+  - PostgreSQL 9.3
+  - MariaDB 10.0, Install Adminer
+  - MongoDB
+  - SQLite
 - Additional Tools
-	- MailCatcher
-	- Elastic Search
+  - MailCatcher
+  - Elastic Search
 
 ## Usage
 

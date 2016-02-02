@@ -56,7 +56,6 @@ gems:
 markdown:  kramdown
 kramdown:
   input: GFM # use Github Flavored Markdown
-highlighter: pygments
 lsi: false
 excerpt_separator:  "\n\n"
 

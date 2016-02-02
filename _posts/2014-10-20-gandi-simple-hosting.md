@@ -14,8 +14,10 @@ But, as you don't control everything that is installed on the server, there is s
 
 If you want to use Jekyll static pages, do the following in config.yml:
 
-	source: "./_source"
-	destination: "./htdocs"
+```vim
+source: "./_source"
+destination: "./htdocs"
+```
 
 And then build locally your website and push everything in the remote. All your source files you can change will be in `/_source` and the static html pages will be in `/htdocs`.
 That way, you keep all files in git and can push everything in gandi remote.

@@ -23,7 +23,9 @@ Note: pour le Macbook Pro, il vaut mieux brancher une souris car le click du tra
 
 - Faire une clé usb bootable : dans le terminal avec XXXX = nom de la Clé
 
-    sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia `--`volume /Volumes/XXXX `--`applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app `--`nointeraction
+```bash
+sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia `--`volume /Volumes/XXXX `--`applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app `--`nointeraction
+```
 
 Voici ce que vous allez voir dans votre terminal si tout se déroule bien.
 
@@ -90,16 +92,20 @@ Use the following script to install apps and bins:
 
 - Si l'install de php56 entre en mode interactif, bien penser à effacer le cache:
 
-    brew cleanup
-    brew purge
+```bash
+brew cleanup
+brew purge
+```
 
 Et relancer l'install, element par element : brew install php56 --with-postgres, puis brew install php56-intl ....
 
 - Ajoutez ceci dans .bash_profile:
 
-    if [ -f `brew --prefix`/etc/bash_completion ]; then
-      . `brew --prefix`/etc/bash_completion
-    fi
+```bash
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+```
 
 
 ### Via le navigateur

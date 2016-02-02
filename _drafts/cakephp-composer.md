@@ -23,7 +23,7 @@ exemple/
 
 Et la classe MaClasse.php
 
-{% highlight php linenos %}
+```php
 <?php
 // Dans MaClasse.php
 MaClasse
@@ -37,13 +37,13 @@ MaClasse
         echo "Hello";
     }
 }
-{% endhighlight %}
+```
 
 
 Dans le fichier index.php, dans le cas où je n'utilise pas d'autoload, je vais
 faire ceci:
 
-{% highlight php linenos %}
+```php
 <?php
 // Dans index.php
 // J'inclue la classe
@@ -51,7 +51,7 @@ require "MaClasse.php";
 
 $maClasse = new MaClasse();
 $maClasse->hello();
-{% endhighlight %}
+```
 
 Si vous ouvrez votre page index.php dans votre navigateur, vous devriez voir
 `Hello` affiché.
@@ -81,13 +81,13 @@ Il faut pour commencer que chaque fichier contienne
 une et et une seule classe. Le fichier doit porter le
 nom de la classe qu'il contient. Exemple:
 
-{% highlight php linenos %}
+```php
 <?php
 // dans le fichier NomDeLaClasse.php
 class NomDeLaClasse
 {
 }
-{% endhighlight %}
+```
 
 Le nom de la classe doit être avec des majuscules pour chaque mot. Il NE DOIT PAS être de type ma_classe.php ou ma-classe.php ou encore maClasse.php.
 
@@ -101,7 +101,7 @@ vers le dossier.
 
 Prenons le fichier de MaClasse.php qui va devenir:
 
-{% highlight php linenos %}
+```php
 <?php
 //
 namespace MonApp;
@@ -112,7 +112,7 @@ class MaClasse
 {
     // methods ...
 }
-{% endhighlight %}
+```
 
 
 Comment Composer nous aide pour l'auto-chargement des classes

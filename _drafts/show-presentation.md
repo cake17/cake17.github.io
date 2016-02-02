@@ -8,16 +8,24 @@ langs: [en]
 
 ## Installation
 
-    npm install -g generator-bespoke
+```bash
+npm install -g generator-bespoke
+```
 
 ## Create a repo
 
-    yo bespoke
+```bash
+yo bespoke
+```
 
 ## install gulp to launch a local server
 
-    npm install --global gulp
+```bash
+npm install --global gulp
+```
 
 ## run a server in your repo
 
-    gulp serve
+```bash
+gulp serve
+```

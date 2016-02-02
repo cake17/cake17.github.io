@@ -27,20 +27,20 @@ to this [post](http://cake17.github.io/2014/10/15/ssh-keys.html).
 
 So basically, you should be able to access to your remote with something like this::
 
-{% highlight bash linenos %}
+```bash
 ssh git@serveName
 // or if you changed your ssh port on your server (strongly advised :-)).
 // For example if your ssh port is on 7373.
 ssh git@serveName -p 7373
-{% endhighlight %}
+```
 
 1.2 Create a Git Bare Repository
 --------------------------------
 
-{% highlight bash linenos %}
+```bash
 cd /volume1/repositories/prod
 git init --bare cakephp3-test.git
-{% endhighlight %}
+```
 
 1.3 Setup Git Hooks
 -------------------
@@ -50,7 +50,7 @@ I took the script from this [website](http://www.sitepoint.com/one-click-app-dep
 Create the file `hooks/post-receive` and add this,
 `vi cakephp3-test.git/hooks/post-receive`:
 
-{% highlight bash linenos %}
+```bash
 #!/bin/sh
 ## store the arguments given to the script
 read oldrev newrev refname
@@ -81,7 +81,7 @@ then
 
   echo "Finished Deploy" >> $LOGFILE
 fi
-{% endhighlight %}
+```
 
 And create the folder in `/volume1/web/cakephp3-test`
 
@@ -91,7 +91,7 @@ And create the folder in `/volume1/web/cakephp3-test`
 2.1 Create a CakePHP repo
 -------------------------
 
-{% highlight bash linenos %}
+```bash
 composer create-project --prefer-dist -s dev cakephp/app cakephp3-test
 cd cakephp3-test
 // add composer.phar
@@ -101,15 +101,15 @@ git init
 // add plugins/DebugKit in .gitignore
 git add --all
 git commit -a -m "initialize cakephp3 project"
-{% endhighlight %}
+```
 
 2.2 Push to Remote
 ------------------
 
-{% highlight bash linenos %}
+```bash
 git remote add origin ssh://syno_git/volume1/repositories/prod/cakephp3-test.git
 git push origin master
-{% endhighlight %}
+```
 
 
 3 Remote
@@ -121,10 +121,10 @@ git push origin master
 Panneau de Configuration/Applications/Services Web/
 Click on Hôte Virtuel
 
-{% highlight vim linenos %}
-Nom du Sous-dossier		Nom d'hôte
-cakephp3-test 	www.nomdomaine.com
-{% endhighlight %}
+```vim
+Nom du Sous-dossier    Nom d'hôte
+cakephp3-test   www.nomdomaine.com
+```
 
 3.2 Check the Website
 ---------------------
@@ -152,11 +152,11 @@ Change the following sections:
 4.1 Gitignore
 -------------
 
-{% highlight bash linenos %}
+```bash
 // Re-add tmp/ and logs/ in .gitignore
 git commit -a -m "add gitignore rules again"
 git push origin master
-{% endhighlight %}
+```
 
 4.2 Add a git hook locally
 --------------------------
@@ -166,14 +166,14 @@ Go [here](http://cake17.github.io/2014/10/15/tips-cakephp3.html) if you need mor
 
 Basically add this in composer.json:
 
-{% highlight bash linenos %}
+```vim
 "require": {
   ...
   "phpunit/phpunit": "*",
   "cakephp/cakephp-codesniffer": "dev-master"
   ...
 },
-{% endhighlight %}
+```
 
 I got [help from here](http://tech.zumba.com/2014/04/14/control-code-quality/)
 
@@ -181,7 +181,7 @@ Add a bin/pre-commit file (see link)
 
 And a setup.sh file that composer will launch, put this in scripts section:
 
-{% highlight json linenos %}
+```json
 "scripts": {
   "post-install-cmd": [
     "App\\Console\\Installer::postInstall"
@@ -190,16 +190,16 @@ And a setup.sh file that composer will launch, put this in scripts section:
     "bash bin/setup.sh"
   ]
 },
-{% endhighlight %}
+```
 
 Don't forget to `chmod +x bin/setup.sh`
 
-{% highlight bash linenos %}
+```bash
 #!/bin/sh
 
 cp bin/pre-commit .git/hooks/pre-commit
 chmod +x .git/hooks/pre-commit
-{% endhighlight %}
+```
 
 4.3 Create your project, add Plugins
 ------------------------------------

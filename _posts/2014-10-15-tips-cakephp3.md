@@ -13,8 +13,10 @@ follow code conventions. In our case, we follow the PSR-4 recommandations and [C
 
 You can now add the plugin [cakephp-codesniffer](https://github.com/cakephp/cakephp-codesniffer) to the composer.json of your project like this:
 
-    php composer.phar require cakephp/cakephp-codesniffer
-    bin/phpcs --config-set installed_paths vendor/cakephp/cakephp-codesniffer
+```bash
+php composer.phar require cakephp/cakephp-codesniffer
+bin/phpcs --config-set installed_paths vendor/cakephp/cakephp-codesniffer
+```
 
 This will also add a symlink to phpcs in bin/ directory.
 
@@ -36,7 +38,9 @@ Will launch every test defined in phpunit.xml.dist
 
 PHPUnit will generate a set of static HTML files containing the coverage results. You can generate coverage for a test case by doing the following:
 
-	./bin/phpunit --coverage-html webroot/coverage tests/TestCase/Model/Table/ArticlesTableTest
+```bash
+./bin/phpunit --coverage-html webroot/coverage tests/TestCase/Model/Table/ArticlesTableTest
+```
 
 Go in to http://localhost/your_app/coverage to see the results
 
@@ -46,13 +50,15 @@ You can use directly [ApiGen](https://github.com/apigen/apigen) in your projects
 
 Install
 
-    composer require apigen/apigen --dev
+```bash
+composer require apigen/apigen --dev
+```
 
 Config
 
 The config file `apigen.neon` is written in [neon format](http://ne-on.org) and is at the root of your project (or create it). Remove the brackets if they exist. Example:
 
-{% highlight yaml linenos %}
+```yml
 source:
   - src
 
@@ -96,9 +102,11 @@ tree: true
 deprecated: false
 todo: false
 download: false
-{% endhighlight %}
+```
 
 
 Generate Api
 
-    php vendor/bin/apigen generate
+```bash
+php vendor/bin/apigen generate
+```

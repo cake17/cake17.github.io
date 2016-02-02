@@ -13,10 +13,12 @@ Mise à jour des paquets
 
 J'utilise le [gestionnaire de paquet `aptitude`](https://www.debian.org/doc/manuals/debian-reference/ch02.fr.html) installé par défaut:
 
-  # Synchronise la liste des paquets
-  aptitude update
-  # Mise à jour des paquets
-  aptitude safe-upgrade
+```bash
+# Synchronise la liste des paquets
+aptitude update
+# Mise à jour des paquets
+aptitude safe-upgrade
+```
 
 Installation de paquets
 -----------------------

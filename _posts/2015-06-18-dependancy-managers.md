@@ -18,8 +18,10 @@ CakePHP 3 sort courant 2014 et utilise Composer pour l'installation de dépendan
 
 ### Installation de Composer sur MAC OS 10.9
 
-    $ curl -sS https://getcomposer.org/installer | php
-    $ mv composer.phar /usr/local/bin/composer
+```bash
+$ curl -sS https://getcomposer.org/installer | php
+$ mv composer.phar /usr/local/bin/composer
+```
 
 et ensuite on peut utiliser la commande **composer** partout (si `usr/local/bin` est dans le PATH)
 
@@ -27,15 +29,19 @@ et ensuite on peut utiliser la commande **composer** partout (si `usr/local/bin`
 
 Elle se fait en une commande avec Composer en se plaçant avec `cd` dans le répertoire où l'on veut installer le nouveau projet
 
-    cd /path/to/project
-    composer create-project --prefer-dist cakephp/app nom-application
+```bash
+cd /path/to/project
+composer create-project --prefer-dist cakephp/app nom-application
+```
 
 ### Fonctionnement de Composer
 
 Le fonctionnement est simple : on ajoute un fichier composer.json à la racine de son projet et on rentre dedans les dépendances dont on a besoin. Ensuite on lance dans le terminal une commande :
 
-    composer install (pour la première execution)
-    composer update (celle qu'on utilisera le plus souvent pour mettre à jour les dépendances, plugins)
+```bash
+composer install (pour la première execution)
+composer update (celle qu'on utilisera le plus souvent pour mettre à jour les dépendances, plugins)
+```
 
 La différence entre les 2 commandes `install` et `update` est qu'avec `install`, les dépendances écrites dans le composer.lock vont être installés.
 
@@ -70,7 +76,7 @@ C'est dans le fichier composer.json que vous allez définir les plugins et dépe
 
 Un exemple simple de ce fichier :
 
-{% highlight json %}
+```json
 {
     "name": "votreNom/nomApp",
     "description": "mon application perso",
@@ -101,7 +107,7 @@ Un exemple simple de ce fichier :
         "post-install-cmd": "App\\Console\\Installer::postInstall"
     }
 }
-{% endhighlight %}
+```
 
 #### Quelques explications :
 
@@ -119,7 +125,7 @@ Voir les solutions à ce problème : [https://getcomposer.org/doc/faqs/should-i-
 
 #### Exemple de composer.json pour un plugin CakePHP
 
-{% highlight json %}
+```json
 {
     "name":"votreNom/nomPlugin",
     "version": "1.0.0",
@@ -166,7 +172,7 @@ Voir les solutions à ce problème : [https://getcomposer.org/doc/faqs/should-i-
         "installer-name": "NomDuPlugin"
     }
 }
-{% endhighlight %}
+```
 
 ## Homebrew
 
@@ -174,7 +180,9 @@ Used to install and update tools on my MAC : http://brew.sh/
 
 ### Install
 
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```bash
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 ### Usage
 

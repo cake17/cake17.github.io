@@ -25,36 +25,44 @@ Je vais plutôt utiliser gulp qui permet d'utiliser des flux et donc permet d'é
 
 Pour pouvoir utiliser gulp, vous devez d'abord avoir node installé. Pour un mac, vous pouvez utiliser brew:
 
-    brew install node
+```bash
+brew install node
+```
 
 [npm](https://www.npmjs.com) est un gestionnaire de dépendances pour javascript. Pour installer des paquets pour votre projet, la meilleure façon est de créer un fichier `package.json` à la racine de votre projet. Par exemple:
 
-    {
-        "name": "blog.cake-websites.com",
-        "description": "Blog website",
-        "version": "0.0.1",
-        "homepage": "http://blog.cake-websites.com",
-        "repository": "cake17/blog.cake-websites.com",
-        "author": "cake17 <cake17@cake-websites.com> (http://www.cake-websites.com/)",
-        "tags": [
-            "tabs"
-        ],
-        "license": "MIT"
-    }
+```json
+{
+    "name": "blog.cake-websites.com",
+    "description": "Blog website",
+    "version": "0.0.1",
+    "homepage": "http://blog.cake-websites.com",
+    "repository": "cake17/blog.cake-websites.com",
+    "author": "cake17 <cake17@cake-websites.com> (http://www.cake-websites.com/)",
+    "tags": [
+        "tabs"
+    ],
+    "license": "MIT"
+}
+```
 
 Ce fichier décrit votre projet et les informations seront utiles si vous décidez de rendre votre projet public. Et donc le principal intêret de ce fichier est de décrire toutes les dépendances de votre projet et leurs versions. Si nous voulons installer gulp, nous pouvons faire la commande suivante:
 
-    npm install gulp --save
+```bash
+npm install gulp --save
+```
 
 This will add the following in the `package.json`:
 
-    {
-        ...
-        "dependencies": {
-            "gulp": "^3.9.0"
-        }
-        ...
+```json
+{
+    ...
+    "dependencies": {
+        "gulp": "^3.9.0"
     }
+    ...
+}
+```
 
 Maintenant nous allons créer des tâches que gulp accomplira. Tout ceci se fait dans un fichier `gulpfile.js` que vous pouvez créer à la racine de votre projet. Dans ce fichier vous allez mettre toutes les dépendances de gulp pour votre projet, que vous pouvez trouver sur le [site des plugins](http://gulpjs.com/plugins).
 
@@ -69,12 +77,14 @@ Les plugins que j'utilise régulièrement sont les suivants:
 
 On les met au début du fichier `gulpfile.js` comme ceci:
 
+```js
     var gulp = require('gulp'),
         sass = require('gulp-sass'),
         minify = require('gulp-minify-css'),
         concat = require('gulp-concat'),
         uglify = require('gulp-uglify'),
         rename = require('gulp-rename');
+```
 
 ##### Workflow
 
@@ -88,32 +98,38 @@ Pour installer les dépendances ``css`` et ``js`` habituelles (jquery, foundatio
 
 Dans le fichier `composer.json`:
 
-    {
-        "require-dev": {
-            "twbs/bootstrap": "v4.0.0-alpha",
-            "components/jquery": "~2.1",
-            "components/modernizr": "~2.8"
-        }
+```json
+{
+    "require-dev": {
+        "twbs/bootstrap": "v4.0.0-alpha",
+        "components/jquery": "~2.1",
+        "components/modernizr": "~2.8"
     }
+}
+```
 
 ##### Bower
 
 On crée un fichier `.bowerrc` qui contient les configurations pour Bower et notamment le dossier où vous allez télécharger vos dépendances.
 
-    {
-      "directory": "bower_components"
-    }
+```json
+{
+  "directory": "bower_components"
+}
+```
 
 Les dépendances que vous souhaitez seront dans `bower.json`:
 
-    {
-        "name": "my-app",
-        "version": "0.0.1",
-        "private": "true",
-        "dependencies": {
-            "foundation": "zurb/bower-foundation"
-        }
+```json
+{
+    "name": "my-app",
+    "version": "0.0.1",
+    "private": "true",
+    "dependencies": {
+        "foundation": "zurb/bower-foundation"
     }
+}
+```
 
 J'ai donc mis foundation en dépendance. Il me suffit maintenant de taper `bower install` dans mon terminal. Il faut bien mettre le dossier bower_components dans .gitignore car ce dossier ne sert que pour le développement. Grâce justement à gulp ou grunt, vous allez pouvoir copier et utiliser les fichiers de libraires css ou js tiers.
 
@@ -129,48 +145,52 @@ Le dossier /dev contient lui les fichiers de développement comme les fichiers s
 
 Dans le fichier `gulpfile.js`, je vais donc créer une variable `paths` qui va nous indiquer les chemins vers les différents dossiers:
 
-    var paths = {
-        'dev': {
-            'scss': './dev/scss/',
-            'js': './dev/js/'
-        },
-        'public': {
-            'css': './public/css/',
-            'js': './public/js/'
-        },
-        'vendor': {
-            'bower': './bower_components/'
-        }
-    };
+```json
+var paths = {
+    'dev': {
+        'scss': './dev/scss/',
+        'js': './dev/js/'
+    },
+    'public': {
+        'css': './public/css/',
+        'js': './public/js/'
+    },
+    'vendor': {
+        'bower': './bower_components/'
+    }
+};
+```
 
 ##### Les Tâches gulp
 
-    // --- TASKS
-    // Generate CSS App file
-    gulp.task('app.css', function() {
-      // place code for your default task here
-      return gulp.src('./dev/scss/*.scss')
-          .pipe(sass({
-              includePaths: [paths.vendor.bower+'foundation/scss']
-          }))
-          .pipe(minify())
-          .pipe(rename({suffix: '.min'}))
-          .pipe(gulp.dest(paths.public.css));
-    });
+```json
+// --- TASKS
+// Generate CSS App file
+gulp.task('app.css', function() {
+  // place code for your default task here
+  return gulp.src('./dev/scss/*.scss')
+      .pipe(sass({
+          includePaths: [paths.vendor.bower+'foundation/scss']
+      }))
+      .pipe(minify())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(paths.public.css));
+});
 
-    // Generate Js App File
-    gulp.task('app.js', function(){
-      return gulp.src([
-            paths.vendor.bower+'jquery/dist/jquery.min.js',
-            paths.vendor.bower+'foundation/js/foundation.min.js',
-            paths.vendor.bower+'fastclick/lib/fastclick.js',
-            paths.vendor.bower+'modernizr/modernizr.js',
-        ])
-        .pipe(concat('app.js'))
-        .pipe(uglify())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(paths.public.js));
-    });
+// Generate Js App File
+gulp.task('app.js', function(){
+  return gulp.src([
+        paths.vendor.bower+'jquery/dist/jquery.min.js',
+        paths.vendor.bower+'foundation/js/foundation.min.js',
+        paths.vendor.bower+'fastclick/lib/fastclick.js',
+        paths.vendor.bower+'modernizr/modernizr.js',
+    ])
+    .pipe(concat('app.js'))
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(paths.public.js));
+});
+```
 
 Ces 2 tâches app.css et app.js se lancent respectivement avec les commandes `gulp app.css` et `gulp app.js`.
 
@@ -182,11 +202,15 @@ Pour le js, la tâche va regrouper tous les fichiers js qui se trouvent en major
 
 Il ne reste plus qu'à ajouter une balise d'insertion vers le css dans le head de votre page:
 
-    <link href="public/css/app.min.css" rel="stylesheet">
+```html
+<link href="public/css/app.min.css" rel="stylesheet">
+```
 
 Et le js à intégrer avant la balise fermante </body>.
 
-    <script type="text/javascript" src="public/js/app.min.js"></script>
+```html
+<script type="text/javascript" src="public/js/app.min.js"></script>
+```
 
 Si vous voulez voir à quoi ressemble le fichier `gulpfile.js` dans son ensemble, vous pouvez aller sur le [dépôt github de ce site](https://github.com/cake17/cake17.github.io/blob/master/_posts/2015-30-30-grunt-gulp.md) puisqu'il utilise ces techniques.
 
@@ -194,7 +218,9 @@ Si vous voulez voir à quoi ressemble le fichier `gulpfile.js` dans son ensemble
 
 ##### Installation
 
-    npm install -g grunt-cli
+```bash
+npm install -g grunt-cli
+```
 
 Créez un fichier Gruntfile.js dans votre projet. Vous mettrez les dépendances nécessaires à l'utilisation de Grunt.
 

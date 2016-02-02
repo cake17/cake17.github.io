@@ -28,12 +28,16 @@ D'abord vous devez entrer vos entrées DNS local – yoursite.dev, test.local ou
 Vous pouvez ajouter autant d'entrées que vous le souhaitez dans le fichier
 `/etc/hosts`:
 
-	sudo vim /etc/hosts
+```bash
+sudo vim /etc/hosts
+```
 
 Quand ce fichier est ouvert, vous pouvez ajouter une nouvelle ligne pour chaque
 domaine:
 
-	127.0.0.1    test.local
+```vim
+127.0.0.1    test.local
+```
 
 Utilisez l'adresse IP 127.0.0.1 puisqu'elle pointe vers votre machine locale.
 
@@ -48,10 +52,12 @@ Il n'y a pas de virtual hosts configurés pour le moment, donc tout pointe vers 
 Commencez un nouveau site dans le dossier /Sites et créez un nouveau site avec
 une seule page:
 
-	cd ~/Sites
-	mkdir test.local
-	cd test.local
-	echo "Ceci est un test.local" > index.html
+```bash
+cd ~/Sites
+mkdir test.local
+cd test.local
+echo "Ceci est un test.local" > index.html
+```
 
 Le dossier aura un fichier appelé index.html qui contient
 "Ceci est un test.local".
@@ -61,44 +67,56 @@ Le dossier aura un fichier appelé index.html qui contient
 Pour que Apache charge le fichier index.html, vous devez créer un hôte virtuel
 qui pointe vers le dossier que vous avez créé. Entrez ceci:
 
-	sudo vim /etc/apache2/httpd.conf
+```bash
+sudo vim /etc/apache2/httpd.conf
+```
 
 et décommentez la ligne:
 
-	Include /private/etc/apache2/extra/httpd-vhosts.conf
+```vim
+Include /private/etc/apache2/extra/httpd-vhosts.conf
+```
 
 Puis ouvrez le fichier des vhosts:
 
-	sudo vim /etc/apache2/extra/httpd-vhosts.conf
+```bash
+sudo vim /etc/apache2/extra/httpd-vhosts.conf
+```
 
 Par défaut ce fichier contient ce qui suit:
 
-	<Directory "/Users/username/Sites/">
-		Options Indexes MultiViews
-		AllowOverride None
-		Order allow,deny
-		Allow from all
-	</Directory>
+```vim
+<Directory "/Users/username/Sites/">
+  Options Indexes MultiViews
+  AllowOverride None
+  Order allow,deny
+  Allow from all
+</Directory>
+```
 
 Ajoutez ceci:
 
-    NameVirtualHost *:80
+```vim
+  NameVirtualHost *:80
 
-	<Directory "/Users/username/Sites/">
-		Options Indexes MultiViews Includes
-		AllowOverride All
-		Order allow,deny
-		Allow from all
-	</Directory>
+<Directory "/Users/username/Sites/">
+  Options Indexes MultiViews Includes
+  AllowOverride All
+  Order allow,deny
+  Allow from all
+</Directory>
 
-	<VirtualHost *:80>
-		ServerName test.local
-		DocumentRoot /Users/username/Sites/test.local
-	</VirtualHost>
+<VirtualHost *:80>
+  ServerName test.local
+  DocumentRoot /Users/username/Sites/test.local
+</VirtualHost>
+```
 
 Maintenant sauvegardez le fichier et redémarrez Apache en entrant ceci:
 
-    sudo apachectl graceful
+```bash
+sudo apachectl graceful
+```
 
 Une fois qu'Apache a redémarré, allez à http://test.local/ et vous devriez
 voir "This is test.local". Succès!
@@ -113,8 +131,10 @@ Install : `brew install mysql`
 
 Voir la version de mySql:
 
-	mysql -v
-	(la mienne : Server version: 5.6.11 MySQL Community Server (GPL))
+```bash
+mysql -v
+(la mienne : Server version: 5.6.11 MySQL Community Server (GPL))
+```
 
 Commande pour sortir de mysql : `quit ou exit`
 
@@ -152,7 +172,9 @@ Modifiez “config.inc.php” et mettez la variable “AllowNoPassword” à tru
 Cela va nous permettre de nous connecter à MySQL avec l'user `root` avec un mot
 de passe vide.
 
-	$cfg['Servers'][$i]['AllowNoPassword'] = true;
+```vim
+$cfg['Servers'][$i]['AllowNoPassword'] = true;
+```
 
 Allez avec votre navigateur à l'adresse : http://localhost/phpMyAdmin/.
 
@@ -170,26 +192,36 @@ Note: When using launchctl the port will be 8080.
 
 To have launchd start jenkins at login:
 
-		mkdir -p ~/Library/LaunchAgents
-		ln -sfv /usr/local/opt/jenkins/*.plist ~/Library/LaunchAgents
+```bash
+mkdir -p ~/Library/LaunchAgents
+ln -sfv /usr/local/opt/jenkins/*.plist ~/Library/LaunchAgents
+```bash
 
 Then to load jenkins now:
 
-		launchctl load ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
+```bash
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
+```
 
 Or, if you don't want/need launchctl, you can just run:
 
-		java -jar /usr/local/opt/jenkins/libexec/jenkins.war
+```bash
+java -jar /usr/local/opt/jenkins/libexec/jenkins.war
+```
 
 Permet de faire de l’intégration continue.
 
 Start Jenkins
 
-	sudo launchctl load /Library/LaunchDaemons/org.jenkins-ci.plist
+```bash
+sudo launchctl load /Library/LaunchDaemons/org.jenkins-ci.plist
+```
 
 Stop Jenkins
 
-	sudo launchctl unload /Library/LaunchDaemons/org.jenkins-ci.plist
+```bash
+sudo launchctl unload /Library/LaunchDaemons/org.jenkins-ci.plist
+```
 
 
 ## XDebug
@@ -199,6 +231,6 @@ Site officiel : http://xdebug.org/
 
 ## Text Editors
 
-- Atom : I know use this one as it's the one developed by Github. Light but functionnal.
+- Atom : I use this one as it's the one developed by Github. Light but functionnal.
 - NetBeans : I used it a while, it's really complete but it's a little slow on my machine.
 - Sublime Text 3 is also a great editor.

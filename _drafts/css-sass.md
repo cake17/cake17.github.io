@@ -19,13 +19,13 @@ par le créateur de bootstrap.
 
 Mise en place de CSS dans une page HTML:
 
-{% highlight html %}
-    <html>
-        <head>
-            <link rel="stylesheet" href="style.css">
-        </head>
-        ..
-{% endhighlight %}
+```html
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    ..
+```
 
 Vous verrez sans doute `type="text/css"` ajouté dans la balise link, mais il
 n'est pas nécessaire de l'ajouter selon les conventions auxquels je fais
@@ -41,11 +41,11 @@ Maintenant nous allons pouvoir modifier l'apparence des id et des classes des
 Par exemple `<div class="red">Ce texte est écrit en rouge</div>`. On va
 ajouter une ligne dans le fichier `style.css` comme ce qui suit::
 
-{% highlight css %}
+```css
     .red {
         font-color: red;
     }
-{% endhighlight %}
+```
 
 On peut donc ajouter `red` aux classes des éléments pour obtenir des éléments
 écrits en rouge.
@@ -79,17 +79,20 @@ Le principal avantage de ce découplement est que l'on va pouvoir réutiliser du
 CSS pour plusieurs elements HTML.
 
 Prenons l'exemple de 2 elements html:
-    <div class="round">Boite ronde</div>
-    <div class="round">Autre boite ronde dans la page</div>
+
+```html
+<div class="round">Boite ronde</div>
+<div class="round">Autre boite ronde dans la page</div>
+```
 
 Le CSS:
 
-{% highlight css %}
-    .round {
-        -moz-border-radius: 15px;
-        border-radius: 15px;
-    }
-{% endhighlight %}
+```css
+.round {
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+```
 
 Ainsi les deux boites seront arrondis.
 

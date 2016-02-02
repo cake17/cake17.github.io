@@ -24,13 +24,17 @@ Quelles extensions sont installées par défaut avec php-fpm ?
 
 Rien ne vaut un test dans le réél. J'ai lancé un container avec docker qui contient la dernière version de Debian, appelée Jessie:
 
-    docker run -t -i debian:jessie /bin/bash
+```bash
+docker run -t -i debian:jessie /bin/bash
+```
 
 Je suis donc dans le bash de ma version containerisée de Jessie et je vais pouvoir tester des installations de php5.
 
 Je commence par installer php5-fpm qui semble être la version la plus avancée de php. On peut lire un résumé des avantages/inconvénients sur [cette page](http://php.net/manual/fr/install.fpm.php):
 
-    apt-get install php5-fpm
+```bash
+apt-get install php5-fpm
+```
 
 J'insiste sur le fait qu'il faille utiliser php-fpm et de **ne** surtout **plus** utiliser mod_php.
 
