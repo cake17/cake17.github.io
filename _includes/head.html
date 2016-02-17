@@ -1,33 +1,22 @@
 <head>
-
   <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>
-  {% if page.title %}
-    {{ page.title }} |
-  {% endif %}
-  Cake17's Blog
-  </title>
-  {% if page.description %}
-  <meta name="description" content="{{ page.description }}">
-  {% endif %}
-  <meta name="author" content="{{ site.author.name }}">
-  <meta name="google-site-verification" content="Eakerb7NRoz_egRoyrFPO32Zzu9vS45GGh7NEsdjKcA">
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Enable responsive viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Styles -->
-  <!-- My css -->
-  <link href="{{ "/public/css/app.min.css" | prepend: site.baseurl }}" rel="stylesheet">
-  <!-- For Flags -->
-  <link href="{{ "/public/css/iso16.css" | prepend: site.baseurl }}" rel="stylesheet">
-  <!-- Foundation icons css -->
-  <link href="{{ "/public/css/foundation-icons.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <title>
+      {% if page.title %}
+        {{ page.title }} |
+      {% endif %}
+      Cake17's Blog
+  </title>
+  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="google-site-verification" content="Eakerb7NRoz_egRoyrFPO32Zzu9vS45GGh7NEsdjKcA">
 
-  <!-- Le fav and touch icons -->
-  <link href="{{ "/public/img/favicon.png" | prepend: site.baseurl }}" rel="shortcut icon">
- <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
-  <link type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml" rel="alternate">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>

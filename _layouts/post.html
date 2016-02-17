@@ -1,45 +1,19 @@
 ---
 layout: default
 ---
+<div class="row">
+  <div class="col-sm-12">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-{% include pagination_posts.html %}
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+        <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+      </header>
 
-<div id="page">
-  <div class="row">
-    <div class="small-12 large-4 columns">
-      <ul class="button-group radius round">
-        <li><a href="{{ page.url | prepend: site.baseurl }}" class="button success tiny">
-          {% assign d = page.date | date: "%d" | plus:'0' %}
-          {{ page.date | date: "%B" }}
-          {% case d %}
-            {% when 1 or 21 or 31 %}{{ d }}st,
-            {% when 2 or 22 %}{{ d }}nd,
-            {% when 3 or 23 %}{{ d }}rd,
-          {% else %}{{ d }}th,
-          {% endcase %}
-          {{ page.date | date: "%Y" }}
-        </a></li>
-      </ul>
-      <h1>
-        {{ page.title }}
-        {% if page.lang %}
-        <span class="flag-{{ page.lang }}"></span>
-        {% endif %}
-      </h1>
-    </div>
-    <hr class="hide-for-medium-up">
-    <div class="small-12 large-8 columns">
-      <article>
-        <div class="article-body" lang="{{ page.lang }}">
-          {{ content }}
-        </div>
-      </article>
-    </div>
+        {{ content }}
+
+    </article>
+
+    {% include disqus.html %}
   </div>
 </div>
-
-{% include bottom_js.html %}
-
-{% include disqus.html %}
-
-<script type="text/javascript" src="{{ "/public/js/swipe.js" | prepend: site.baseurl }}"></script>

@@ -1,10 +1,7 @@
 ---
-layout: post
-title: Welcome
-tags: [General]
-description: First Post on this blog
-lang: en
-comments: false
+layout: page
+title: About
+permalink: /about/
 ---
 
 This is a tech blog about my experiences with CakePHP and the world around PHP (Composer, Git, ...). I have a Mac so the installs will refer to OS X Yosemite.

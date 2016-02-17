@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html class="no-js" lang="fr">
+<html>
 
   {% include head.html %}
 
   <body>
 
-    {% include cookies.html %}
-
     {% include header.html %}
 
-    {{ content }}
+    <div class="container-fluid">
+      {{ content }}
+    </div>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   </body>
 

@@ -1,9 +1,10 @@
-# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
-
-## Personal values
+# Site settings
 title: Cake17's Blog
-description: Development environment, PHP, CakePHP, Git, and more...
-baseurl: http://blog.cake-websites.com
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Development environment, PHP, CakePHP, Git, and more...
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://blog.cake-websites.com" # the base hostname & protocol for your site
 
 author:
   name: cake17
@@ -12,71 +13,14 @@ author:
   bio:
   email_md5: HBfd!8é!çà99098872
 
-## Where things are
-# source folder
-source:  .
-# destination folder
-destination: ./_site
-# plugins folder
-plugins_dir: ./_plugins
-# layouts folder
-layouts_dir: ./_layouts
-# data source folder
-data_dir: ./_data
-# collections
-collections: null
-sass:
-  sass_dir: dev/scss
-
-## Handling Reading
-# Safe mode to false: plugins et symbolics links are authorized
-# Safe mode is to true in github pages
-safe:  true
-include: [".htaccess"]
 # files to exclude
-exclude: ["README.md", "vendor", "bower_components", "dev"]
-keep_files:  [".git", ".svn"]
-encoding:  "utf-8"
-markdown_ext:  "markdown,mkdown,mkdn,mkd,md"
-textile_ext: "textile"
+exclude: ["README.md"]
 
-## Filtering Content
-show_drafts: null
-limit_posts: 0
-future:  true
-unpublished: false
-
-## Plugins
-whitelist: []
+# Build settings
+markdown: kramdown
 gems:
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-gist
+    - jekyll-gist
 
-## Conversion
-markdown:  kramdown
-kramdown:
-  input: GFM # use Github Flavored Markdown
-lsi: false
-excerpt_separator:  "\n\n"
-
-## Serving
-detach:  false
-port:  4000
-host:  0.0.0.0
-baseurl: ''
-
-## Backwards-compatibility
-relative_permalinks: false
-
-## Outputting
-permalink: date
-paginate_path: /page:num
-timezone:  "Europe/Paris"
-quiet: false
-
-## defaults var for all pages, posts & drafts
 defaults:
   -
     scope:
@@ -85,16 +29,3 @@ defaults:
     values:
       layout: "post"
       comments: true
-  -
-    scope:
-      path: "_drafts" # values will be defined for all files in _drafts (empty string for all files)
-      type: "drafts" # apply the defaults only for drafts
-    values:
-      layout: "post"
-
-# For RSS
-rss_path: feed.xml
-tags_path: tags.html
-
-paginate: 20
-paginate_path: "page:num"
