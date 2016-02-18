@@ -14,10 +14,9 @@ author:
   email_md5: HBfd!8é!çà99098872
 
 # files to exclude
-exclude: ["README.md"]
+exclude: ["README.md", "oldies"]
 
 # Build settings
-markdown: kramdown
 gems:
     - jekyll-gist
 
@@ -29,3 +28,6 @@ defaults:
     values:
       layout: "post"
       comments: true
+
+sass:
+  sass_dir: _sass
