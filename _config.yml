@@ -14,7 +14,7 @@ author:
   email_md5: HBfd!8é!çà99098872
 
 # files to exclude
-exclude: ["README.md", "oldies"]
+exclude: ["README.md"]
 
 # Build settings
 gems:
