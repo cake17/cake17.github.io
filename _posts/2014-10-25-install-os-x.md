@@ -6,7 +6,7 @@ description: Un reminder pour ma clean install de El Capitan
 lang: fr
 ---
 
-**Last-Update : 2015-10-01**
+**Last-Update : 2015-03-24**
 
 ## A faire avant l'installation
 
@@ -62,7 +62,7 @@ Voici ce que vous allez voir dans votre terminal si tout se déroule bien.
 
 ### Dock
 
-Le mettre à gauche et ajouter Finder, Launchpad, AppStore, Pref, Terminal, Firefox, Itunes, Atom, Netbeans, Gimp, Colloquy, PoEdit, Github Desktop, Rappels, Imovie, Garage Band, Transfert d'images, Libre Office - Téléchargement, Corbeille
+Le mettre à gauche et ajouter Finder, Launchpad, AppStore, Pref, Terminal, Firefox, Itunes, Atom, Netbeans, Gimp, Colloquy, PoEdit, Rappels, Imovie, Garage Band, Transfert d'images, Libre Office - Téléchargement, Corbeille
 
 ### Clavier
 
@@ -86,18 +86,7 @@ Pour installer le command-line developer tools:
 
 ### Via [Homebrew](http://brew.sh) (for bin installation) & [Brew Cast](http://caskroom.io) (for app installation) & my shell
 
-Use the following script to install apps and bins:
-
-{% gist 99e72719c221d239b3f8 %}
-
-- Si l'install de php56 entre en mode interactif, bien penser à effacer le cache:
-
-```bash
-brew cleanup
-brew purge
-```
-
-Et relancer l'install, element par element : brew install php56 --with-postgres, puis brew install php56-intl ....
+Use the mac_install.sh script to install apps and bins:
 
 - Ajoutez ceci dans .bash_profile:
 
