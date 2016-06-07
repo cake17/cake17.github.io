@@ -15,7 +15,7 @@ var paths = {
         'js': './public/js/'
     },
     'vendor': {
-        'bower': './vendor/'
+        'node': './node_modules/'
     }
 };
 
@@ -25,7 +25,7 @@ gulp.task('app.css', function() {
   // place code for your default task here
   return gulp.src(paths.dev.scss+'*.scss')
       .pipe(sass({
-          includePaths: [paths.vendor.composer+'twbs/bootstrap-sass/assets/stylesheets']
+          includePaths: [paths.vendor.node+'bootstrap-sass/assets/stylesheets']
       }))
       .pipe(minify())
       .pipe(rename({suffix: '.min'}))
@@ -35,9 +35,9 @@ gulp.task('app.css', function() {
 // Generate Js App File
 gulp.task('app.js', function(){
   return gulp.src([
-        paths.vendor.composer+'components/jquery/jquery.min.js',
-        paths.vendor.composer+'twbs/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-        paths.dev.js+'bootstrap-multiselect.js'
+        paths.vendor.node+'jquery/dist/jquery.min.js',
+        paths.vendor.node+'bootstrap-sass/assets/javascripts/bootstrap.min.js',
+        paths.dev.js+'cookies.js'
     ])
     .pipe(concat('app.js'))
     .pipe(uglify())

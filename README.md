@@ -5,5 +5,5 @@
 ## To run the website locally, do the following
 
 ```bash
-bundle exec jekyll serve
+jekyll serve
 ```
