@@ -1,3 +1,11 @@
+---
+layout: post
+title: Tips for Android
+tags: [General]
+description: Astuces générales pour Android
+langs: [fr]
+---
+
 ## Activer les options des développeurs ##
 
 Très utile pour accéder à des options supplémentaires de votre samsung Galaxy s4 avec Android v5.0.1.
