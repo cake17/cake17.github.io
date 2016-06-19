@@ -6,13 +6,15 @@ description: Un reminder pour ma clean install de El Capitan
 lang: fr
 ---
 
-**Last-Update : 2015-03-24**
+**Last-Update : 2015-06-19**
 
 ## A faire avant l'installation
 
 Faire une sauvegarde:
+
 - des `/Documents` : via rsync
 - des clés ssh
+- de .bash_profile et .gitconfig
 - des `/sites`
 
 ## Clean Install El Capitan
