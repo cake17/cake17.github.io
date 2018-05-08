@@ -5,5 +5,5 @@
 ## To run the website locally, do the following
 
 ```bash
-jekyll serve
+vuepress dev docs
 ```
