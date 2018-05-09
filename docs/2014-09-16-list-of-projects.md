@@ -3,6 +3,7 @@
 # tags: [General]
 # description: List of interesting projects.
 title: List of interesting projects.
+sidebar: false
 # lang: en
 ---
 
