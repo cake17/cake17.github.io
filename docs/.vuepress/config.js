@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Blog',
     description: 'Dev tips',
-    base: 'http://blog.cake-websites.com',
+    // base: 'https://blog.cake-websites.com',
     themeConfig: {
         nav: false,
         sidebar: [
