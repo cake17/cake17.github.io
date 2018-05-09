@@ -31,10 +31,10 @@ sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinst
 
 Voici ce que vous allez voir dans votre terminal si tout se déroule bien.
 
-![Install Ok]({{ site.baseurl }}/public/img/install_os_x_ok.png)
+![Install Ok](/public/img/install_os_x_ok.png)
 
 - Redémarrer l'ordi avec la clé branchée. Appuyer sur la touche Option.
-  ![Schéma CakePHP docs]({{ site.baseurl }}/public/img/touche_option_mac.jpg)
+  ![Schéma CakePHP docs](/public/img/touche_option_mac.jpg)
 
 - Allez dans l'Utilitaire de disques et effacez la partition de votre volume. Fermer l'utilitaire et lancez l'installation.
 
