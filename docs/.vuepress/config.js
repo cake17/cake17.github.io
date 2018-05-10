@@ -5,15 +5,19 @@ module.exports = {
     themeConfig: {
         nav: [
             {
-                text: 'Languages',
+                text: 'Dev',
                 items: [
                     {
-                        text: 'PHP',
-                        link: '/php/2013-03-17-contributing-to-cakephp-docs'
+                        text: 'Backend (PHP)',
+                        link: '/backend/2013-03-17-contributing-to-cakephp-docs'
                     },
                     {
-                        text: 'Javascript',
-                        link: '/javascript/2015-03-30-grunt-gulp'
+                        text: 'Frontend (HTML, CSS, Javascript, ...)',
+                        link: '/frontend/2015-03-30-grunt-gulp'
+                    },
+                    {
+                        text: 'Tools',
+                        link: '/devtools/2014-10-15-ssh-keys'
                     }
                 ]
             },
@@ -23,14 +27,6 @@ module.exports = {
                     {
                         text: 'MAC OS',
                         link: '/macos/2014-10-25-install-os-x'
-                    },
-                    {
-                        text: 'Dev Tools',
-                        link: '/devtools/2014-10-15-ssh-keys'
-                    },
-                    {
-                        text: 'Deploy',
-                        link: '/deploy/2014-10-20-gandi-simple-hosting'
                     },
                     {
                         text: 'General',
@@ -44,15 +40,16 @@ module.exports = {
             },
         ],
         sidebar: {
-            '/php/': [
-                '/php/2013-03-17-contributing-to-cakephp-docs',
-                '/php/2014-10-15-tips-cakephp3',
-                '/php/2014-11-29-cakephp-deploy',
-                '/php/2015-06-12-php-extensions'
+            '/backend/': [
+                '/backend/2013-03-17-contributing-to-cakephp-docs',
+                '/backend/2014-10-15-tips-cakephp3',
+                '/backend/2014-11-29-cakephp-deploy',
+                '/backend/2015-06-12-php-extensions'
             ],
-            '/javascript/': [
-                '/javascript/2015-03-30-grunt-gulp',
-                '/javascript/2016-06-07-show-presentation'
+            '/frontend/': [
+                '/frontend/2015-03-30-grunt-gulp',
+                '/frontend/2016-06-07-show-presentation',
+                '/frontend/2018-05-10-css-sass'
             ],
             '/macos/': [
                 '/macos/2014-10-25-install-os-x',
@@ -64,18 +61,18 @@ module.exports = {
                 '/devtools/2014-10-14-git',
                 '/devtools/2014-10-15-ssh-keys',
                 '/devtools/2014-10-15-virtual-machines',
+                '/devtools/2014-10-14-jekyll-github',
+                '/devtools/2014-11-04-sphinx',
                 '/devtools/2015-06-18-dependancy-managers',
                 '/devtools/2015-08-20-atom',
-                '/devtools/2016-05-20-docker',
-                '/devtools/2014-11-04-sphinx',
-                '/devtools/2014-10-14-jekyll-github'
+                '/devtools/2016-05-20-docker'
             ],
 
             // fallback
             '/': [
                 '/2015-07-25-markup-languages',
                 '/2015-07-25-nombres-binaires-informatiques',
-                '/deploy/2014-10-20-gandi-simple-hosting',
+                '/2014-10-20-gandi-simple-hosting',
                 '/2016-06-07-rooter-android-galaxy-s4',
             ]
         }

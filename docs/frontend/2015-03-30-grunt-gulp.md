@@ -3,7 +3,7 @@ title: Grunt & Gulp
 description: Grunt & Gulp - 2 outils pour les mêmes besoins
 ---
 
-### Grunt && Gulp
+### Grunt & Gulp
 
 Grunt et Gulp sont 2 outils qui permettent d'automatiser des tâches habituelles lorsque l'on développe des sites web. Par exemple, vous pourrez faire les tâches suivantes:
 
