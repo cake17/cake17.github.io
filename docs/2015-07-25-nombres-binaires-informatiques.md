@@ -91,7 +91,7 @@ Un octet est ensemble de 8 bits. Un moyen de s'en souvenir est de prendre la rac
 
 ### Représentation
 
-![Schéma octets-bits](/public/img/octet-bits.png)
+![Schéma octets-bits](../public/img/octet-bits.png)
 
 ## Application pour les encodages
 

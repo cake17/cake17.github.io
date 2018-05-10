@@ -1,9 +1,6 @@
 ---
-layout: post
 title: Grunt & Gulp
-tags: [General]
 description: Grunt & Gulp - 2 outils pour les mêmes besoins
-lang: fr
 ---
 
 ### Grunt && Gulp
@@ -56,11 +53,9 @@ This will add the following in the `package.json`:
 
 ```json
 {
-    ...
     "dependencies": {
         "gulp": "^3.9.0"
     }
-    ...
 }
 ```
 
@@ -97,7 +92,7 @@ Pour installer les dépendances ``css`` et ``js`` habituelles (jquery, foundatio
 ##### Composer
 
 Dans le fichier `composer.json`:
-
+<!-- 
 ```json
 {
     "require-dev": {
@@ -106,21 +101,21 @@ Dans le fichier `composer.json`:
         "components/modernizr": "~2.8"
     }
 }
-```
+``` -->
 
 ##### Bower
 
 On crée un fichier `.bowerrc` qui contient les configurations pour Bower et notamment le dossier où vous allez télécharger vos dépendances.
 
-```json
+<!-- ```json
 {
   "directory": "bower_components"
 }
-```
+```-->
 
 Les dépendances que vous souhaitez seront dans `bower.json`:
 
-```json
+<!-- ```json
 {
     "name": "my-app",
     "version": "0.0.1",
@@ -129,7 +124,7 @@ Les dépendances que vous souhaitez seront dans `bower.json`:
         "foundation": "zurb/bower-foundation"
     }
 }
-```
+``` -->
 
 J'ai donc mis foundation en dépendance. Il me suffit maintenant de taper `bower install` dans mon terminal. Il faut bien mettre le dossier bower_components dans .gitignore car ce dossier ne sert que pour le développement. Grâce justement à gulp ou grunt, vous allez pouvoir copier et utiliser les fichiers de libraires css ou js tiers.
 
@@ -145,7 +140,7 @@ Le dossier /dev contient lui les fichiers de développement comme les fichiers s
 
 Dans le fichier `gulpfile.js`, je vais donc créer une variable `paths` qui va nous indiquer les chemins vers les différents dossiers:
 
-```json
+```js
 var paths = {
     'dev': {
         'scss': './dev/scss/',
@@ -163,7 +158,7 @@ var paths = {
 
 ##### Les Tâches gulp
 
-```json
+```js
 // --- TASKS
 // Generate CSS App file
 gulp.task('app.css', function() {

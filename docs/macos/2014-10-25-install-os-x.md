@@ -1,9 +1,6 @@
 ---
-# layout: post
-title: Installer Mac OS X El Capitan 10.11
-# tags: [General]
-# description: Un reminder pour ma clean install de El Capitan
-# lang: fr
+title: Installer Mac OS X
+description: Un reminder pour ma clean install de El Capitan
 ---
 
 **Last-Update : 2015-06-19**
@@ -31,10 +28,10 @@ sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinst
 
 Voici ce que vous allez voir dans votre terminal si tout se déroule bien.
 
-![Install Ok](/public/img/install_os_x_ok.png)
+![Install Ok](../../public/img/install_os_x_ok.png)
 
 - Redémarrer l'ordi avec la clé branchée. Appuyer sur la touche Option.
-  ![Schéma CakePHP docs](/public/img/touche_option_mac.jpg)
+  ![Schéma CakePHP docs](../../public/img/touche_option_mac.jpg)
 
 - Allez dans l'Utilitaire de disques et effacez la partition de votre volume. Fermer l'utilitaire et lancez l'installation.
 

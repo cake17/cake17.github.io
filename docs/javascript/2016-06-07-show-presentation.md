@@ -4,8 +4,6 @@ title: Bespoke.js - Show Presentation
 # tags: [General]
 # description: To make a nice slideshow presentation
 # langs: [en]
-prev: ./2016-06-07-rooter-android-galaxy-s4
-next: false
 ---
 
 ## Installation

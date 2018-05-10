@@ -1,10 +1,9 @@
 ---
-# layout: post
 title: Softwares Installation
-# tags: [General]
-# description: Install softwares on a MAC
-# lang: fr
+description: Install softwares on a MAC
 ---
+
+**Note du 10 mai 2018** : pour installer les logiciels et ne pas encombrer l'OS, je préfère maintenant les installer dans des containers avec Docker.
 
 ## Apache
 

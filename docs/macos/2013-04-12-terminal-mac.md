@@ -1,9 +1,6 @@
 ---
-# layout: post
 title: Cheat sheet pour MAC Terminal, Bash et Vim
-# tags: [General]
-# description: Commandes utiles pour le terminal de Mac
-# lang: fr
+description: Commandes utiles pour le terminal de Mac
 ---
 
 ### Raccourcis Clavier et astuces MAC
@@ -91,7 +88,7 @@ On peut cumuler les options pour par exemple lister le contenu avec les permissi
 | cd NOM_REPERTOIRE                | Se déplacer dans les répertoires                                                                     |
 | df -h                            | Affiche la liste des volumes montés sur votre Mac et les caractéristiques de ceux-ci (très pratique) |
 | history                          | Pour voir un historique des commandes entrées                                                        |
-| CONTROL + R + COMMANDE_RECHERCHEE| Pour rechercher une commande tapée                                                                   |
+| CTRL + R + CMD_RECHERCHEE| Pour rechercher une commande tapée                                                                   |
 | find où quoi                     | ex : find /home/cake17 readme.txt, cherche readme.txt dans /home/cake 17                             |
 
 

@@ -1,6 +1,6 @@
 ---
 home: true
-actionText: Docs →
+actionText: Articles →
 actionLink: /2016-06-07-show-presentation
 ---
 

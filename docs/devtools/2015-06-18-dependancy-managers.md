@@ -1,6 +1,6 @@
 ---
 # layout: post
-title: Gestionnaires de Dépendances (Dependancy Managers)
+title: Gestionnaires de Dépendances
 # tags: [General]
 # description: Liste des Gestionnaires de Dépendances
 # lang: fr
