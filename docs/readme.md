@@ -1,7 +1,7 @@
 ---
 home: true
 actionText: Articles →
-actionLink: /2016-06-07-show-presentation
+actionLink: /frontend/2016-06-07-show-presentation
 ---
 
 Welcome !
